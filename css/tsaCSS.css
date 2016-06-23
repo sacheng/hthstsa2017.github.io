@@ -1,4 +1,4 @@
-/*#lpImages {
+#lpImages {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all ease 2s;
@@ -7,4 +7,8 @@
 #lpImages:hover {
 	-webkit-filter: grayscale(20%);
     filter: grayscale(20%);
-}*/
+}
+
+#lpLabel {
+	color:#4169E1;
+}
