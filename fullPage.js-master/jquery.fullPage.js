@@ -125,7 +125,7 @@
 
             //scrolling
             css3: true,
-            scrollingSpeed: 700,
+            scrollingSpeed: 900,
             autoScrolling: true,
             fitToSection: true,
             fitToSectionDelay: 1000,
@@ -159,7 +159,7 @@
             //design
             controlArrows: true,
             controlArrowColor: '#fff',
-            verticalCentered: true,
+            verticalCentered: false,
             sectionsColor : [],
             paddingTop: 0,
             paddingBottom: 0,

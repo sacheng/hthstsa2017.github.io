@@ -4,17 +4,29 @@
 }
 
 #sec1{
-	background-color:#1BBC9B
+	background-color:white;
 }
 
 #sec2 {
-	background-color:white
+	background-color:#1BBC9B;
 }
 
 #sec3{
-	background-color:#1BBC9B
+	background-color:white;
 } 
 
 #sec4 {
-	background-color:white;
+	background-color:#1BBC9B;
+}
+
+#hthsTSATitle {
+	text-align:center;
+}
+
+#hthsTSAHeader {
+	text-align:center;
+}
+
+#hthsTSASlogan {
+	text-align:center;
 }
