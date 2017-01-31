@@ -4,11 +4,11 @@
 }
 
 #sec1{
-	background-image: url("pictures/technology_student_association.png");
+	background-color: #FAFAFA;
 }
 
 #sec2 {
-	background-color:#1BBC9B;
+	background-color: #e8f4f8;
 }
 
 #sec3{
@@ -29,4 +29,15 @@
 
 #hthsTSASlogan {
 	text-align:center;
+}
+
+#stat1 {
+	text-align:center;
+}
+
+#iconStat {
+	color:#ee6e73;
+}
+
+#tsaRow {
 }
