@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>HTHS Technology Student Association</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="css/tsaCSS.css">
+
+  <link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+  <script src="fullPage.js-master/vendors/jquery.easings.min.js"></script>
+  <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+  <script type="text/javascript" src="fullPage.js-master/jquery.fullPage.js"></script>
+
+  <script>
+
+    //Smooth scrolling initialize
+    $(document).ready(function() {
+      $('#fullpage').fullpage();
+    });
+
+    $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+    });
+
+  </script>
+
+<body>
+
+  <div id="fullpage">
+
+      <div class="section" id="sec1" style="color:#ee6e73">
+
+        <p id="hthsTSATitle">High Technology High School's</p> 
+        <h1 id="hthsTSAHeader">Technology Student Association</h1>
+        <h4 id="hthsTSASlogan">Learning to Lead in a Technical World.</h4>
+
+      </div>
+      
+      <div class="section" id="sec2" style="color:#ee6e73">
+
+      <!--This is the overview bar with icons and descriptions of the TSA chapter. If you feel that this belongs elsewhere, just copy and paste this chunk into wherever you need it-->
+
+        <div class="row" id="tsaRow2">
+
+        <div class="col s3" id="stat1">
+          <i class="large material-icons" id="iconStat">group</i>
+          <p id="iconTitle">Overview</p>
+          <p id="iconText">HTHS TSA is home to over 50% of the school's young, developing minds in search of a club that allows them to demonstrate STEM aptitude and finesse.</p>
+          </div>
+
+          <div class="col s3" id="stat1">
+          <i class="large material-icons" id="iconStat">person_pin</i>
+          <p id="iconTitle">Leadership</p>
+          <p id="iconText">TSA's motto is "Learning to Lead in a Technical World" after all. What's a successful chapter without the guidance of its highly qualified officers?</p>
+          </div>
+
+          <div class="col s3" id="stat1">
+          <i class="large material-icons" id="iconStat">stars</i>
+          <p id="iconTitle">Success</p>
+          <p id="iconText">Talent and effort culminate into success.HTHS excels at the NJ TSA state and national conferences, as they show what the nation's #1 STEM school has to offer.</p>
+          </div>
+
+          <div class="col s3" id="stat1">
+          <i class="large material-icons" id="iconStat">question_answer</i>
+          <p id="iconTitle">Beyond</p>
+          <p id="iconText">The HTHS TSA Chapter strives to make sure that its members succeed. In addition our chapter holds fundraisers to give back to the community as well.</p>
+          </div>
+
+         </div>
+
+      <!--The row ends here-->
+
+      </div>
+
+      <div class="section" id="sec3">
+      
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/sample-1.jpg">
+          <span class="card-title">Card Title</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </div>
+
+
+      <div class="section" id="sec4">
+
+
+        <div class="row" id="OfficerRow1">
+
+
+          <!--Let's start with Alex Yao-->
+
+
+          <div class="col s4">
+
+              <!-- Modal Trigger -->
+<!--               <a href="#modal1"><img src="pictures/testPhotos/lion.png" alt="" class="circle"></a> -->
+
+
+              
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+    <p>You have to include jQuery and Materialize JS + CSS for the modal to work. You can include it from <a href="http://materializecss.com/getting-started.html">CDN (getting started)</a>.
+      
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+          </div>
+
+          <!--END OF ALEX YAO-->
+
+
+          <div class="col s4">
+            
+          </div>
+
+          <div class="col s4">
+            
+          </div>
+
+        </div>
+
+        <div class="row" id="OfficerRow2">
+
+          <div class="col s4">
+            Kunaal Chaudhari
+          </div>
+            
+          <div class="col s4">
+            Eric She
+          </div>
+          
+          <div class="col s4">
+            Anjali Chakradhar
+          </div>
+
+        </div>
+
+
+        <div class="row" id="OfficerRow3">
+
+          <div class="col s4">
+            Mr. Robert Dennis
+          </div>
+
+        </div>
+    
+
+      </div>
+
+
+  </div>
+
+  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+      <a class="btn-floating btn-large blue">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="Landing Page" href="Landing_Page.htm"><i class="material-icons">http</i></a></li>
+        <li><a class="btn-floating green tooltipped" data-position="top" data-delay="50" data-tooltip="CTE" href="CTE.htm"><i class="material-icons">person_pin</i></a></li>
+        <li><a class="btn-floating yellow darken-1 tooltipped" data-position="top" data-delay="50" data-tooltip="TSA" href="TSA3.htm"><i class="material-icons">code</i></a></li>
+        <li><a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="AR" href="Prompt.htm"><i class="material-icons">games</i></a></li>
+      </ul>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/tsaJS.js"></script>
+
+</body>
+
+</html>
+
+<!--http://studybreaks.com/wp-content/uploads/2016/10/forbes.png-->

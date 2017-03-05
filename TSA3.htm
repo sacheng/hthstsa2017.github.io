@@ -26,10 +26,10 @@
     	$('#fullpage').fullpage();
 		});
 
-		//Carousel initialize
-		$(document).ready(function(){
-      	$('.carousel').carousel();
-    	});
+    $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+    });
 
 	</script>
 
@@ -38,6 +38,7 @@
 	<div id="fullpage">
 
 	    <div class="section" id="sec1" style="color:#ee6e73">
+
 	    	<p id="hthsTSATitle">High Technology High School's</p> 
 	    	<h1 id="hthsTSAHeader">Technology Student Association</h1>
 	    	<h4 id="hthsTSASlogan">Learning to Lead in a Technical World.</h4>
@@ -68,19 +69,95 @@
 			    <p>something about shining at tsa nationals</p>
 			    </div>
 
-			</div>
-
-		</div>
-
-	    <div class="section" id="sec3">Some section
-	    
-        <p>High Technology High School has been a chapter of TSA since 1991. It has undergone many leadership changes since then. Today, we have 170 members which comprises over 50% of the school's population. HTHS is a very active member of TSA, sending students to the State and National Conferences annually. We are proud to send students to become state officers as well, thereby continuing to spread the love of technological learning throughout NJ TSA.</p>
-
-        <p>insert statistics here</p>
+			   </div>
 
 		  </div>
 
-	    <div class="section" id="sec4">Some section</div>
+	    <div class="section" id="sec3">
+	    
+        <p id="sec3Content">High Technology High School has been a chapter of TSA since 1991. It has undergone many leadership changes since then. Today, we have 170 members which comprises over 50% of the school's population. HTHS is a very active member of TSA, sending students to the State and National Conferences annually. We are proud to send students to become state officers as well, thereby continuing to spread the love of technological learning throughout NJ TSA.</p>
+
+        <p id="sec3Content">insert statistics here</p>
+
+		  </div>
+
+
+	    <div class="section" id="sec4">
+
+
+        <div class="row" id="OfficerRow1">
+
+
+          <!--Let's start with Alex Yao-->
+
+
+          <div class="col s4">
+
+              <!-- Modal Trigger -->
+<!--               <a href="#modal1"><img src="pictures/testPhotos/lion.png" alt="" class="circle"></a> -->
+
+
+              
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+    <p>You have to include jQuery and Materialize JS + CSS for the modal to work. You can include it from <a href="http://materializecss.com/getting-started.html">CDN (getting started)</a>.
+      
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+          </div>
+
+          <!--END OF ALEX YAO-->
+
+
+          <div class="col s4">
+            
+          </div>
+
+          <div class="col s4">
+            
+          </div>
+
+        </div>
+
+        <div class="row" id="OfficerRow2">
+
+          <div class="col s4">
+            Kunaal Chaudhari
+          </div>
+            
+          <div class="col s4">
+            Eric She
+          </div>
+          
+          <div class="col s4">
+            Anjali Chakradhar
+          </div>
+
+        </div>
+
+
+        <div class="row" id="OfficerRow3">
+
+          <div class="col s4">
+            Mr. Robert Dennis
+          </div>
+
+        </div>
+    
+
+      </div>
+
+
 	</div>
 
 	<div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
@@ -95,7 +172,10 @@
       </ul>
     </div>
 
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/tsaJS.js"></script>
