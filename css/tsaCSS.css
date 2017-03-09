@@ -18,13 +18,17 @@ body {
 }
 
 #sec2 {
-	background-color: white;
+	background-color: #FAFAFA;
 }
 
-#sec3{
+/*#sec3{
 	background-image: url("../pictures/TSA/tsaPattern2.png");
   background-repeat: repeat;
-} 
+} */
+
+/*#sec3 {
+  background-color: #FAFAFA;
+}*/
 
 #sec4 {
 	background-color: #C6E2FF;
