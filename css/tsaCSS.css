@@ -1,20 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,400italic,300italic,300);
+
+body {
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  overflow-x:hidden;
+  height:100%;
+  margin-top:-20px;
+  line-height: 150%;
+}
+
 #sec1, #sec2, #sec3, #sec4 {
-	height:100%;
-	width:100%;
 }
 
 #sec1{
 	background-color: #FAFAFA;
+  width:100%;
+  height:1000px;
 }
 
 #sec2 {
-	background-color: #C6E2FF;
+	background-color: #FAFAFA;
 }
 
-#sec3{
+/*#sec3{
 	background-image: url("../pictures/TSA/tsaPattern2.png");
   background-repeat: repeat;
-} 
+} */
+
+/*#sec3 {
+  background-color: #FAFAFA;
+}*/
 
 #sec4 {
 	background-color: #C6E2FF;
@@ -32,15 +47,73 @@
 	text-align:center;
 }
 
+/*This is where TSA Section 1 Content Begins*/
+
+
+
+/*This is where TSA Section 2 Content Begins*/
+#tsaRow2 {
+  margin-left:8%;
+  margin-right:8%;
+  color:black;
+  text-align: center;
+}
+
+#iconStat {
+  color:black;
+  text-align: center;
+}
+
+#iconTitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#iconText {
+  text-align: center;
+}
+
+/*This is where TSA Section 3 Content Begins*/
+
+
+
+/*This is where TSA Section 4 Content Begins*/
+#OfficerRow1, #OfficerRow2, #OfficerRow3 {
+  left:50%;
+  right:50%;
+}
+
+#alyao {
+  height:100px;
+  width:100px;
+}
+
+/*This is where TSA Section 5 Content Begins*/
 #stat1 {
 	text-align:center;
 }
 
-#iconStat {
-	color:#ee6e73;
+#sec3Content {
+  margin-left:5%;
+  margin-right:5%;
+  font-size: 14;
 }
 
-@import "compass/css3";
+#lion {
+  border-radius:50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*@import "compass/css3";
 
 .masonry-list {
   left: 50%;
@@ -277,4 +350,4 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
+} */
