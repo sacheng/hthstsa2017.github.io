@@ -6,6 +6,7 @@ body {
   overflow-x:hidden;
   height:100%;
   margin-top:-20px;
+  line-height: 150%;
 }
 
 #sec1, #sec2, #sec3, #sec4 {
