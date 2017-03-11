@@ -26,8 +26,23 @@
   <script>
 
     //Smooth scrolling initialize
+    // $(document).ready(function() {
+    //   $('#fullpage').fullpage();
+    // });
+
     $(document).ready(function() {
-      $('#fullpage').fullpage();
+      $('#fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+        responsiveWidth: 900,
+        afterResponsive: function(isResponsive){
+          
+        }
+
+      });
     });
 
     $(function(){ 
@@ -50,15 +65,19 @@
 
   <div id="fullpage">
 
-      <div class="section" id="sec1" style="color:#ee6e73">
+      <div class="section" id="sec1" data-anchor="firstPage" style="color:#ee6e73">
 
-        <p id="hthsTSATitle">High Technology High School's</p> 
-        <h1 id="hthsTSAHeader">Technology Student Association</h1>
-        <h4 id="hthsTSASlogan">Learning to Lead in a Technical World.</h4>
+        <div class="container">
+
+          <p id="hthsTSATitle">High Technology High School's</p> 
+          <h1 id="hthsTSAHeader">Technology Student Association</h1>
+          <h4 id="hthsTSASlogan">Learning to Lead in a Technical World.</h4>
+
+        </div>
 
       </div>
       
-      <div class="section" id="sec2">
+      <div class="section" id="sec2" data-anchor="secondPage">
 
         <div class="container">
       
@@ -78,7 +97,9 @@
 
       </div>
 
-      <div class="section" id="sec3" style="color:#ee6e73">
+      <div class="section" id="sec3" style="color:#ee6e73" data-anchor="3rdPage">
+
+        <div class="container">
 
       <!--This is the overview bar with icons and descriptions of the TSA chapter. If you feel that this belongs elsewhere, just copy and paste this chunk into wherever you need it-->
 
@@ -111,7 +132,7 @@
           </div>
 
       <!--The row ends here-->
-
+        </div>
       </div>
 
 
@@ -119,23 +140,25 @@
 
 
       <div class="section" id="sec4">
+        <div class="container">
         <h1>HTHS TSA: Meet Our Officers</h1>
 
-          <div class="row section">
-            <div class="col">
-              <!-- Modal Trigger -->
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-              <p>You have to include jQuery and Materialize JS + CSS for the modal to work. You can include it from <a href="http://materializecss.com/getting-started.html">CDN (getting started)</a>.
+            <div class="row section">
+              <div class="col">
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                <p>You have to include jQuery and Materialize JS + CSS for the modal to work. You can include it from <a href="http://materializecss.com/getting-started.html">CDN (getting started)</a>.
+              </div>
             </div>
-          </div>
-          <!-- Modal Structure -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+              </div>
             </div>
           </div>
 
@@ -149,22 +172,30 @@
 
 
       <div class="section" id="sec5">
-        <h1>We SUCCEED</h1>
-          insert statistics here
-        <h1>We CHANGE</h1>
+        <div class="container">
+
+          <h1>We SUCCEED</h1>
+            insert statistics here
+          <h1>We CHANGE</h1>
+
+        </div>
       </div>
 
       <div class="section" id="sec6">
-        <h1>HTHS TSA: VEX</h1>
-        <p>The VEX Robotics Competition (VRC) is a robotics event for high schoolers. Teams build robots to complete an annual challenge. For the 2016-2017 season, the VRC challenge is STARSTRUCK, in which two alliances, composed of 2 teams each, score stars and cubes in designated zones in their respective zones and hang their robots on the Hanging Bar. This was the second year that the 5-member HTHS team, Team 765A, competed in the VRC challenge. Also, this is the first year that a secondary HTHS VEX team, Team 765X, competed at the regional and state levels. They won the most prestigious award available, the Excellence Award, at their regional competition, where they were also tournament finalists. This qualified them for the state-level competition, where they reprised their success, winning the state-level Excellence Award and becoming tournament finalists there as well. These awards qualify them for the international level of competition, VEX Worlds, where they will be competing in mid-April.</p>
+        <div class="container">
+          <h1>HTHS TSA: VEX</h1>
+            <p>The VEX Robotics Competition (VRC) is a robotics event for high schoolers. Teams build robots to complete an annual challenge. For the 2016-2017 season, the VRC challenge is STARSTRUCK, in which two alliances, composed of 2 teams each, score stars and cubes in designated zones in their respective zones and hang their robots on the Hanging Bar. This was the second year that the 5-member HTHS team, Team 765A, competed in the VRC challenge. Also, this is the first year that a secondary HTHS VEX team, Team 765X, competed at the regional and state levels. They won the most prestigious award available, the Excellence Award, at their regional competition, where they were also tournament finalists. This qualified them for the state-level competition, where they reprised their success, winning the state-level Excellence Award and becoming tournament finalists there as well. These awards qualify them for the international level of competition, VEX Worlds, where they will be competing in mid-April.</p>
+        </div>
       </div>
 
-      <div class="section" id="sec6">
-        <h1>National Conference</h1>
-          do we want a section just for national conference?
+      <div class="section" id="sec7">
+        <div class="container">
+          <h1>National Conference</h1>
+            do we want a section just for national conference?
+        </div>
       </div>
 
-      <div class="section" id="sec6">
+      <div class="section" id="sec8">
         <div class="container">
           <h1>HTHS TSA Activites: Inside and Out</h1>
           <h2>Within the Chapter</h2>
