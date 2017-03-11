@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>HTHS Technology Student Association</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+  <link rel="stylesheet" href="css/tsaCSS.css">
+
+  <link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css" />
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/tsaJS.js"></script>
+  <script src="fullPage.js-master/vendors/jquery.easings.min.js"></script>
+  <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+  <script type="text/javascript" src="fullPage.js-master/jquery.fullPage.js"></script>
+
+  <script>
+
+    //Smooth scrolling initialize
+    $(document).ready(function() {
+      $('#fullpage').fullpage();
+    });
+
+    $(function(){ 
+      $('.carousel.carousel-slider').carousel({full_width: true}); 
+      // Next slide
+      $('.carousel').carousel('next');
+      $('.carousel').carousel('next', 3); // Move next n times.
+      // Previous slide
+      $('.carousel').carousel('prev');
+      $('.carousel').carousel('prev', 4); // Move prev n times.
+      // Set to nth slide
+      $('.carousel').carousel('set', 4);
+    });
+
+
+
+      </script>
+
+<body>
+
+  <div id="fullpage">
+
+      <div class="section" id="sec1" style="color:#ee6e73">
+
+        <p id="hthsTSATitle">High Technology High School's</p> 
+        <h1 id="hthsTSAHeader">Technology Student Association</h1>
+        <h4 id="hthsTSASlogan">Learning to Lead in a Technical World.</h4>
+
+      </div>
+      
+      <div class="section" id="sec2">
+
+        <div class="container">
+      
+        <h1>WHO WE ARE</h1>
+          <p>Since 1991, High Technology High School has been a chapter of TSA. It has undergone many leadership changes since then. As of the 2016-2017 school year, our chapter is home to 150 members, which comprises over 50% of the school's population. With students possessing immense talent and drive, there's no doubt that HTHS has been an extremely active member of the Technology Student Association...sending students to the State and National Conferences annually. In addition, we are proud to send students to become state officers as well, thereby continuing to spread the love of technological learning throughtout NJ TSA.</p>
+
+         <!--Insert image carousel here-->
+
+           <div class="slider">
+              <ul class="slides">
+                <li>
+                  <img class="materialboxed" src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                  <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                  </div>
+                </li>
+                <li>
+                  <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                  <div class="caption left-align">
+                    <h3>Left Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                  </div>
+                </li>
+                <li>
+                  <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                  <div class="caption right-align">
+                    <h3>Right Aligned Caption</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                  </div>
+                </li>
+                <li>
+                  <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                  <div class="caption center-align">
+                    <h3>This is our big Tagline!</h3>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                  </div>
+                </li>
+              </ul>
+            </div>
+      
+        </div>
+
+      </div>
+
+      <div class="section" id="sec3" style="color:#ee6e73">
+
+      <!--This is the overview bar with icons and descriptions of the TSA chapter. If you feel that this belongs elsewhere, just copy and paste this chunk into wherever you need it-->
+
+          <div class="row" id="tsaRow2">
+
+            <div class="col s3" id="stat1">
+              <i class="large material-icons" id="iconStat">group</i>
+              <p id="iconTitle">Overview</p>
+              <p id="iconText">HTHS TSA is home to over 50% of the school's young, developing minds in search of a club that allows them to demonstrate STEM aptitude and finesse.</p>
+            </div>
+
+            <div class="col s3" id="stat1">
+              <i class="large material-icons" id="iconStat">person_pin</i>
+              <p id="iconTitle">Leadership</p>
+              <p id="iconText">TSA's motto is "Learning to Lead in a Technical World" after all. What's a successful chapter without the guidance of its highly qualified officers?</p>
+            </div>
+
+            <div class="col s3" id="stat1">
+              <i class="large material-icons" id="iconStat">stars</i>
+              <p id="iconTitle">Success</p>
+              <p id="iconText">Talent and effort culminate into success.HTHS excels at the NJ TSA state and national conferences, as they show what the nation's #1 STEM school has to offer.</p>
+            </div>
+
+            <div class="col s3" id="stat1">
+              <i class="large material-icons" id="iconStat">question_answer</i>
+              <p id="iconTitle">Beyond</p>
+              <p id="iconText">The HTHS TSA Chapter strives to make sure that its members succeed. In addition our chapter holds fundraisers to give back to the community as well.</p>
+            </div>
+
+          </div>
+
+      <!--The row ends here-->
+
+      </div>
+
+      <div class="section" id="sec4">
+        <h1>HTHS TSA: Meet Our Officers</h1>
+      </div>
+
+      <div class="section" id="sec5">
+        <h1>We SUCCEED</h1>
+        <h1>We CHANGE</h1>
+      </div>
+
+      <div class="section" id="sec6">
+        <h1>HTHS TSA: VEX</h1>
+      </div>
+
+      <div class="section" id="sec6">
+        <h1>National Conference</h1>
+      </div>
+
+      <div class="section" id="sec6">
+        <div class="container">
+          <h1>HTHS TSA Activites: Inside and Out</h1>
+          <h2>Within the Chapter</h2>
+
+            <ul>
+
+              <li>competition selection</li>
+              <li>mid-year check-ins</li>
+              <li>ensure that chapter members are continually working on their TSA projects</li>
+              <li>chapter officer elections</li>
+              <li>end-of-year pizza party</li>
+              <li>routine activities consist of large chapter meetings for presentation of any updates or important material</li>
+              <li>State and National Conferences</li>
+
+            </ul>
+
+            Within the Community
+                Unfortunately, the HTHS chapter does not have many community activities due to the difficulty in organizing such a large club (the largest club at HTHS!). However, we do plan on having fundraising events in the future.
+
+            We are hoping to put together a district-wide Relay For Life to raise money for the American Cancer Society - TSA's official charity.
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+      <a class="btn-floating btn-large blue">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="Landing Page" href="Landing_Page.htm"><i class="material-icons">http</i></a></li>
+        <li><a class="btn-floating green tooltipped" data-position="top" data-delay="50" data-tooltip="CTE" href="CTE.htm"><i class="material-icons">person_pin</i></a></li>
+        <li><a class="btn-floating yellow darken-1 tooltipped" data-position="top" data-delay="50" data-tooltip="TSA" href="TSA3.htm"><i class="material-icons">code</i></a></li>
+        <li><a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="AR" href="Prompt.htm"><i class="material-icons">games</i></a></li>
+      </ul>
+    </div>
+
+</body>
+
+</html>
+
+<!--http://studybreaks.com/wp-content/uploads/2016/10/forbes.png-->

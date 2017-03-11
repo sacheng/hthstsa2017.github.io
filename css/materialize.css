@@ -7428,7 +7428,8 @@ input[type=range]:focus::-ms-fill-upper {
 .carousel.carousel-slider {
   top: 0;
   left: 0;
-  height: 0;
+  height: 450px !important;
+  width: 500px !important;
 }
 
 .carousel.carousel-slider .carousel-item {
