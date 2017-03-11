@@ -12,3 +12,8 @@ fullPage.js-master is the folder that has all the scroll.js (invisible scrolling
 
 js -> javascript files
 
+
+
+Notes:
+changes in carousel slider css
+(refer to materialize.css line #7431 and #7432)
