@@ -32,10 +32,10 @@
 
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage','6thPage','7thPage','8thPage'],
+        anchors: ['HTHSTSA', 'WhoWeAre', 'something', 'Officers', 'Success', 'VEX', 'Activities'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['HTHS TSA', 'Who We Are', 'something', 'Meet the Officers', 'Success', 'HTHS VEX', 'National Conference', 'Activities'],
+        navigationTooltips: ['HTHS TSA', 'Who We Are', 'something', 'Meet the Officers', 'Success', 'HTHS VEX', 'Activities'],
         responsiveWidth: 900,
         afterResponsive: function(isResponsive){
           
@@ -46,14 +46,6 @@
 
     $(function(){ 
       $('.carousel.carousel-slider').carousel({full_width: true}); 
-      // Next slide
-      $('.carousel').carousel('next');
-      $('.carousel').carousel('next', 3); // Move next n times.
-      // Previous slide
-      $('.carousel').carousel('prev');
-      $('.carousel').carousel('prev', 4); // Move prev n times.
-      // Set to nth slide
-      $('.carousel').carousel('set', 4);
     });
 
 
@@ -64,7 +56,7 @@
 
   <div id="fullpage">
 
-      <div class="section" id="sec1" data-anchor="firstPage">
+      <div class="section" id="sec1" data-anchor="HTHSTSA">
 
         <div class="container">
 
@@ -76,7 +68,7 @@
 
       </div>
       
-      <div class="section" id="sec2" data-anchor="secondPage">
+      <div class="section" id="sec2" data-anchor="WhoWeAre">
 
         <div class="container">
       
@@ -96,7 +88,7 @@
 
       </div>
 
-      <div class="section" id="sec3" style="color:#ee6e73" data-anchor="3rdPage">
+      <div class="section" id="sec3" data-anchor="something">
 
         <div class="container">
 
@@ -138,7 +130,7 @@
 
 
 
-      <div class="section" id="sec4" data-anchor="4thPage">
+      <div class="section" id="sec4" data-anchor="Officers">
         <div class="container">
 
         <h1>HTHS TSA: Meet Our Officers</h1>
@@ -164,7 +156,6 @@
         </div>
 
 
-
       </div>
 
 
@@ -172,7 +163,7 @@
 
 
 
-      <div class="section" id="sec5" data-anchor="5thPage">
+      <div class="section" id="sec5" data-anchor="Success">
 
         <div class="container">
 
@@ -184,21 +175,15 @@
 
       </div>
 
-      <div class="section" id="sec6" data-anchor="6thPage">
+      <div class="section" id="sec6" data-anchor="VEX">
         <div class="container">
           <h1>HTHS TSA: VEX</h1>
             <p>The VEX Robotics Competition (VRC) is a robotics event for high schoolers. Teams build robots to complete an annual challenge. For the 2016-2017 season, the VRC challenge is STARSTRUCK, in which two alliances, composed of 2 teams each, score stars and cubes in designated zones in their respective zones and hang their robots on the Hanging Bar. This was the second year that the 5-member HTHS team, Team 765A, competed in the VRC challenge. Also, this is the first year that a secondary HTHS VEX team, Team 765X, competed at the regional and state levels. They won the most prestigious award available, the Excellence Award, at their regional competition, where they were also tournament finalists. This qualified them for the state-level competition, where they reprised their success, winning the state-level Excellence Award and becoming tournament finalists there as well. These awards qualify them for the international level of competition, VEX Worlds, where they will be competing in mid-April.</p>
         </div>
       </div>
 
-      <div class="section" id="sec7" data-anchor="7thPage">
-        <div class="container">
-          <h1>National Conference</h1>
-            do we want a section just for national conference?
-        </div>
-      </div>
 
-      <div class="section" id="sec8" data-anchor="8thPage">
+      <div class="section" id="sec7" data-anchor="Activities">
         <div class="container">
           <h1>HTHS TSA Activites: Inside and Out</h1>
           <h2>Within the Chapter</h2>
