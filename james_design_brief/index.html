@@ -56,8 +56,11 @@
         
         <!-- Full screen sections -->
         <div id="section1" class="fullScreenSection">
+            <div class="backgroundMask"></div>
             <img src="iphone_vector.svg" class="iphone" draggable="false">
-            <div class="sharpieText">Drag around phone to experience in Augmented Reality.</div>
+            <div class="sharpieText">Drag around phone<br>to experience in<br>Augmented Reality.
+                <img src="sharpie_text_arrow.png" draggable="false">
+            </div>
         </div>
         <div id="section2" class="fullScreenSection">
         </div>
@@ -89,13 +92,16 @@
             
             // Draggable iPhone
             function moveWithMouse(e) {
-                $("#section1 .iphone").css("left", e.clientX + offsetX + "px");
-                $("#section1 .iphone").css("top", e.clientY + offsetY + "px");
+                // Every time mouse moves, update position of iPhone
+                $("#section1 .iphone").css("left", (e.clientX/$(window).width())*100 + offsetX + "%");
+                $("#section1 .iphone").css("bottom", (($(window).height()-e.clientY)/$(window).height())*100 + offsetY + "%");
             }
             $("#section1 .iphone").on("mousedown", function(e) {
                 document.addEventListener("mousemove", moveWithMouse);
-                offsetX = parseInt($("#section1 .iphone").css("left")) - e.clientX;
-                offsetY = parseInt($("#section1 .iphone").css("top")) - e.clientY;
+                // Calculate offset of mouse click in relation to iPhone, as a percent
+                offsetX = (parseInt($("#section1 .iphone").css("left")) - e.clientX)*100 / $(window).width();
+                offsetY = parseInt($("#section1 .iphone").css("bottom")) - (($(window).height()-e.clientY)*100) / $(window).height();
+                $("#section1 .sharpieText").fadeOut();
             })
             $("#section1 .iphone").on("mouseup", function() {
                 document.removeEventListener("mousemove", moveWithMouse);
