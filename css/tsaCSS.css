@@ -9,17 +9,44 @@ body {
   line-height: 150%;
 }
 
+/*#scrollDownCaret {
+    width: 10%;
+    height: 28px;
+    left: 45%;
+    position: fixed;
+    bottom: 28px;
+    cursor: pointer;
+}
+
+#scrollDownCaret.visible {
+    visibility: visible;
+}
+
+#scrollDownCaret.hidden {
+    visibility: hidden;
+}
+
+#scrollDownCaret img {
+    display: block;
+    margin: auto;
+    animation-name: arrow;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0 -12px;
+    animation-duration: 5s;
+}*/
+
 #sec1, #sec2, #sec3, #sec4 {
 }
 
 #sec1{
-	background-color: #FAFAFA;
+	background-color: #323D59;
   width:100%;
   height:1000px;
 }
 
 #sec2 {
-	background-color: #FAFAFA;
+	background-color: #66AFEA;
 }
 
 /*#sec3{
@@ -27,12 +54,24 @@ body {
   background-repeat: repeat;
 } */
 
-/*#sec3 {
-  background-color: #FAFAFA;
-}*/
+#sec3 {
+  background-color: #4487ED;
+}
 
 #sec4 {
-	background-color: #C6E2FF;
+	background-color: #129CCA;
+}
+
+#sec5 {
+  background-color: #267FAA;
+}
+
+#sec6 {
+  background-color: #5EABD4;
+}
+
+#sec7 {
+  background-color: #129CCA;
 }
 
 #hthsTSATitle {
@@ -48,7 +87,6 @@ body {
 }
 
 /*This is where TSA Section 1 Content Begins*/
-
 
 
 /*This is where TSA Section 2 Content Begins*/
@@ -78,19 +116,17 @@ body {
 
 
 /*This is where TSA Section 4 Content Begins*/
-#OfficerRow1, #OfficerRow2, #OfficerRow3 {
-  left:50%;
-  right:50%;
-}
-
-#alyao {
-  height:100px;
-  width:100px;
+#alex {
+  width:175px;
+  height:175px;
+  text-align:center;
+  border-radius:50%;
 }
 
 /*This is where TSA Section 5 Content Begins*/
 #stat1 {
 	text-align:center;
+  
 }
 
 #sec3Content {
