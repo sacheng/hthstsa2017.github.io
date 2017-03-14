@@ -1,0 +1,160 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.fullScreenSection {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+#section1 {
+    background-color: #323D59;
+    background-image: url("hero_background.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section1 .iphone {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+#section1 .sharpieText {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+}
+
+#section2 {
+    background-color: #66AFEA;
+}
+
+#section3 {
+    background-color: #4487ED;
+}
+
+#section4 {
+    background-color: #129CCA;
+}
+
+#section5 {
+    background-color: #267FAA;
+}
+
+#section6 {
+    background-color: #5EABD4;
+}
+
+#scrollDownCaret {
+    width: 10%;
+    height: 28px;
+    left: 45%;
+    position: fixed;
+    bottom: 28px;
+    cursor: pointer;
+}
+
+#scrollDownCaret.visible {
+    visibility: visible;
+}
+
+#scrollDownCaret.hidden {
+    visibility: hidden;
+}
+
+#scrollDownCaret img {
+    display: block;
+    margin: auto;
+    animation-name: arrow;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0 -12px;
+    animation-duration: 5s;
+}
+
+@keyframes arrow {
+    0% { transform: translate3d(0, 0, 10px) rotateX(37deg); opacity: 0; }
+    20% { transform: translate3d(0, 0, 10px) rotateX(0); opacity: 1; }
+    80% { transform: translate3d(0, 0, 10px) rotateX(0); opacity: 1; }
+    100% { transform: translate3d(0, 0, 10px) rotateX(-45deg); opacity: 0; }
+}
+
+#sectionNav {
+    display: block;
+    position: fixed;
+    top: calc(50% - 96px);
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sectionNav li {
+    position: relative;
+    display: block;
+}
+
+#sectionNav li .label {
+    position: absolute;
+    display: block;
+    text-align: right;
+    width: 84px;
+    top: 0px;
+    right: 0px;
+    padding-right: 25px;
+    opacity: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+#sectionNav li .dot:hover .label {
+    opacity: 1;
+}
+
+#sectionNav li .dot {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#sectionNav li .dot .inner {
+    display: block;
+    position: relative;
+    left: 8px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0.5;
+    background: white;
+}
+
+#sectionNav li .dot:hover .inner:not(.active) {
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    top: 7px;
+    left: 7px;
+}
+
+#sectionNav li .dot .active {
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+    top: 6px;
+    left: 6px;
+}
