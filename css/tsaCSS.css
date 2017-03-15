@@ -1,5 +1,3 @@
-/*General CSS*/
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,400italic,300italic,300);
 
 body {
@@ -11,14 +9,50 @@ body {
   line-height: 150%;
 }
 
+/*#scrollDownCaret {
+    width: 10%;
+    height: 28px;
+    left: 45%;
+    position: fixed;
+    bottom: 28px;
+    cursor: pointer;
+}
+
+#scrollDownCaret.visible {
+    visibility: visible;
+}
+
+#scrollDownCaret.hidden {
+    visibility: hidden;
+}
+
+#scrollDownCaret img {
+    display: block;
+    margin: auto;
+    animation-name: arrow;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: 0 0 -12px;
+    animation-duration: 5s;
+}*/
+
+#sec1, #sec2, #sec3, #sec4 {
+}
+
 #sec1{
 	background-color: #323D59;
   width:100%;
+  height:1000px;
 }
 
 #sec2 {
 	background-color: #66AFEA;
 }
+
+/*#sec3{
+	background-image: url("../pictures/TSA/tsaPattern2.png");
+  background-repeat: repeat;
+} */
 
 #sec3 {
   background-color: #4487ED;
@@ -83,30 +117,16 @@ body {
 
 /*This is where TSA Section 4 Content Begins*/
 #alex {
-  width:150px;
-  height:150px;
+  width:175px;
+  height:175px;
   text-align:center;
   border-radius:50%;
-
-  -webkit-transition: .2s ease-in-out; /* Safari */
-  -moz-transition: .2s ease-in-out; /* Mozilla Firefox */
-  -ms-transition: .2s ease-in-out; /* Microsoft specific */
-  -o-transition: .2s ease-in-out; /* Opera */
-  transition: .2s ease-in-out; /* general & Google Chrome */
 }
-
-#alex:hover {
-  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.8), 0 4px 15px 0 rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.8), 0 4px 15px 0 rgba(0, 0, 0, 0.6);
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.8), 0 4px 15px 0 rgba(0, 0, 0, 0.6); 
-}
-
-
 
 /*This is where TSA Section 5 Content Begins*/
 #stat1 {
 	text-align:center;
-
+  
 }
 
 #sec3Content {
