@@ -12,12 +12,12 @@ body {
 }
 
 #sec1{
-	background-color: #323D59;
+  background-color: #323D59;
   width:100%;
 }
 
 #sec2 {
-	background-color: #66AFEA;
+  background-color: #66AFEA;
 }
 
 #sec3 {
@@ -25,7 +25,7 @@ body {
 }
 
 #sec4 {
-	background-color: #129CCA;
+  background-color: #129CCA;
 }
 
 #sec5 {
@@ -41,15 +41,15 @@ body {
 }
 
 #hthsTSATitle {
-	text-align:center;
+  text-align:center;
 }
 
 #hthsTSAHeader {
-	text-align:center;
+  text-align:center;
 }
 
 #hthsTSASlogan {
-	text-align:center;
+  text-align:center;
 }
 
 /*This is where TSA Section 1 Content Begins*/
@@ -103,10 +103,9 @@ body {
 
 
 
-
 /*This is where TSA Section 5 Content Begins*/
 #stat1 {
-	text-align:center;
+  text-align:center;
 
 }
 
