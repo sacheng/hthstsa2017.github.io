@@ -9,6 +9,33 @@
         <link href="styles.css" type="text/css" rel="stylesheet">
     </head>
     <body>
+        <!-- Full screen sections -->
+        <div id="section1" class="fullScreenSection">
+            <div class="clippingBox">
+                <div class="backgroundMask"></div>
+                <img src="iphone_vector.svg" class="iphone" draggable="false">
+                <div class="sharpieText">Drag around phone<br>to experience in<br>Augmented Reality.
+                    <img src="sharpie_text_arrow.png" draggable="false">
+                </div>
+            </div>
+        </div>
+        <div id="section2" class="fullScreenSection">
+        </div>
+        <div id="section3" class="fullScreenSection">
+            <div class="leftContainer">
+                <img src="iphone_vector_vertical.svg" class="iphone" draggable="false">
+                <img src="face_mesh.svg" class="faceMesh" draggable="false">
+            </div>
+            <div class="rightContainer">
+            </div>
+        </div>
+        <div id="section4" class="fullScreenSection">
+        </div>
+        <div id="section5" class="fullScreenSection">
+        </div>
+        <div id="section6" class="fullScreenSection">
+        </div>
+        
         <!-- Dot navigation bar on right side -->
         <ol id="sectionNav">
             <li>
@@ -54,23 +81,13 @@
             <img src="scroll_down_caret.png" width="30" height="17">
         </div>
         
-        <!-- Full screen sections -->
-        <div id="section1" class="fullScreenSection">
-            <img src="iphone_vector.svg" class="iphone" draggable="false">
-            <div class="sharpieText">Drag around phone to experience in Augmented Reality.</div>
-        </div>
-        <div id="section2" class="fullScreenSection">
-        </div>
-        <div id="section3" class="fullScreenSection">
-        </div>
-        <div id="section4" class="fullScreenSection">
-        </div>
-        <div id="section5" class="fullScreenSection">
-        </div>
-        <div id="section6" class="fullScreenSection">
-        </div>
-        
         <script type="text/javascript">
+            // @media listeners
+            var largeScreenStateChange = window.matchMedia("(min-width: 1400px)");
+            var tinyScreenStateChange = window.matchMedia("(max-width: 700px)");
+            largeScreenStateChange.addListener(updateiPhoneMaskPosition);
+            tinyScreenStateChange.addListener(updateiPhoneMaskPosition);
+            
             // Caret scroll-down functionality
             $("#scrollDownCaret").on("click", function() {
                 $("html, body").animate({
@@ -89,17 +106,57 @@
             
             // Draggable iPhone
             function moveWithMouse(e) {
-                $("#section1 .iphone").css("left", e.clientX + offsetX + "px");
-                $("#section1 .iphone").css("top", e.clientY + offsetY + "px");
+                // Every time mouse moves, update position of iPhone
+                $("#section1 .iphone").css("left", (e.clientX/$(window).width())*100 + offsetX + "vw");
+                $("#section1 .iphone").css("bottom", (($(window).height()-e.clientY)/$(window).height())*100 + offsetY + "vh");
+                updateiPhoneMaskPosition()
             }
             $("#section1 .iphone").on("mousedown", function(e) {
                 document.addEventListener("mousemove", moveWithMouse);
-                offsetX = parseInt($("#section1 .iphone").css("left")) - e.clientX;
-                offsetY = parseInt($("#section1 .iphone").css("top")) - e.clientY;
+                // Calculate offset of mouse click in relation to iPhone, as a percent
+                offsetX = (parseInt($("#section1 .iphone").css("left")) - e.clientX)*100 / $(window).width();
+                offsetY = (parseInt($("#section1 .iphone").css("bottom")) - ($(window).height()-e.clientY))*100 / $(window).height();
+                $("#section1 .sharpieText").fadeOut();
+                $("#sectionNav").fadeOut();
+                $("#scrollDownCaret").fadeOut();
+                
             })
             $("#section1 .iphone").on("mouseup", function() {
                 document.removeEventListener("mousemove", moveWithMouse);
-            })
+                $("#sectionNav").fadeIn();
+                $("#scrollDownCaret").fadeIn();
+            });
+            $("#section1").mouseleave(function() {
+                document.removeEventListener("mousemove", moveWithMouse);
+                $("#sectionNav").fadeIn();
+                $("#scrollDownCaret").fadeIn();  
+            });
+            function updateiPhoneMaskPosition() {
+                var left = (parseInt($("#section1 .iphone").css("left")) / $(window).width()) * 100;
+                var bottom = (parseInt($("#section1 .iphone").css("bottom")) / $(window).height()) * 100;
+                if (window.matchMedia("(max-width: 700px)").matches) {
+                    // Tiny screen
+                    document.getElementsByClassName("backgroundMask")[0].style.webkitClipPath = 
+                        "polygon(" + (left + 2) + "% calc(" + (101 - bottom) + "% - 41.3vw), \
+                        "+ (left + 82) + "% calc(" + (101 - bottom) + "% - 41.3vw), \
+                        "+ (left + 82) + "% " + (99 - bottom) + "%, \
+                        " + (left + 2) + "% " + (99 - bottom) + "%)"
+                } else if (window.matchMedia("(min-width: 1400px)").matches) {
+                    // Large screen
+                    document.getElementsByClassName("backgroundMask")[0].style.webkitClipPath = 
+                        "polygon(" + (left + 2) + "% calc(" + (101 - bottom) + "% - 19.7vw), \
+                        "+ (left + 38) + "% calc(" + (101 - bottom) + "% - 19.7vw), \
+                        "+ (left + 38) + "% " + (99 - bottom) + "%, \
+                        " + (left + 2) + "% " + (99 - bottom) + "%)"
+                } else {
+                    // Normal-sized screen
+                    document.getElementsByClassName("backgroundMask")[0].style.webkitClipPath = 
+                        "polygon(" + (left + 5) + "% calc(" + (101 - bottom) + "% - 24.6vw), \
+                        "+ (left + 45) + "% calc(" + (101 - bottom) + "% - 24.6vw), \
+                        "+ (left + 45) + "% " + (99 - bottom) + "%, \
+                        " + (left + 5) + "% " + (99 - bottom) + "%)"
+                }
+            }
         </script>
     </body>
 </html>
