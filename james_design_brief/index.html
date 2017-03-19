@@ -4,6 +4,9 @@
         <title>Design Brief</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script src="../js/materialize.js"></script>
+        <script src="../js/materialize.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
@@ -27,12 +30,6 @@
             </div>
         </div>
         <div id="section2" class="fullScreenSection">
-            <img class="mountainImage" id="mtn1" src="mountain_images/mountains1.png">
-            <img class="mountainImage" id="mtn2" src="mountain_images/mountains2.png">
-            <img class="mountainImage" id="mtn3" src="mountain_images/mountains3.png">
-            <img class="mountainImage" id="mtn4" src="mountain_images/mountains4.png">
-            <img class="mountainImage" id="mtn5" src="mountain_images/mountains5.png">
-            <img class="mountainImage" id="mtn6" src="mountain_images/mountains6.png">
         </div>
         <div id="section3" class="fullScreenSection">
             <div class="leftContainer">
@@ -58,13 +55,13 @@
                         Snapchat is a photo-sharing application that was first launched in September 2011. It enables users to take and send photos and short videos that automatically delete after a set amount of time. Beginning in September 2015, Snapchat incorporated augmented reality into the experience through a feature called Lense Filters.
                     </div>
                     <div id="text2" class="text animated hidden">
-                        Why use Snapchat instead of taking a picture with your phone's generic camera app and sending it via text? Snapchat Lense Filters add real-time special effects to images and have rapidly grown in popularity since their addition. Specific examples include the illusion of the user living under the sea, possessing kitchy anime eyes, crying or drooling, and having a dog's rolling tongue once the user opens his or her mouth.
+                        Why use SnapChat instead of taking a picture with your phone's generic camera app and sending it via text? SnapChat Lense Filters add real-time special effects to images and have rapidly grown in popularity since their addition. Specific examples include the illusion of the user living under the sea, possessing kitchy anime eyes, crying or drooling, and having a dog's rolling tongue once the user opens his or her mouth.
                     </div>
                     <div id="text3" class="text animated hidden">
-                        Snapchat's unique face-tracking algorithm is the sole reason to their advanced AR attributes. In order to properly use Snapchat Lense Filters, the user must first point his or her face directly towards the camera and hold his or her finger down on the screen to trigger the filters. At that point, the app traces an intricate outline of the user's face in order to superimpose a variety of unique filters, which the user can then select from.
+                        SnapChat's unqiue face-tracking algorithm is the sole reason to their advanced AR attributes. In order to properly use SnapChat Lense Filters, the user must first point his or her face directly towards the camera and hold his or her finger down on the screen to trigger the filters. At that point, the app traces an intricate outline of the user's face in order to superimpose a variety of unique filters, which the user can then select from.
                     </div>
                     <div id="text4" class="text animated hidden">
-                        These Lense Filters are just one of the many reasons why Snapchat is constantly evolving and growing in popularity among the masses. In addition to geotags and on-demand filters (i.e. current time and temperature), since these lenses are constantly being updated with brand-new and creative options, users incessantly flock to the app to see all the ways they can transform their faces.
+                        These Lense Filters are just one of the many reasons why SnapChat is constantly evolving and growing in popularity among the masses. In addition to geotags and on-demand filters (i.e. current time and temperature), since these lenses are constantly being updated with brand-new and creative options, users incessantly flock to the app to see all the ways they can transform their faces.
                     </div>
                 </div>
             </div>
@@ -74,8 +71,6 @@
         <div id="section5" class="fullScreenSection">
         </div>
         <div id="section6" class="fullScreenSection">
-        </div>
-        <div id="section7" class="fullScreenSection">
         </div>
         
         <!-- Dot navigation bar on right side -->
@@ -107,17 +102,11 @@
             <li>
                 <div data-section-number="5" id="dot5" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Current Uses</div>
-                </div>
-            </li>
-            <li>
-                <div data-section-number="6" id="dot6" class="dot">
-                    <div class="inner"></div>
                     <div class="label">Safety Concerns</div>
                 </div>
             </li>
             <li>
-                <div data-section-number="7" id="dot7" class="dot">
+                <div data-section-number="6" id="dot6" class="dot">
                     <div class="inner"></div>
                     <div class="label">Future Uses</div>
                 </div>
@@ -168,25 +157,15 @@
                 scroll4 = $("#section4").offset().top + heightOffset;
                 scroll5 = $("#section5").offset().top + heightOffset;
                 scroll6 = $("#section6").offset().top + heightOffset;
-                scroll7 = $("#section7").offset().top + heightOffset;
             }
             
             $(window).on("scroll", function() {
                 var currentScroll = $(window).scrollTop();
-                
-                // Scroll caret
                 if (currentScroll > 50) {
                     $("#scrollDownCaret").fadeOut();
                 } else {
                     $("#scrollDownCaret").fadeIn();
                 }
-                
-                // Mountains
-                if (currentScroll > 0 && currentScroll < $("#section3").offset().top) {
-                    $("#mtn1").css("top", currentScroll + "px")
-                }
-                
-                // Navigation dots
                 if (currentScroll < scroll1) {
                     // Section1
                     $("#sectionNav li .dot .inner").removeClass("active");
@@ -211,10 +190,6 @@
                     // Section6
                     $("#sectionNav li .dot .inner").removeClass("active");
                     $("#sectionNav li #dot6 .inner").addClass("active");
-                } else if (currentScroll > scroll6 && currentScroll < scroll7) {
-                    // Section7
-                    $("#sectionNav li .dot .inner").removeClass("active");
-                    $("#sectionNav li #dot7 .inner").addClass("active");
                 }
             });
             
@@ -224,7 +199,7 @@
                     scrollTop: ($("#section2").offset().top)
                 },500,"swing");
             })
-             
+            
             // Section navigation dots scrolling functionality
             $("#sectionNav li .dot").on("click", function() {
                 $("html, body").animate({
@@ -249,6 +224,7 @@
                 $("#section1 .sharpieText").fadeOut();
                 $("#sectionNav").fadeOut();
                 $("#scrollDownCaret").fadeOut();
+                
             })
             $("#section1 .iphone").on("mouseup", function() {
                 document.removeEventListener("mousemove", moveWithMouse);
