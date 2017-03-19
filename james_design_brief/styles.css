@@ -4,6 +4,14 @@ html, body {
     padding: 0px;
 }
 
+.noOpacity {
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
 .fullScreenSection {
     box-sizing: border-box;
     width: 100%;
@@ -28,7 +36,7 @@ html, body {
 
 #section1 .backgroundMask {
     position: absolute;
-    background-image: url("hero-background-mask.jpg");
+    background-image: url("hero_background_mask.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,7 +73,7 @@ html, body {
     top: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media (pointer:coarse), screen and max-width: 700px) {
     #section1 .backgroundMask {
         -webkit-clip-path: polygon(10% calc(81% - 41.3vw), 90% calc(81% - 41.3vw), 90% 79%, 10% 79%);    
     }
@@ -135,15 +143,105 @@ html, body {
     position: absolute;
     width: 46%;
     height: auto;
+    max-height: 33%;
     right: 27%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 #section3 .rightContainer {
+    position: relative;
     width: 60%;
     height: 100%;
     float: right;
+}
+
+#section3 .rightContainer .content {
+    position: absolute;
+    left: 5%;
+    width: 80%;
+    height: 100%;
+}
+
+#section3 .rightContainer .content .title {
+    position: absolute;
+    width: 100%;
+    top: 18%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 3.2vw;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+#section3 .rightContainer .content .subtitleLine {
+    position: absolute;
+    width: 64%;
+    left: 18%;
+    height: 1px;
+    background: white;
+    top: calc(18% + 6.5vw);
+}
+
+#section3 .rightContainer .content .subtitle {
+    position: absolute;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 2.2vw;
+    padding: 0 1vw 0 1vw;
+    top: calc(18% + 2.2em);
+    background: #37B3DE;
+    left: 22%;
+}
+
+#section3 .rightContainer .content .buttonContainer {
+    position: relative;
+    background-image: url("buttonNumbers.svg");
+    top: calc(18% + 9vw);
+    width: 50%;
+    height: 2.85vw;
+    left: 25%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#section3 .rightContainer .content .buttonContainer .btn {
+    position: relative;
+    margin-right: 15%;
+    float: left;
+    width: 13.75%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#section3 .rightContainer .content .buttonContainer .btn:last-child {
+    margin-right: 0;
+}
+
+#section3 .rightContainer .content .buttonContainer .circle {
+    background-image: url("buttonCircle.svg");
+    position: absolute;
+    left: -1%;
+    width: 13.75%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#section3 .rightContainer .content .text {
+    position: absolute;
+    top: calc(18% + 14vw);
+    width: 65%;
+    left: 20%;
+    height: 10vw;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.1vw;
 }
 
 #section4 {
