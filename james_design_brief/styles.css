@@ -198,7 +198,7 @@ html, body {
 
 #section3 .rightContainer .content .buttonContainer {
     position: relative;
-    background-image: url("buttonNumbers.svg");
+    background-image: url("number_buttons.png");
     top: calc(18% + 9vw);
     width: 50%;
     height: 2.85vw;
@@ -222,7 +222,7 @@ html, body {
 }
 
 #section3 .rightContainer .content .buttonContainer .circle {
-    background-image: url("buttonCircle.svg");
+    background-image: url("button_circle.svg");
     position: absolute;
     left: -1%;
     width: 13.75%;
