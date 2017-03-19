@@ -1,0 +1,63 @@
+body {
+	font-family:'Lato';
+	background-color: #313e5a;
+}
+
+#imageContent {
+	height:40%;
+	width:100%;
+	background-color:red;
+}
+
+
+#logos {
+	height:125px;
+	width:125px;	
+	border-radius:50%;
+	display:block;
+	margin: auto;
+	-webkit-transition: .2s ease-in-out; /* Safari */
+	-moz-transition: .2s ease-in-out; /* Mozilla Firefox */
+	-ms-transition: .2s ease-in-out; /* Microsoft specific */
+	-o-transition: .2s ease-in-out; /* Opera */
+	transition: .2s ease-in-out; /* general & Google Chrome */
+}
+
+#logos:hover, #logosSlack:hover {
+	-webkit-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.8), 0 5px 16px 0 rgba(0, 0, 0, 0.6);
+  	-moz-box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.8), 0 5px 16px 0 rgba(0, 0, 0, 0.6);
+  	box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.8), 0 5px 16px 0 rgba(0, 0, 0, 0.6); 
+  	border:5px #37B3DE solid;
+}
+
+#iconTitle {
+	text-align: center;
+	font-weight: bold;
+	font-size: 22px;
+	color:#37B3DE;
+}
+
+#iconText {
+	text-align: center;
+}
+
+a {
+	color:black;
+}
+
+a:hover {
+	color:#37B3DE;
+}
+
+/*#sourceList {
+	color:black;
+}
+
+#sourceList:hover {
+	color:#37B3DE;
+	cursor:pointer;
+}*/
+
+#tableSource {
+	color:white;
+}
