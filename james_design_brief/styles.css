@@ -208,7 +208,7 @@ html, body {
     background-position: center;
 }
 
-#section3 .rightContainer .content .buttonContainer .btn {
+#section3 .rightContainer .content .buttonContainer .numberButton {
     position: relative;
     margin-right: 15%;
     float: left;
@@ -217,7 +217,7 @@ html, body {
     cursor: pointer;
 }
 
-#section3 .rightContainer .content .buttonContainer .btn:last-child {
+#section3 .rightContainer .content .buttonContainer .numberButton:last-child {
     margin-right: 0;
 }
 
