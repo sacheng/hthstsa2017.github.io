@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>CTE By Room</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="CTEroom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+  <link rel="stylesheet" href="css/tsaCSS.css">
+
+  <link rel="stylesheet" type="text/css" href="fullPage.js-master/jquery.fullPage.css" />
+  <link rel="shortcut icon" type="image/png" href="pictures/CTE/CTEfav.ico"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/materialize.min.js"></script>
+
+  <script type="text/javascript">
+
+    updateSectionScrollPositions();
+      $(window).on("resize", updateSectionScrollPositions);
+      function updateSectionScrollPositions() {
+          var heightOffset = $(window).height() / 2;
+          scroll1 = heightOffset;
+          scroll2 = $("#section2").offset().top + heightOffset;
+          scroll3 = $("#section3").offset().top + heightOffset;
+          scroll4 = $("#section4").offset().top + heightOffset;
+          scroll5 = $("#section5").offset().top + heightOffset;
+          scroll6 = $("#section6").offset().top + heightOffset;
+      }
+      
+      $(window).on("scroll", function() {
+          var currentScroll = $(window).scrollTop();
+          if (currentScroll > 50) {
+              $("#scrollDownCaret").fadeOut();
+          } else {
+              $("#scrollDownCaret").fadeIn();
+          }
+          if (currentScroll < scroll1) {
+              // Section1
+              $("#sectionNav li .dot .inner").removeClass("active");
+              $("#sectionNav li #dot1 .inner").addClass("active");
+          } else if (currentScroll > scroll1 && currentScroll < scroll2) {
+              // Section2
+              $("#sectionNav li .dot .inner").removeClass("active");
+              $("#sectionNav li #dot2 .inner").addClass("active");
+          } else if (currentScroll > scroll2 && currentScroll < scroll3) {
+              // Section3
+              $("#sectionNav li .dot .inner").removeClass("active");
+              $("#sectionNav li #dot3 .inner").addClass("active");
+          } else if (currentScroll > scroll3 && currentScroll < scroll4) {
+              // Section4
+              $("#sectionNav li .dot .inner").removeClass("active");
+              $("#sectionNav li #dot4 .inner").addClass("active");
+          } else if (currentScroll > scroll4 && currentScroll < scroll5) {
+              // Section5
+              $("#sectionNav li .dot .inner").removeClass("active");
+              $("#sectionNav li #dot5 .inner").addClass("active");
+          } else if (currentScroll > scroll5 && currentScroll < scroll6) {
+              // Section6
+              $("#sectionNav li .dot .inner").removeClass("active");
+              $("#sectionNav li #dot6 .inner").addClass("active");
+          }
+      });
+
+      // Section navigation dots scrolling functionality
+      $("#sectionNav li .dot").on("click", function() {
+          $("html, body").animate({
+              scrollTop: ($("#section" + this.getAttribute("data-section-number")).offset().top)
+          },500,"swing");
+          $("#sectionNav li .dot .inner").removeClass("active");
+          $(this).children(".inner").addClass("active");
+      })
+
+  </script>
+</head>
+
+<body>
+
+      <div id="section1">
+
+          <h3>Career and Technical Education</h3>
+
+          <div class="container">
+
+          <div class="row">
+            <div class="col s3">
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front card1front">
+                        <img src="pictures/CTE/house.jpg">
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                        <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs,-energy-is-everything.jpg?itok=Z-ujUOUr">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col s3">
+
+                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                      <div class="front">
+                        <!-- front content -->
+                      </div>
+                      <div class="back">
+                        <!-- back content -->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div id="section2">
+
+
+      </div>
+
+      <div id="section3">
+
+      </div>
+
+      <div id="section4">
+
+      </div>
+
+
+      <div id="section5">
+        <div class="circle"></div>
+      </div>
+
+      <div id="section6">
+
+      </div>
+
+  <!-- Dot navigation bar on right side -->
+  <ol id="sectionNav">
+      <li>
+          <div data-section-number="1" id="dot1" class="dot">
+              <div class="inner active"></div>
+              <div class="label">Augmented Reality</div>
+          </div>
+      </li>
+      <li>
+          <div data-section-number="2" id="dot2" class="dot">
+              <div class="inner"></div>
+              <div class="label">HUDs</div>
+          </div>
+      </li>
+      <li>
+          <div data-section-number="3" id="dot3" class="dot">
+              <div class="inner"></div>
+              <div class="label">Snapchat Lenses</div>
+          </div>
+      </li>
+      <li>
+          <div data-section-number="4" id="dot4" class="dot">
+              <div class="inner"></div>
+              <div class="label">Google Glass</div>
+          </div>
+      </li>
+      <li>
+          <div data-section-number="5" id="dot5" class="dot">
+              <div class="inner"></div>
+              <div class="label">Safety Concerns</div>
+          </div>
+      </li>
+      <li>
+          <div data-section-number="6" id="dot6" class="dot">
+              <div class="inner"></div>
+              <div class="label">Future Uses</div>
+          </div>
+      </li>
+  </ol>
+
+
+  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large blue waves-effect">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="Landing Page" href="Landing_Page.htm"><i class="material-icons">http</i></a></li>
+      <li><a class="btn-floating green tooltipped" data-position="top" data-delay="50" data-tooltip="CTE" href="CTE.htm"><i class="material-icons">person_pin</i></a></li>
+      <li><a class="btn-floating yellow darken-1 tooltipped" data-position="top" data-delay="50" data-tooltip="TSA" href="TSA3.htm"><i class="material-icons">code</i></a></li>
+      <li><a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="AR" href="Prompt.htm"><i class="material-icons">games</i></a></li>
+    </ul>
+  </div>
+
+
+
+</body>
+
+</html>
