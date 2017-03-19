@@ -3,10 +3,15 @@
     <head>
         <title>Design Brief</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <link rel="stylesheet" href="../css/materialize.css">
+        <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection"/>
         <link href="styles.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="animate.min.css">
     </head>
@@ -44,10 +49,10 @@
                     <div class="subtitle animated noOpacity" id="subtitle4">Key to Success</div>
                     <div class="buttonContainer">
                         <div class="circle"></div>
-                        <div data-section-number="1" class="btn"></div>
-                        <div data-section-number="2" class="btn"></div>
-                        <div data-section-number="3" class="btn"></div>
-                        <div data-section-number="4" class="btn"></div>
+                        <div data-section-number="1" class="numberButton"></div>
+                        <div data-section-number="2" class="numberButton"></div>
+                        <div data-section-number="3" class="numberButton"></div>
+                        <div data-section-number="4" class="numberButton"></div>
                     </div>
                     <div id="text1" class="text animated">
                         Snapchat is a photo-sharing application that was first launched in September 2011. It enables users to take and send photos and short videos that automatically delete after a set amount of time. Beginning in September 2015, Snapchat incorporated augmented reality into the experience through a feature called Lense Filters.
@@ -123,6 +128,18 @@
         <div id="scrollDownCaret" class="visible">
             <img src="scroll_down_caret.png" width="30" height="17">
         </div>
+
+            <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+              <a class="btn-floating btn-large blue">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul>
+                <li><a class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="CTE" href="CTE.htm"><i class="material-icons">person_pin</i></a></li>
+                <li><a class="btn-floating green darken-1 tooltipped" data-position="top" data-delay="50" data-tooltip="TSA" href="TSA3.htm"><i class="material-icons">code</i></a></li>
+                <li><a class="btn-floating yellow tooltipped" data-position="top" data-delay="50" data-tooltip="AR" href="Prompt.htm"><i class="material-icons">games</i></a></li>
+                <li><a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="About Us" href="About_Us.htm"><i class="material-icons">http</i></a></li>
+              </ul>
+          </div>
         
         <script type="text/javascript">
             $.fn.extend({
@@ -275,7 +292,7 @@
             // Number buttons and text fading in/out
             currentSection = 1;
             var leftValues = [-1, 28.5, 58, 87.5];
-            $("#section3 .rightContainer .btn").on("click touch", function() {
+            $("#section3 .rightContainer .numberButton").on("click touch", function() {
                 var sectionNumber = this.getAttribute("data-section-number")
                 $("#section3 .rightContainer .circle").animate({
                     left: leftValues[sectionNumber - 1] + "%"
