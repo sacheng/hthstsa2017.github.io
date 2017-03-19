@@ -1,0 +1,217 @@
+body{
+  font-family: "Lato";
+}
+
+#section1,#section2,#section3,#section4,#section5,#section6{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+html, body {
+  width:100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#section2 {
+  background-image:url("pictures/CTE/reslab.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#section3 {
+  background-image:url("pictures/CTE/room170.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#section4 {
+  background-image:url("pictures/CTE/room185.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#section5 {
+  background-image:url("pictures/CTE/room210.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+#section6 {
+  background-image:url("pictures/CTE/room175.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.circle{
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  background-color:transparent;
+  border: 5px white solid;
+  left:30%
+  top:50%;
+}
+
+
+/*START FLIP CARD CSS*/
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: 100px;
+  height: 100px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+.card1front{
+  background:
+    url("pictures/CTE/house.jpg") no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.front img, .back img{
+  height:100px;
+  width:100px;
+  overflow:hidden;
+}
+
+.card{
+  width:100px;
+}
+
+.card-image{
+    background-color:#778899;
+}
+
+.front {
+  background-color:green;
+}
+
+.back {
+  background-color:blue;
+}
+/* END FLIP CARD CSS */
+
+
+/* START SIDE DOT NAVIGATION */
+#sectionNav {
+    display: block;
+    position: fixed;
+    top: calc(50% - 96px);
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sectionNav li {
+    position: relative;
+    display: block;
+}
+
+#sectionNav li .label {
+    position: absolute;
+    display: block;
+    text-align: right;
+    width: 84px;
+    top: 0px;
+    right: 0px;
+    padding-right: 25px;
+    opacity: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+#sectionNav li .dot:hover .label {
+    opacity: 1;
+}
+
+#sectionNav li .dot {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+#sectionNav li .dot .inner {
+    display: block;
+    position: relative;
+    left: 8px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0.5;
+    background: white;
+}
+
+#sectionNav li .dot:hover .inner:not(.active) {
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    top: 7px;
+    left: 7px;
+}
+
+#sectionNav li .dot .active {
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+    top: 6px;
+    left: 6px;
+}
+/*END SIDE DOT NAVIGATION*/
