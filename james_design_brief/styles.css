@@ -113,7 +113,16 @@ html, body {
 }
 
 #section2 {
-    background-color: grey;
+    background-image: url("mountain_images/mountains_background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#section2 .mountainImage {
+    position: absolute;
+    width: 100%;
+    height: auto;
 }
 
 #section3 {
@@ -254,6 +263,10 @@ html, body {
 
 #section6 {
     background-color: #5EABD4;
+}
+
+#section7 {
+    background-color: grey;
 }
 
 #scrollDownCaret {
