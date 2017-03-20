@@ -107,12 +107,12 @@ imageAnimation {  0% {
 
 @-webkit-keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: blue }
+    50% { border-color: white }
 }
 
 @-moz-keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: blue }
+    50% { border-color: white }
 }
 
 #banner_heading h3{
@@ -123,7 +123,7 @@ imageAnimation {  0% {
     width: auto; 
     white-space:nowrap;
     overflow:hidden;
-    border-right: .1em solid blue;
+    border-right: .1em solid white;
     
     -webkit-animation: typing 3s steps(37, end), /* # of steps = # of characters */
                         blink-caret 1s step-end infinite;
