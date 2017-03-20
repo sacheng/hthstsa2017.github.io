@@ -113,6 +113,7 @@ html, body {
 }
 
 #section2 {
+    overflow: hidden;
     background-image: url("mountain_images/mountains_background.png");
     background-size: cover;
     background-repeat: no-repeat;
