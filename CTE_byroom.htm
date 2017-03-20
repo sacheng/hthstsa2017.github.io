@@ -81,12 +81,16 @@
 
 
       <div id="section5">
-        <a class="modal-trigger" id="house" href="#housemodal"><div class="circle"></div></a>
-        <div class="line" id="houseline"> </div>
-        <div id="phouse">
-          In Civil Engineering and Architecture, students apply math, science, and standard engineering practices to design both residential and commercial projects and document their work using 3-D architectural design software.
+        <a class="modal-trigger circle1" id="house" href="#housemodal"></a>
+        
+          <div class="line" id="houseline"></div>
+            <div id="houselinetext">
+          <div id="phouse">
+            In Civil Engineering and Architecture, students apply math, science, and standard engineering practices to design both residential and commercial projects and document their work using 3-D architectural design software.
+          </div>
         </div>
       </div>
+
 
       <div id="section6">
 
@@ -164,7 +168,6 @@ $('#house').hover(function() {
     $('#houseline').stop(true, false).animate({
         width: enlarged ? 1 : 300,            
     }, 600);
-
     enlarged = !enlarged;
 });
 
