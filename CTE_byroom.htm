@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="CTEroom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <link rel="stylesheet" href="css/materialize.css">
@@ -24,232 +25,170 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/materialize.min.js"></script>
-
-  <script type="text/javascript">
-
-    updateSectionScrollPositions();
-      $(window).on("resize", updateSectionScrollPositions);
-      function updateSectionScrollPositions() {
-          var heightOffset = $(window).height() / 2;
-          scroll1 = heightOffset;
-          scroll2 = $("#section2").offset().top + heightOffset;
-          scroll3 = $("#section3").offset().top + heightOffset;
-          scroll4 = $("#section4").offset().top + heightOffset;
-          scroll5 = $("#section5").offset().top + heightOffset;
-          scroll6 = $("#section6").offset().top + heightOffset;
-      }
-      
-      $(window).on("scroll", function() {
-          var currentScroll = $(window).scrollTop();
-          if (currentScroll > 50) {
-              $("#scrollDownCaret").fadeOut();
-          } else {
-              $("#scrollDownCaret").fadeIn();
-          }
-          if (currentScroll < scroll1) {
-              // Section1
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot1 .inner").addClass("active");
-          } else if (currentScroll > scroll1 && currentScroll < scroll2) {
-              // Section2
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot2 .inner").addClass("active");
-          } else if (currentScroll > scroll2 && currentScroll < scroll3) {
-              // Section3
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot3 .inner").addClass("active");
-          } else if (currentScroll > scroll3 && currentScroll < scroll4) {
-              // Section4
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot4 .inner").addClass("active");
-          } else if (currentScroll > scroll4 && currentScroll < scroll5) {
-              // Section5
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot5 .inner").addClass("active");
-          } else if (currentScroll > scroll5 && currentScroll < scroll6) {
-              // Section6
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot6 .inner").addClass("active");
-          }
-      });
-
-      // Section navigation dots scrolling functionality
-      $("#sectionNav li .dot").on("click", function() {
-          $("html, body").animate({
-              scrollTop: ($("#section" + this.getAttribute("data-section-number")).offset().top)
-          },500,"swing");
-          $("#sectionNav li .dot .inner").removeClass("active");
-          $(this).children(".inner").addClass("active");
-      })
-
-  </script>
 </head>
 
 <body>
+  <div id="section1">
+    
+      <div class = "slider fullscreen">
 
-      <div id="section1">
-
-          <h3>Career and Technical Education</h3>
-
-          <div class="container">
-
-          <div class="row">
-            <div class="col s3">
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front card1front">
-                        <img src="pictures/CTE/house.jpg">
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                        <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs,-energy-is-everything.jpg?itok=Z-ujUOUr">
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
+          <ul class="slides">
+            <li>
+              <img src="pictures/Webmaster.jpg" id="lpImages">
+              <div class="caption center-align">
+                <h3 id="lpLabel">develop.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>HTHS WEBMASTER 2017</strong></h5>
+              </div>
+            </li>
+            <li>
+              <img src="pictures/CTE.jpg" id="lpImages">
+              <div class="caption left-align">
+                <h3 id="lpLabel">innovate.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>Career and Technical Education</strong></h5>
+              </div>
+            </li>
+            <li>
+              <img src="pictures/TSA.jpg" id="lpImages">
+              <div class="caption right-align">
+                <h3 id="lpLabel">learn.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>Science, Technology, Engineering, Mathematics</strong></h5>
+              </div>
+            </li>
+            <li>
+              <img src="pictures/ar.png" id="lpImages">
+              <div class="caption center-align">
+                <h3 id="lpLabel">explore.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>The Classrooms and Beyond</strong></h5>
+              </div>
+            </li>
+          </ul>
         </div>
+      
 
       </div>
       
       <div id="section2">
+        <a class="modal-trigger circle1" id="microscope" href="#microscopemodal"></a>
+        <div class="line" id="microscopeline"></div>
+        <div id="microscopelinetext">
+          <div id="pmicroscope">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
+
+        <a class="modal-trigger circle1" id="plants" href="#plantsmodal"></a>
+        <div class="line" id="plantsline"></div>
+        <div id="plantslinetext">
+          <div id="pplants">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
 
 
       </div>
 
       <div id="section3">
+        <a class="modal-trigger circle1" id="work" href="#workmodal"></a>
+        <div class="line" id="workline"></div>
+        <div id="worklinetext">
+          <div id="pwork">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
+        <a class="modal-trigger circle1" id="vex" href="#vexmodal"></a>
+        <div class="line" id="vexline"></div>
+        <div id="vexlinetext">
+          <div id="pvex">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
+        <a class="modal-trigger circle1" id="proj" href="#projmodal"></a>
+        <div class="line" id="projline"></div>
+        <div id="projlinetext">
+          <div id="pproj">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
 
       </div>
 
       <div id="section4">
+        <a class="modal-trigger circle1" id="cars" href="#carsmodal"></a>
+        <div class="line" id="carsline"></div>
+        <div id="carslinetext">
+          <div id="pcars">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
+        <a class="modal-trigger circle1" id="mockup1" href="#mockup1modal"></a>
+        <div class="line" id="mockup1line"></div>
+        <div id="mockup1linetext">
+          <div id="pmockup1">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
+        <a class="modal-trigger circle1" id="mockup2" href="#mockup1modal"></a>
+        <div class="line" id="mockup2line"></div>
+        <div id="mockup2linetext">
+          <div id="pmockup2">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
 
       </div>
 
 
       <div id="section5">
-        <div class="circle"></div>
+        <a class="modal-trigger circle1" id="house" href="#housemodal"></a>
+        <div class="line" id="houseline"></div>
+        <div id="houselinetext">
+          <div id="phouse">
+            In Civil Engineering and Architecture, students apply math, science, and standard engineering practices to design both residential and commercial projects and document their work using 3-D architectural design software.
+          </div>
+        </div>
+
+        <a class="modal-trigger circle1" id="bluebox" href="#blueboxmodal"></a>
+        <div class="line" id="blueboxline"></div>
+        <div id="blueboxlinetext">
+          <div id="pbluebox">
+            In CIM, alsdjflgjag asdfl; lalsdfjla j ;laflkasj ;fl asfj kl asdfl;j adfj a;lsd  akdjf ;lj asld;kj a;ljf a;sldk  asdj;k
+          </div>
+        </div>
+
+        <a class="modal-trigger circle1" id="bridge" href="#bridgemodal"></a>
+        <div class="line" id="bridgeline"></div>
+        <div id="bridgelinetext">
+          <div id="pbridge">
+            bridges in cea / cim / poe what bridges wverywhere
+          </div>
+        </div>
+
       </div>
 
+
       <div id="section6">
+        
+        <a class="modal-trigger circle1" id="comp" href="#compmodal"></a>
+        <div class="line" id="compline"></div>
+        <div id="complinetext">
+          <div id="pcomp">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
+        <a class="modal-trigger circle1" id="paper" href="#papermodal"></a>
+        <div class="line" id="paperline"></div>
+        <div id="paperlinetext">
+          <div id="ppaper">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
+        <a class="modal-trigger circle1" id="poster" href="#poster"></a>
+        <div class="line" id="posterline"></div>
+        <div id="posterlinetext">
+          <div id="pposter">
+            FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          </div>
+        </div>
 
       </div>
 
@@ -258,42 +197,46 @@
       <li>
           <div data-section-number="1" id="dot1" class="dot">
               <div class="inner active"></div>
-              <div class="label">Augmented Reality</div>
+              <div class="label">CTE</div>
           </div>
       </li>
       <li>
           <div data-section-number="2" id="dot2" class="dot">
               <div class="inner"></div>
-              <div class="label">HUDs</div>
+              <div class="label">room 1</div>
           </div>
       </li>
       <li>
           <div data-section-number="3" id="dot3" class="dot">
               <div class="inner"></div>
-              <div class="label">Snapchat Lenses</div>
+              <div class="label">room 2</div>
           </div>
       </li>
       <li>
           <div data-section-number="4" id="dot4" class="dot">
               <div class="inner"></div>
-              <div class="label">Google Glass</div>
+              <div class="label">room 3</div>
           </div>
       </li>
       <li>
           <div data-section-number="5" id="dot5" class="dot">
               <div class="inner"></div>
-              <div class="label">Safety Concerns</div>
+              <div class="label">room 4</div>
           </div>
       </li>
       <li>
           <div data-section-number="6" id="dot6" class="dot">
               <div class="inner"></div>
-              <div class="label">Future Uses</div>
+              <div class="label">room 5</div>
           </div>
       </li>
   </ol>
 
+<div id="scrollDownCaret" class="visible">
+  <img src="james_design_brief/scroll_down_caret.png" width="30" height="17">
+</div>
 
+<!--hamburger nav-->
   <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large blue waves-effect">
       <i class="material-icons">menu</i>
@@ -306,7 +249,306 @@
     </ul>
   </div>
 
+<!--MODALS-->
+<div id="microscopemodal" class="modal">
+  <div class="modal-content">
+    <h4>BEES?</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
 
+<div id="plantsmodal" class="modal">
+  <div class="modal-content">
+    <h4>Research</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="workmodal" class="modal">
+  <div class="modal-content">
+    <h4>IED</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="vexmodal" class="modal">
+  <div class="modal-content">
+    <h4>EDD</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="projmodal" class="modal">
+  <div class="modal-content">
+    <h4>EDD</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="carsmodal" class="modal">
+  <div class="modal-content">
+    <h4>IED</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="mockup1modal" class="modal">
+  <div class="modal-content">
+    <h4>EDD</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="housemodal" class="modal">
+  <div class="modal-content">
+    <h4>CEA</h4>
+    <p>Civil Engineering and Architecture is a high school level course that is appropriate for 10th or 11th grade students interested in careers related to civil engineering and architecture.  Other than their concurrent enrollment in college preparatory mathematics and science courses, this course assumes no previous knowledge.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="blueboxmodal" class="modal">
+  <div class="modal-content">
+    <h4>CIM</h4>
+    <p>Here, you make blue boxes.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="bridgemodal" class="modal">
+  <div class="modal-content">
+    <h4>CEA</h4>
+    <p>Bridges.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="postermodal" class="modal">
+  <div class="modal-content">
+    <h4>INSPIRATION!</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="compmodal" class="modal">
+  <div class="modal-content">
+    <h4>Hard at work at computer</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<div id="papermodal" class="modal">
+  <div class="modal-content">
+    <h4>Homework?</h4>
+    <p>FILLER TEXT: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+  </div>
+</div>
+
+<script>
+//make line bigger
+var enlargedscope = false;
+$('#microscope').hover(function() {
+    $('#microscopeline').stop(true, false).animate({
+        width: enlargedscope ? 1 : 300,            
+    }, 600);
+    enlargedscope = !enlargedscope;
+});
+var enlargedscope = false;
+$('#plants').hover(function() {
+    $('#plantsline').stop(true, false).animate({
+        height: enlargedscope ? 1 : 100,            
+    }, 600);
+    enlargedscope = !enlargedscope;
+});
+var enlargedwork = false;
+$('#work').hover(function() {
+    $('#workline').stop(true, false).animate({
+        height: enlargedwork ? 1 : 130,            
+    }, 600);
+    enlargedwork = !enlargedwork;
+});
+var enlargedvex = false;
+$('#vex').hover(function() {
+    $('#vexline').stop(true, false).animate({
+        width: enlargedvex ? 1 : 140,            
+    }, 600);
+    enlargedvex = !enlargedvex;
+});
+var enlargedproj = false;
+$('#proj').hover(function() {
+    $('#projline').stop(true, false).animate({
+        width: enlargedproj ? 1 : 170,            
+    }, 600);
+    enlargedproj = !enlargedproj;
+});
+var enlargedcar = false;
+$('#cars').hover(function() {
+    $('#carsline').stop(true, false).animate({
+        width: enlargedcar ? 1 : 300,            
+    }, 600);
+    enlargedcar = !enlargedcar;
+});
+var enlargedm1 = false;
+$('#mockup1').hover(function() {
+    $('#mockup1line').stop(true, false).animate({
+        width: enlargedm1 ? 1 : 320,            
+    }, 600);
+    enlargedm1 = !enlargedm1;
+});
+var enlargedm2 = false;
+$('#mockup2').hover(function() {
+    $('#mockup2line').stop(true, false).animate({
+        height: enlargedm2 ? 1 : 75,            
+    }, 600);
+    enlargedm2 = !enlargedm2;
+});
+var enlargedhouse = false;
+$('#house').hover(function() {
+    $('#houseline').stop(true, false).animate({
+        width: enlargedhouse ? 1 : 300,            
+    }, 600);
+    enlargedhouse = !enlargedhouse;
+});
+var enlargedbox = false;
+$('#bluebox').hover(function() {
+    $('#blueboxline').stop(true, false).animate({
+        height: enlargedbox ? 1 : 100,            
+    }, 600);
+    enlargedbox = !enlargedbox;
+});
+var enlargedbridge = false;
+$('#bridge').hover(function() {
+    $('#bridgeline').stop(true, false).animate({
+        height: enlargedbridge ? 1 : 100,            
+    }, 600);
+    enlargedbridge = !enlargedbridge;
+});
+var enlargedposter = false;
+$('#poster').hover(function() {
+    $('#posterline').stop(true, false).animate({
+        height: enlargedposter ? 1 : 100,            
+    }, 600);
+    enlargedposter = !enlargedposter;
+});
+var enlargedcomp = false;
+$('#comp').hover(function() {
+    $('#compline').stop(true, false).animate({
+        width: enlargedcomp ? 1 : 300,            
+    }, 600);
+    enlargedcomp = !enlargedcomp;
+});
+var enlargedpaper = false;
+$('#paper').hover(function() {
+    $('#paperline').stop(true, false).animate({
+        width: enlargedpaper ? 1 : 300,            
+    }, 600);
+    enlargedpaper = !enlargedpaper;
+});
+
+updateSectionScrollPositions();
+$(window).on("resize", updateSectionScrollPositions);
+function updateSectionScrollPositions() {
+    var heightOffset = $(window).height() / 2;
+    scroll1 = heightOffset;
+    scroll2 = $("#section2").offset().top + heightOffset;
+    scroll3 = $("#section3").offset().top + heightOffset;
+    scroll4 = $("#section4").offset().top + heightOffset;
+    scroll5 = $("#section5").offset().top + heightOffset;
+    scroll6 = $("#section6").offset().top + heightOffset;
+}
+
+$(window).on("scroll", function() {
+    var currentScroll = $(window).scrollTop();
+    if (currentScroll > 50) {
+        $("#scrollDownCaret").fadeOut();
+    } else {
+        $("#scrollDownCaret").fadeIn();
+    }
+    if (currentScroll < scroll1) {
+        // Section1
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot1 .inner").addClass("active");
+    } else if (currentScroll > scroll1 && currentScroll < scroll2) {
+        // Section2
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot2 .inner").addClass("active");
+    } else if (currentScroll > scroll2 && currentScroll < scroll3) {
+        // Section3
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot3 .inner").addClass("active");
+    } else if (currentScroll > scroll3 && currentScroll < scroll4) {
+        // Section4
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot4 .inner").addClass("active");
+    } else if (currentScroll > scroll4 && currentScroll < scroll5) {
+        // Section5
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot5 .inner").addClass("active");
+    } else if (currentScroll > scroll5 && currentScroll < scroll6) {
+        // Section6
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot6 .inner").addClass("active");
+    }
+});
+
+// Section navigation dots scrolling functionality
+$("#sectionNav li .dot").on("click", function() {
+    $("html, body").animate({
+        scrollTop: ($("#section" + this.getAttribute("data-section-number")).offset().top)
+    },500,"swing");
+    $("#sectionNav li .dot .inner").removeClass("active");
+    $(this).children(".inner").addClass("active");
+});
+
+$(document).ready(function(){
+    $('.slider').slider({
+      indicators:false,
+      transition:700,
+    });
+  });
+
+//modals
+$(document).ready(function(){
+    $('.modal-trigger').leanModal();
+  });
+
+</script>
 
 </body>
 
