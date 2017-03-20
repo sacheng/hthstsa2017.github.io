@@ -264,15 +264,30 @@ html, body {
 }
 
 #section5 {
-    background-color: #267FAA;
+    background-color: #313E5A;
+}
+
+#section5 .centerCircle {
+    position: relative;
+    width: 20%;
+    height: 20vw;
+    border-radius: 50%;
+    left: 40%;
+    top: calc(50% - 10vw);
+    background: #D8D8D8;
+}
+
+#section5 .centerCircle p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.8vw;
+    color: #313E5A;
+    width: 100%;
+    text-align: center;
 }
 
 #section6 {
     background-color: #5EABD4;
-}
-
-#section7 {
-    background-color: grey;
 }
 
 #scrollDownCaret {

@@ -107,10 +107,9 @@
             </div>
         </div>
         <div id="section5" class="fullScreenSection">
+            <div class="centerCircle valign-wrapper"><p>Other Uses</p></div>
         </div>
         <div id="section6" class="fullScreenSection">
-        </div>
-        <div id="section7" class="fullScreenSection">
         </div>
         
         <!-- Dot navigation bar on right side -->
@@ -142,19 +141,13 @@
             <li>
                 <div data-section-number="5" id="dot5" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Current Uses</div>
+                    <div class="label">Other Uses</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="6" id="dot6" class="dot">
                     <div class="inner"></div>
                     <div class="label">Safety Concerns</div>
-                </div>
-            </li>
-            <li>
-                <div data-section-number="7" id="dot7" class="dot">
-                    <div class="inner"></div>
-                    <div class="label">Future Uses</div>
                 </div>
             </li>
         </ol>
@@ -203,7 +196,6 @@
                 scroll4 = $("#section4").offset().top + heightOffset;
                 scroll5 = $("#section5").offset().top + heightOffset;
                 scroll6 = $("#section6").offset().top + heightOffset;
-                scroll7 = $("#section7").offset().top + heightOffset;
             }
             
             $(window).on("scroll", function() {
@@ -251,10 +243,6 @@
                     // Section6
                     $("#sectionNav li .dot .inner").removeClass("active");
                     $("#sectionNav li #dot6 .inner").addClass("active");
-                } else if (currentScroll > scroll6 && currentScroll < scroll7) {
-                    // Section7
-                    $("#sectionNav li .dot .inner").removeClass("active");
-                    $("#sectionNav li #dot7 .inner").addClass("active");
                 }
             });
             
