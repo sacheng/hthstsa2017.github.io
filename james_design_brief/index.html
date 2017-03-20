@@ -45,10 +45,10 @@
                 <div class="content">
                     <span class="title">Snapchat Lense Filters</span>
                     <div class="subtitleLine"></div>
-                    <div class="subtitle animated" id="subtitle1">Augmented Reality?</div>
-                    <div class="subtitle animated noOpacity" id="subtitle2">More Than Just A Picture</div>
-                    <div class="subtitle animated noOpacity" id="subtitle3">Adding the Effect</div>
-                    <div class="subtitle animated noOpacity" id="subtitle4">Key to Success</div>
+                    <div class="subtitle animated" id="snapchatSubtitle1">Augmented Reality?</div>
+                    <div class="subtitle animated noOpacity" id="snapchatSubtitle2">More Than Just A Picture</div>
+                    <div class="subtitle animated noOpacity" id="snapchatSubtitle3">Adding the Effect</div>
+                    <div class="subtitle animated noOpacity" id="snapchatSubtitle4">Key to Success</div>
                     <div class="buttonContainer">
                         <div class="circle"></div>
                         <div data-section-number="1" class="numberButton"></div>
@@ -56,22 +56,55 @@
                         <div data-section-number="3" class="numberButton"></div>
                         <div data-section-number="4" class="numberButton"></div>
                     </div>
-                    <div id="text1" class="text animated">
+                    <div id="snapchatText1" class="text animated">
                         Snapchat is a photo-sharing application that was first launched in September 2011. It enables users to take and send photos and short videos that automatically delete after a set amount of time. Beginning in September 2015, Snapchat incorporated augmented reality into the experience through a feature called Lense Filters.
                     </div>
-                    <div id="text2" class="text animated hidden">
+                    <div id="snapchatText2" class="text animated hidden">
                         Why use Snapchat instead of taking a picture with your phone's generic camera app and sending it via text? Snapchat Lense Filters add real-time special effects to images and have rapidly grown in popularity since their addition. Specific examples include the illusion of the user living under the sea, possessing kitchy anime eyes, crying or drooling, and having a dog's rolling tongue once the user opens his or her mouth.
                     </div>
-                    <div id="text3" class="text animated hidden">
+                    <div id="snapchatText3" class="text animated hidden">
                         Snapchat's unique face-tracking algorithm is the sole reason to their advanced AR attributes. In order to properly use Snapchat Lense Filters, the user must first point his or her face directly towards the camera and hold his or her finger down on the screen to trigger the filters. At that point, the app traces an intricate outline of the user's face in order to superimpose a variety of unique filters, which the user can then select from.
                     </div>
-                    <div id="text4" class="text animated hidden">
+                    <div id="snapchatText4" class="text animated hidden">
                         These Lense Filters are just one of the many reasons why Snapchat is constantly evolving and growing in popularity among the masses. In addition to geotags and on-demand filters (i.e. current time and temperature), since these lenses are constantly being updated with brand-new and creative options, users incessantly flock to the app to see all the ways they can transform their faces.
                     </div>
                 </div>
             </div>
         </div>
         <div id="section4" class="fullScreenSection">
+            <div class="leftContainer">
+                <img src="iphone_vector_vertical.svg" class="iphone" draggable="false">
+                <img src="face_mesh.svg" class="faceMesh" draggable="false">
+            </div>
+            <div class="rightContainer">
+                <div class="content">
+                    <span class="title">Google Glass</span>
+                    <div class="subtitleLine"></div>
+                    <div class="subtitle animated" id="googleSubtitle1">Heading 1</div>
+                    <div class="subtitle animated noOpacity" id="googleSubtitle2">Heading 2</div>
+                    <div class="subtitle animated noOpacity" id="googleSubtitle3">Heading 3</div>
+                    <div class="subtitle animated noOpacity" id="googleSubtitle4">Heading 4</div>
+                    <div class="buttonContainer">
+                        <div class="circle"></div>
+                        <div data-section-number="1" class="numberButton"></div>
+                        <div data-section-number="2" class="numberButton"></div>
+                        <div data-section-number="3" class="numberButton"></div>
+                        <div data-section-number="4" class="numberButton"></div>
+                    </div>
+                    <div id="googleText1" class="text animated">
+                        Snapchat is a photo-sharing application that was first launched in September 2011. It enables users to take and send photos and short videos that automatically delete after a set amount of time. Beginning in September 2015, Snapchat incorporated augmented reality into the experience through a feature called Lense Filters.
+                    </div>
+                    <div id="googleText2" class="text animated hidden">
+                        Why use Snapchat instead of taking a picture with your phone's generic camera app and sending it via text? Snapchat Lense Filters add real-time special effects to images and have rapidly grown in popularity since their addition. Specific examples include the illusion of the user living under the sea, possessing kitchy anime eyes, crying or drooling, and having a dog's rolling tongue once the user opens his or her mouth.
+                    </div>
+                    <div id="googleText3" class="text animated hidden">
+                        Snapchat's unique face-tracking algorithm is the sole reason to their advanced AR attributes. In order to properly use Snapchat Lense Filters, the user must first point his or her face directly towards the camera and hold his or her finger down on the screen to trigger the filters. At that point, the app traces an intricate outline of the user's face in order to superimpose a variety of unique filters, which the user can then select from.
+                    </div>
+                    <div id="googleText4" class="text animated hidden">
+                        These Lense Filters are just one of the many reasons why Snapchat is constantly evolving and growing in popularity among the masses. In addition to geotags and on-demand filters (i.e. current time and temperature), since these lenses are constantly being updated with brand-new and creative options, users incessantly flock to the app to see all the ways they can transform their faces.
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="section5" class="fullScreenSection">
         </div>
@@ -296,28 +329,51 @@
                 }
             }
             
-            // Number buttons and text fading in/out
-            currentSection = 1;
+            // Snapchat number buttons and text fading in/out
+            currentSnapchatSection = 1;
             var leftValues = [-1, 28.5, 58, 87.5];
             $("#section3 .rightContainer .numberButton").on("click touch", function() {
                 var sectionNumber = this.getAttribute("data-section-number")
                 $("#section3 .rightContainer .circle").animate({
                     left: leftValues[sectionNumber - 1] + "%"
                 },400,"swing");
-                if (sectionNumber - currentSection > 0) {
-                    $("#subtitle" + currentSection).animateCss("fadeOutLeft");
-                    $("#subtitle" + currentSection).addClass("noOpacity");
-                    $("#subtitle" + sectionNumber).animateCss("fadeInRight");
-                    $("#text" + currentSection).fadeOut();
-                    $("#text" + sectionNumber).fadeIn();
-                } else if (sectionNumber - currentSection < 0) {
-                    $("#subtitle" + currentSection).animateCss("fadeOutRight");
-                    $("#subtitle" + currentSection).addClass("noOpacity");
-                    $("#subtitle" + sectionNumber).animateCss("fadeInLeft");
-                    $("#text" + currentSection).fadeOut();
-                    $("#text" + sectionNumber).fadeIn();
+                if (sectionNumber - currentSnapchatSection > 0) {
+                    $("#snapchatSubtitle" + currentSnapchatSection).animateCss("fadeOutLeft");
+                    $("#snapchatSubtitle" + currentSnapchatSection).addClass("noOpacity");
+                    $("#snapchatSubtitle" + sectionNumber).animateCss("fadeInRight");
+                    $("#snapchatText" + currentSnapchatSection).fadeOut();
+                    $("#snapchatText" + sectionNumber).fadeIn();
+                } else if (sectionNumber - currentSnapchatSection < 0) {
+                    $("#snapchatSubtitle" + currentSnapchatSection).animateCss("fadeOutRight");
+                    $("#snapchatSubtitle" + currentSnapchatSection).addClass("noOpacity");
+                    $("#snapchatSubtitle" + sectionNumber).animateCss("fadeInLeft");
+                    $("#snapchatText" + currentSnapchatSection).fadeOut();
+                    $("#snapchatText" + sectionNumber).fadeIn();
                 }
-                currentSection = sectionNumber;
+                currentSnapchatSection = sectionNumber;
+            });
+            
+            // Google number buttons and text fading in/out
+            currentGoogleSection = 1;
+            $("#section4 .rightContainer .numberButton").on("click touch", function() {
+                var sectionNumber = this.getAttribute("data-section-number")
+                $("#section4 .rightContainer .circle").animate({
+                    left: leftValues[sectionNumber - 1] + "%"
+                },400,"swing");
+                if (sectionNumber - currentGoogleSection > 0) {
+                    $("#googleSubtitle" + currentGoogleSection).animateCss("fadeOutLeft");
+                    $("#googleSubtitle" + currentGoogleSection).addClass("noOpacity");
+                    $("#googleSubtitle" + sectionNumber).animateCss("fadeInRight");
+                    $("#googleText" + currentGoogleSection).fadeOut();
+                    $("#googleText" + sectionNumber).fadeIn();
+                } else if (sectionNumber - currentGoogleSection < 0) {
+                    $("#googleSubtitle" + currentGoogleSection).animateCss("fadeOutRight");
+                    $("#googleSubtitle" + currentGoogleSection).addClass("noOpacity");
+                    $("#googleSubtitle" + sectionNumber).animateCss("fadeInLeft");
+                    $("#googleText" + currentGoogleSection).fadeOut();
+                    $("#googleText" + sectionNumber).fadeIn();
+                }
+                currentGoogleSection = sectionNumber;
             });
         </script>
     </body>
