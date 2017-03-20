@@ -10,10 +10,17 @@ body{
   /*overflow-x:scroll;*/
 }
 
-/*take out for fullscreen slider?*/
+.modal-close:hover{
+  background-color:#C9D6FA;
+}
 
-#section1 img{
-  background-size:cover;
+.modal-close{
+  /* CSS transitions */
+  -webkit-transition: .5s ease-in-out; /* Safari */
+  -moz-transition: .5s ease-in-out; /* Mozilla Firefox */
+  -ms-transition: .5s ease-in-out; /* Microsoft specific */
+  -o-transition: .5s ease-in-out; /* Opera */
+  transition: .5s ease-in-out; /* general & Google Chrome */
 }
 
 #section1, #section2,#section3,#section4,#section5,#section6{
@@ -67,7 +74,7 @@ a{
 .circle1{
   border-radius:50%;
   background-color:transparent;
-  border: 3px white solid;
+  border: 3px #e8f3fc solid;
 
   /* CSS transitions */
   -webkit-transition: .5s ease-in-out; /* Safari */
@@ -75,6 +82,10 @@ a{
   -ms-transition: .5s ease-in-out; /* Microsoft specific */
   -o-transition: .5s ease-in-out; /* Opera */
   transition: .5s ease-in-out; /* general & Google Chrome */
+}
+
+#microscopeline, #plantsline, #carsline, #mockup1line, #mockup2line, #posterline, #compline, #paperline, #houseline, #blueboxline, #bridgeline, #workline, #vexline, #projline{
+  background-color:#e8f3fc;
 }
 
 #house:hover, #bluebox:hover, #bridge:hover, #microscope:hover, #plants:hover, #plantsline, #cars:hover, #mockup1:hover, #mockup2:hover, #poster:hover, #comp:hover, #paper:hover, #work:hover, #vex:hover, #proj:hover{
@@ -94,7 +105,7 @@ a{
   bottom:3px;
   font-family:"Open Sans";
   text-align:justify;
-  background-color:rgba(0,0,0,.7);
+  background-color:rgba(33,41,92,.7);
   font-weight:bold;
   color:white;
   padding-left:5px;
@@ -122,7 +133,6 @@ a{
 #plantsline{
   width:2px;
   height:1px;
-  background-color:white;
   position:absolute;
   bottom:67.8%;
   left:30%;
@@ -148,7 +158,6 @@ a{
 #microscopeline{
   width:1px;
   height:2px;
-  background-color:white;
   position:absolute;
   top:60%;
   right:20.3%;
@@ -174,7 +183,6 @@ a{
 #workline{
   width:2px;
   height:1px;
-  background-color:white;
   position:absolute;
   bottom:59.8%;
   left:46%;
@@ -200,7 +208,6 @@ a{
 #vexline{
   width:1px;
   height:2px;
-  background-color:white;
   position:absolute;
   top:70%;
   left:36.9%;
@@ -226,7 +233,6 @@ a{
 #projline{
   width:1px;
   height:2px;
-  background-color:white;
   position:absolute;
   top:36.5%;
   right:10.1%;
@@ -252,7 +258,6 @@ a{
 #carsline{
   width:1px;
   height:2px;
-  background-color:white;
   position:relative;
   top:53%;
   left:76.8%;
@@ -278,7 +283,6 @@ a{
 #mockup1line{
   width:1px;
   height:2px;
-  background-color:white;
   position:relative;
   top:2%;
   left:22.4%;
@@ -304,7 +308,6 @@ a{
 #mockup2line{
   width:2px;
   height:1px;
-  background-color:white;
   position:absolute;
   bottom:42%;
   left:33%;
@@ -330,7 +333,6 @@ a{
 #houseline{
   width:1px;
   height:2px;
-  background-color:white;
   position:relative;
   top:51%;
   left:44.8%;
@@ -356,7 +358,6 @@ a{
 #blueboxline{
   width:2px;
   height:1px;
-  background-color:white;
   position:relative;
   top:26.8%;
   left:25.5%;
@@ -382,7 +383,6 @@ a{
 #bridgeline{
   width:2px;
   height:1px;
-  background-color:white;
   position:absolute;
   bottom:65.5%;
   left:65%;
@@ -408,7 +408,6 @@ a{
 #posterline{
   width:2px;
   height:1px;
-  background-color:white;
   position:relative;
   top:-24%;
   left:70.5%;
@@ -434,7 +433,6 @@ a{
 #compline{
   width:1px;
   height:2px;
-  background-color:white;
   position:relative;
   top:29%;
   left:27.3%;
@@ -460,7 +458,6 @@ a{
 #paperline{
   width:1px;
   height:2px;
-  background-color:white;
   position:relative;
   top:55%;
   left:36%;
