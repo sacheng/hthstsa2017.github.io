@@ -44,10 +44,10 @@
                     <div class="subtitle animated noOpacity" id="subtitle4">Key to Success</div>
                     <div class="buttonContainer">
                         <div class="circle"></div>
-                        <div data-section-number="1" class="btn"></div>
-                        <div data-section-number="2" class="btn"></div>
-                        <div data-section-number="3" class="btn"></div>
-                        <div data-section-number="4" class="btn"></div>
+                        <div data-section-number="1" class="numberButton"></div>
+                        <div data-section-number="2" class="numberButton"></div>
+                        <div data-section-number="3" class="numberButton"></div>
+                        <div data-section-number="4" class="numberButton"></div>
                     </div>
                     <div id="text1" class="text animated">
                         Snapchat is a photo-sharing application that was first launched in September 2011. It enables users to take and send photos and short videos that automatically delete after a set amount of time. Beginning in September 2015, Snapchat incorporated augmented reality into the experience through a feature called Lense Filters.
@@ -145,7 +145,6 @@
             $(window).on("resize", updateSectionScrollPositions);
             function updateSectionScrollPositions() {
                 var heightOffset = $(window).height() / 2;
-                sectionHeight = $("#section2").offset().top;
                 scroll1 = heightOffset;
                 scroll2 = $("#section2").offset().top + heightOffset;
                 scroll3 = $("#section3").offset().top + heightOffset;
@@ -167,8 +166,12 @@
                 
                 // Mountains
                 if (currentScroll > 0 && currentScroll < $("#section3").offset().top) {
-                    $("#mtn1").css("top", 0.2*currentScroll + sectionHeight + "px");
-                    $("#mtn2").css("top", 0.3*currentScroll + sectionHeight + "px");
+                    $("#mtn1").css("top", 0.2*currentScroll + "px");
+                    $("#mtn2").css("top", 0.3*currentScroll + "px");
+                    $("#mtn3").css("top", 0.4*currentScroll + "px");
+                    $("#mtn4").css("top", 0.5*currentScroll + "px");
+                    $("#mtn5").css("top", 0.6*currentScroll + "px");
+                    $("#mtn6").css("top", 0.7*currentScroll + "px");
                 }
                 
                 // Navigation dots
@@ -277,7 +280,7 @@
             // Number buttons and text fading in/out
             currentSection = 1;
             var leftValues = [-1, 28.5, 58, 87.5];
-            $("#section3 .rightContainer .btn").on("click touch", function() {
+            $("#section3 .rightContainer .numberButton").on("click touch", function() {
                 var sectionNumber = this.getAttribute("data-section-number")
                 $("#section3 .rightContainer .circle").animate({
                     left: leftValues[sectionNumber - 1] + "%"
