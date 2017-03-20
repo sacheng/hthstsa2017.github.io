@@ -73,7 +73,7 @@ html, body {
     top: 10px;
 }
 
-@media (pointer:coarse), screen and max-width: 700px) {
+@media (pointer:coarse), screen and (max-width: 700px) {
     #section1 .backgroundMask {
         -webkit-clip-path: polygon(10% calc(81% - 41.3vw), 90% calc(81% - 41.3vw), 90% 79%, 10% 79%);    
     }
@@ -114,6 +114,7 @@ html, body {
 
 #section2 {
     overflow: hidden;
+    position: relative;
     background-image: url("mountain_images/mountains_background.png");
     background-size: cover;
     background-repeat: no-repeat;
