@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="CTEroom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <link rel="stylesheet" href="css/materialize.css">
@@ -25,209 +26,43 @@
   <script src="js/materialize.js"></script>
   <script src="js/materialize.min.js"></script>
 
-  <script type="text/javascript">
-
-    updateSectionScrollPositions();
-      $(window).on("resize", updateSectionScrollPositions);
-      function updateSectionScrollPositions() {
-          var heightOffset = $(window).height() / 2;
-          scroll1 = heightOffset;
-          scroll2 = $("#section2").offset().top + heightOffset;
-          scroll3 = $("#section3").offset().top + heightOffset;
-          scroll4 = $("#section4").offset().top + heightOffset;
-          scroll5 = $("#section5").offset().top + heightOffset;
-          scroll6 = $("#section6").offset().top + heightOffset;
-      }
-      
-      $(window).on("scroll", function() {
-          var currentScroll = $(window).scrollTop();
-          if (currentScroll > 50) {
-              $("#scrollDownCaret").fadeOut();
-          } else {
-              $("#scrollDownCaret").fadeIn();
-          }
-          if (currentScroll < scroll1) {
-              // Section1
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot1 .inner").addClass("active");
-          } else if (currentScroll > scroll1 && currentScroll < scroll2) {
-              // Section2
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot2 .inner").addClass("active");
-          } else if (currentScroll > scroll2 && currentScroll < scroll3) {
-              // Section3
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot3 .inner").addClass("active");
-          } else if (currentScroll > scroll3 && currentScroll < scroll4) {
-              // Section4
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot4 .inner").addClass("active");
-          } else if (currentScroll > scroll4 && currentScroll < scroll5) {
-              // Section5
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot5 .inner").addClass("active");
-          } else if (currentScroll > scroll5 && currentScroll < scroll6) {
-              // Section6
-              $("#sectionNav li .dot .inner").removeClass("active");
-              $("#sectionNav li #dot6 .inner").addClass("active");
-          }
-      });
-
-      // Section navigation dots scrolling functionality
-      $("#sectionNav li .dot").on("click", function() {
-          $("html, body").animate({
-              scrollTop: ($("#section" + this.getAttribute("data-section-number")).offset().top)
-          },500,"swing");
-          $("#sectionNav li .dot .inner").removeClass("active");
-          $(this).children(".inner").addClass("active");
-      })
-
-  </script>
+  <script src="cte.js"></script>
 </head>
 
 <body>
 
-      <div id="section1">
+      <div class = "slider fullscreen" id="section1">
 
-          <h3>Career and Technical Education</h3>
-
-          <div class="container">
-
-          <div class="row">
-            <div class="col s3">
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front card1front">
-                        <img src="pictures/CTE/house.jpg">
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                        <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs,-energy-is-everything.jpg?itok=Z-ujUOUr">
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-
-            <div class="col s3">
-
-                  <div class="flip-container tableColumn" ontouchstart="this.classList.toggle('hover');">
-                    <div class="flipper">
-                      <div class="front">
-                        <!-- front content -->
-                      </div>
-                      <div class="back">
-                        <!-- back content -->
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-        </div>
+          <ul class="slides">
+            <li>
+              <img src="pictures/Webmaster.jpg" id="lpImages"> <!-- random image -->
+              <div class="caption center-align">
+                <h3 id="lpLabel">develop.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>HTHS WEBMASTER 2017</strong></h5>
+              </div>
+            </li>
+            <li>
+              <img src="pictures/CTE.jpg" id="lpImages"> <!-- random image -->
+              <div class="caption left-align">
+                <h3 id="lpLabel">innovate.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>Career and Technical Education</strong></h5>
+              </div>
+            </li>
+            <li>
+              <img src="pictures/TSA.jpg" id="lpImages"> <!-- random image -->
+              <div class="caption right-align">
+                <h3 id="lpLabel">compete.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>Technology Student Association</strong></h5>
+              </div>
+            </li>
+            <li>
+              <img src="pictures/ar.png" id="lpImages"> <!-- random image -->
+              <div class="caption center-align">
+                <h3 id="lpLabel">discover.</h3>
+                <h5 class="light grey-text text-lighten-3"><strong>Augmented Reality</strong></h5>
+              </div>
+            </li>
+          </ul>
 
       </div>
       
@@ -246,7 +81,11 @@
 
 
       <div id="section5">
-        <div class="circle"></div>
+        <a class="modal-trigger" id="house" href="#housemodal"><div class="circle"></div></a>
+        <div class="line" id="houseline"> </div>
+        <div id="phouse">
+          In Civil Engineering and Architecture, students apply math, science, and standard engineering practices to design both residential and commercial projects and document their work using 3-D architectural design software.
+        </div>
       </div>
 
       <div id="section6">
@@ -258,42 +97,42 @@
       <li>
           <div data-section-number="1" id="dot1" class="dot">
               <div class="inner active"></div>
-              <div class="label">Augmented Reality</div>
+              <div class="label">CTE</div>
           </div>
       </li>
       <li>
           <div data-section-number="2" id="dot2" class="dot">
               <div class="inner"></div>
-              <div class="label">HUDs</div>
+              <div class="label">room 1</div>
           </div>
       </li>
       <li>
           <div data-section-number="3" id="dot3" class="dot">
               <div class="inner"></div>
-              <div class="label">Snapchat Lenses</div>
+              <div class="label">room 2</div>
           </div>
       </li>
       <li>
           <div data-section-number="4" id="dot4" class="dot">
               <div class="inner"></div>
-              <div class="label">Google Glass</div>
+              <div class="label">room 3</div>
           </div>
       </li>
       <li>
           <div data-section-number="5" id="dot5" class="dot">
               <div class="inner"></div>
-              <div class="label">Safety Concerns</div>
+              <div class="label">room 4</div>
           </div>
       </li>
       <li>
           <div data-section-number="6" id="dot6" class="dot">
               <div class="inner"></div>
-              <div class="label">Future Uses</div>
+              <div class="label">room 5</div>
           </div>
       </li>
   </ol>
 
-
+<!--hamburger nav-->
   <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large blue waves-effect">
       <i class="material-icons">menu</i>
@@ -306,7 +145,95 @@
     </ul>
   </div>
 
+<!--MODALS-->
+<div id="housemodal" class="modal">
+  <div class="modal-content">
+    <h4>CEA</h4>
+    <p>Civil Engineering and Architecture is a high school level course that is appropriate for 10th or 11th grade students interested in careers related to civil engineering and architecture.  Other than their concurrent enrollment in college preparatory mathematics and science courses, this course assumes no previous knowledge.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
 
+
+<script>
+//make line bigger
+var enlarged = false;
+$('#house').hover(function() {
+    $('#houseline').stop(true, false).animate({
+        width: enlarged ? 1 : 300,            
+    }, 600);
+
+    enlarged = !enlarged;
+});
+
+updateSectionScrollPositions();
+$(window).on("resize", updateSectionScrollPositions);
+function updateSectionScrollPositions() {
+    var heightOffset = $(window).height() / 2;
+    scroll1 = heightOffset;
+    scroll2 = $("#section2").offset().top + heightOffset;
+    scroll3 = $("#section3").offset().top + heightOffset;
+    scroll4 = $("#section4").offset().top + heightOffset;
+    scroll5 = $("#section5").offset().top + heightOffset;
+    scroll6 = $("#section6").offset().top + heightOffset;
+}
+
+$(window).on("scroll", function() {
+    var currentScroll = $(window).scrollTop();
+    if (currentScroll > 50) {
+        $("#scrollDownCaret").fadeOut();
+    } else {
+        $("#scrollDownCaret").fadeIn();
+    }
+    if (currentScroll < scroll1) {
+        // Section1
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot1 .inner").addClass("active");
+    } else if (currentScroll > scroll1 && currentScroll < scroll2) {
+        // Section2
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot2 .inner").addClass("active");
+    } else if (currentScroll > scroll2 && currentScroll < scroll3) {
+        // Section3
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot3 .inner").addClass("active");
+    } else if (currentScroll > scroll3 && currentScroll < scroll4) {
+        // Section4
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot4 .inner").addClass("active");
+    } else if (currentScroll > scroll4 && currentScroll < scroll5) {
+        // Section5
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot5 .inner").addClass("active");
+    } else if (currentScroll > scroll5 && currentScroll < scroll6) {
+        // Section6
+        $("#sectionNav li .dot .inner").removeClass("active");
+        $("#sectionNav li #dot6 .inner").addClass("active");
+    }
+});
+
+// Section navigation dots scrolling functionality
+$("#sectionNav li .dot").on("click", function() {
+    $("html, body").animate({
+        scrollTop: ($("#section" + this.getAttribute("data-section-number")).offset().top)
+    },500,"swing");
+    $("#sectionNav li .dot .inner").removeClass("active");
+    $(this).children(".inner").addClass("active");
+});
+
+$(document).ready(function(){
+    $('.slider').slider();
+  });
+
+//modals
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+</script>
 
 </body>
 

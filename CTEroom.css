@@ -1,5 +1,6 @@
 body{
   font-family: "Lato";
+  /*overflow-x:scroll;*/
 }
 
 #section1,#section2,#section3,#section4,#section5,#section6{
@@ -53,14 +54,66 @@ html, body {
 
 .circle{
   border-radius:50%;
-  width:100px;
-  height:100px;
+  width:7%;
+  height:7vw;
   background-color:transparent;
-  border: 5px white solid;
-  left:30%
-  top:50%;
+  border: 3px white solid;
+
+  /* CSS transitions */
+  -webkit-transition: .5s ease-in-out; /* Safari */
+  -moz-transition: .5s ease-in-out; /* Mozilla Firefox */
+  -ms-transition: .5s ease-in-out; /* Microsoft specific */
+  -o-transition: .5s ease-in-out; /* Opera */
+  transition: .5s ease-in-out; /* general & Google Chrome */
 }
 
+#houseline{
+  width:1px;
+  height:2px;
+  background-color:white;
+  position:relative;
+  top:51%;
+  left:44.8%;
+}
+
+#house{
+  position:relative;
+  top:56%;
+  left:38%;
+}
+
+
+#phouse{
+  font-size:10pt;
+  width:270px;
+  position:relative;
+  left:46%; 
+  top:20%;
+  font-family:"Open Sans";
+  text-align:justify;
+  background-color:rgba(0,0,0,.7);
+  font-weight:bold;
+  color:white;
+  padding-left:5px;
+  padding-right:5px;
+  opacity: 0;
+
+  -o-transition: opacity .7s ease-in-out;
+  -ms-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -webkit-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+}
+
+#house:hover{
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.5), 0 4px 15px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.5), 0 4px 15px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.5), 0 4px 15px 0 rgba(0, 0, 0, 0.4); 
+}
+
+#house:hover~#phouse{
+  opacity:100;
+}
 
 /*START FLIP CARD CSS*/
 /* entire container, keeps perspective */
