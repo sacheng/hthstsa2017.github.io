@@ -111,6 +111,14 @@ a{
 }
 
 /*PLANTS*/
+#plants{
+  position:relative;
+  top:10%;
+  left:27%;
+  width:6%;
+  height:6vw;
+}
+
 #plantsline{
   width:2px;
   height:1px;
@@ -118,14 +126,6 @@ a{
   position:absolute;
   bottom:67.8%;
   left:30%;
-}
-
-#plants{
-  position:relative;
-  top:10%;
-  left:27%;
-  width:6%;
-  height:6vw;
 }
 
 #plantslinetext{
@@ -137,6 +137,14 @@ a{
 }
 
 /*MICROSCOPE*/
+#microscope{
+  position:relative;
+  top:47%;
+  left:79.5%;
+  width:11%;
+  height:11vw;
+}
+
 #microscopeline{
   width:1px;
   height:2px;
@@ -146,23 +154,23 @@ a{
   right:20.3%;
 }
 
-#microscope{
-  position:relative;
-  top:47%;
-  left:79.5%;
-  width:11%;
-  height:11vw;
-}
-
 #microscopelinetext{
   background-color:transparent;
   position:relative;
-  top:43%;
-  left:58%;
+  top:37%;
+  left:64.7%;
   width:300px;
 }
 
 /*WORKSPACE*/
+#work{
+  position:relative;
+  top:40%;
+  left:43%;
+  width:6%;
+  height:6vw;
+}
+
 #workline{
   width:2px;
   height:1px;
@@ -170,14 +178,6 @@ a{
   position:absolute;
   bottom:59.8%;
   left:46%;
-}
-
-#work{
-  position:relative;
-  top:40%;
-  left:43%;
-  width:6%;
-  height:6vw;
 }
 
 #worklinetext{
@@ -189,6 +189,14 @@ a{
 }
 
 /*VEX*/
+#vex{
+  position:relative;
+  top:47%;
+  left:27%;
+  width:10%;
+  height:10vw;
+}
+
 #vexline{
   width:1px;
   height:2px;
@@ -196,14 +204,6 @@ a{
   position:absolute;
   top:70%;
   left:36.9%;
-}
-
-#vex{
-  position:relative;
-  top:47%;
-  left:27%;
-  width:10%;
-  height:10vw;
 }
 
 #vexlinetext{
@@ -215,6 +215,14 @@ a{
 }
 
 /*POE PROJECT*/
+#proj{
+  position:relative;
+  top:0%;
+  left:89.8%;
+  width:4%;
+  height:4vw;
+}
+
 #projline{
   width:1px;
   height:2px;
@@ -222,14 +230,6 @@ a{
   position:absolute;
   top:36.5%;
   right:10.1%;
-}
-
-#proj{
-  position:relative;
-  top:0%;
-  left:89.8%;
-  width:4%;
-  height:4vw;
 }
 
 #projlinetext{
@@ -241,6 +241,14 @@ a{
 }
 
 /*CARS*/
+#cars{
+  position:relative;
+  top:60%;
+  left:69%;
+  width:8%;
+  height:8vw;
+}
+
 #carsline{
   width:1px;
   height:2px;
@@ -248,14 +256,6 @@ a{
   position:relative;
   top:53%;
   left:76.8%;
-}
-
-#cars{
-  position:relative;
-  top:60%;
-  left:69%;
-  width:8%;
-  height:8vw;
 }
 
 #carslinetext{
@@ -267,6 +267,14 @@ a{
 }
 
 /*MOCKUP 1*/
+#mockup1{
+  position:relative;
+  top:4%;
+  left:18%;
+  width:5%;
+  height:5vw;
+}
+
 #mockup1line{
   width:1px;
   height:2px;
@@ -274,14 +282,6 @@ a{
   position:relative;
   top:2%;
   left:22.4%;
-}
-
-#mockup1{
-  position:relative;
-  top:4%;
-  left:18%;
-  width:5%;
-  height:5vw;
 }
 
 #mockup1linetext{
@@ -293,6 +293,14 @@ a{
 }
 
 /*MOCKUP 2*/
+#mockup2{
+  position:relative;
+  top:30%;
+  left:20%;
+  width:20%;
+  height:20vw;
+}
+
 #mockup2line{
   width:2px;
   height:1px;
@@ -300,14 +308,6 @@ a{
   position:absolute;
   bottom:42%;
   left:33%;
-}
-
-#mockup2{
-  position:relative;
-  top:30%;
-  left:20%;
-  width:20%;
-  height:20vw;
 }
 
 #mockup2linetext{
@@ -319,6 +319,14 @@ a{
 }
 
 /*HOUSE*/
+#house{
+  position:relative;
+  top:56%;
+  left:38%;
+  width:7%;
+  height:7vw;
+}
+
 #houseline{
   width:1px;
   height:2px;
@@ -326,14 +334,6 @@ a{
   position:relative;
   top:51%;
   left:44.8%;
-}
-
-#house{
-  position:relative;
-  top:56%;
-  left:38%;
-  width:7%;
-  height:7vw;
 }
 
 #houselinetext{
@@ -345,58 +345,66 @@ a{
 }
 
 /*BLUE BOX*/
+#bluebox{
+  position:relative;
+  top:27%;
+  left:23.3%;
+  width:4.5%;
+  height:4.5vw;
+}
+
 #blueboxline{
   width:2px;
   height:1px;
   background-color:white;
   position:relative;
-  top:45.8%;
-  left:25.7%;
-}
-
-#bluebox{
-  position:relative;
-  top:46%;
-  left:23.5%;
-  width:4.5%;
-  height:4.5vw;
+  top:26.8%;
+  left:25.5%;
 }
 
 #blueboxlinetext{
   background-color:transparent;
   position:relative;
-  top:53%;
+  top:35%;
   left:19%;
   width:300px;
 }
 
 /*BRIDGE*/
+#bridge{
+  position:relative;
+  top:20%;
+  left:60.5%;
+  width:9%;
+  height:9vw;
+}
+
 #bridgeline{
   width:2px;
   height:1px;
   background-color:white;
   position:absolute;
-  bottom:63.7%;
-  left:64.9%;
-}
-
-#bridge{
-  position:relative;
-  top:12%;
-  left:60.3%;
-  width:9%;
-  height:9vw;
+  bottom:65.5%;
+  left:65%;
 }
 
 #bridgelinetext{
   background-color:transparent;
   position:relative;
-  top:-22%;
-  left:56%;
+  top:-10%;
+  left:58%;
   width:300px;
 }
 
 /*POSTER*/
+#poster{
+  position:relative;
+  top:-23.8%;
+  left:66.5%;
+  width:8%;
+  height:8vw;
+}
+
 #posterline{
   width:2px;
   height:1px;
@@ -404,14 +412,6 @@ a{
   position:relative;
   top:-24%;
   left:70.5%;
-}
-
-#poster{
-  position:relative;
-  top:-23.8%;
-  left:66.5%;
-  width:8%;
-  height:8vw;
 }
 
 #posterlinetext{
@@ -423,6 +423,14 @@ a{
 }
 
 /*COMPUTER*/
+#comp{
+  position:relative;
+  top:33%;
+  left:23%;
+  width:4.5%;
+  height:4.5vw;
+}
+
 #compline{
   width:1px;
   height:2px;
@@ -430,14 +438,6 @@ a{
   position:relative;
   top:29%;
   left:27.3%;
-}
-
-#comp{
-  position:relative;
-  top:33%;
-  left:23%;
-  width:4.5%;
-  height:4.5vw;
 }
 
 #complinetext{
@@ -449,6 +449,14 @@ a{
 }
 
 /*PAPER*/
+#paper{
+  position:relative;
+  top:63%;
+  left:28%;
+  width:8%;
+  height:8vw;
+}
+
 #paperline{
   width:1px;
   height:2px;
@@ -456,14 +464,6 @@ a{
   position:relative;
   top:55%;
   left:36%;
-}
-
-#paper{
-  position:relative;
-  top:63%;
-  left:28%;
-  width:8%;
-  height:8vw;
 }
 
 #paperlinetext{
