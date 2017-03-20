@@ -131,7 +131,11 @@ html, body {
     background-color: #37B3DE;
 }
 
-#section3 .leftContainer {
+#section4 {
+    background-color: #4487ED;
+}
+
+.leftContainer {
     position: relative;
     width: 40%;
     height: 100%;
@@ -160,21 +164,21 @@ html, body {
     transform: translateY(-50%);
 }
 
-#section3 .rightContainer {
+.rightContainer {
     position: relative;
     width: 60%;
     height: 100%;
     float: right;
 }
 
-#section3 .rightContainer .content {
+.rightContainer .content {
     position: absolute;
     left: 5%;
     width: 80%;
     height: 100%;
 }
 
-#section3 .rightContainer .content .title {
+.rightContainer .content .title {
     position: absolute;
     width: 100%;
     top: 18%;
@@ -186,7 +190,7 @@ html, body {
     z-index: 2;
 }
 
-#section3 .rightContainer .content .subtitleLine {
+.rightContainer .content .subtitleLine {
     position: absolute;
     width: 64%;
     left: 18%;
@@ -195,7 +199,7 @@ html, body {
     top: calc(18% + 6.5vw);
 }
 
-#section3 .rightContainer .content .subtitle {
+.rightContainer .content .subtitle {
     position: absolute;
     color: white;
     font-family: 'Lato', sans-serif;
@@ -207,7 +211,11 @@ html, body {
     left: 22%;
 }
 
-#section3 .rightContainer .content .buttonContainer {
+#section4 .rightContainer .content .subtitle {
+    background: #4487ED;
+}
+
+.rightContainer .content .buttonContainer {
     position: relative;
     background-image: url("number_buttons.png");
     top: calc(18% + 9vw);
@@ -219,7 +227,7 @@ html, body {
     background-position: center;
 }
 
-#section3 .rightContainer .content .buttonContainer .numberButton {
+.rightContainer .content .buttonContainer .numberButton {
     position: relative;
     margin-right: 15%;
     float: left;
@@ -228,11 +236,11 @@ html, body {
     cursor: pointer;
 }
 
-#section3 .rightContainer .content .buttonContainer .numberButton:last-child {
+.rightContainer .content .buttonContainer .numberButton:last-child {
     margin-right: 0;
 }
 
-#section3 .rightContainer .content .buttonContainer .circle {
+.rightContainer .content .buttonContainer .circle {
     background-image: url("button_circle.svg");
     position: absolute;
     left: -1%;
@@ -243,7 +251,7 @@ html, body {
     background-position: center;
 }
 
-#section3 .rightContainer .content .text {
+.rightContainer .content .text {
     position: absolute;
     top: calc(18% + 14vw);
     width: 65%;
@@ -253,10 +261,6 @@ html, body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.1vw;
-}
-
-#section4 {
-    background-color: #129CCA;
 }
 
 #section5 {
