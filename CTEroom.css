@@ -240,25 +240,25 @@ a{
 /*POE PROJECT*/
 #proj{
   position:relative;
-  top:0%;
-  left:89.8%;
-  width:4%;
-  height:4vw;
+  top:14%;
+  left:82%;
+  width:10%;
+  height:10vw;
 }
 
 #projline{
   width:1px;
   height:2px;
   position:absolute;
-  top:36.5%;
-  right:10.1%;
+  top:56%;
+  right:17.9%;
 }
 
 #projlinetext{
   background-color:transparent;
   position:relative;
-  top:2%;
-  left:66%;
+  top:15%;
+  left:58%;
   width:300px;
 }
 
