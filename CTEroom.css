@@ -70,6 +70,10 @@ body{
   top:10px;
   left:10px;
 }
+
+ul li{
+  list-style-type:circle;
+}
 /*FOR CLICK CIRCLES*/
 a{
   display:block;
