@@ -35,6 +35,7 @@
             <img class="mountainImage" id="mtn4" src="mountain_images/mountains4.png">
             <img class="mountainImage" id="mtn5" src="mountain_images/mountains5.png">
             <img class="mountainImage" id="mtn6" src="mountain_images/mountains6.png">
+            <div id="mountainCover"></div>
         </div>
         <div id="section3" class="fullScreenSection">
             <div class="leftContainer">
@@ -80,10 +81,10 @@
                 <div class="content">
                     <span class="title">Google Glass</span>
                     <div class="subtitleLine"></div>
-                    <div class="subtitle animated" id="googleSubtitle1">Heading 1</div>
-                    <div class="subtitle animated noOpacity" id="googleSubtitle2">Heading 2</div>
-                    <div class="subtitle animated noOpacity" id="googleSubtitle3">Heading 3</div>
-                    <div class="subtitle animated noOpacity" id="googleSubtitle4">Heading 4</div>
+                    <div class="subtitle animated" id="googleSubtitle1">Hardware and Software</div>
+                    <div class="subtitle animated noOpacity" id="googleSubtitle2">Preliminary Round</div>
+                    <div class="subtitle animated noOpacity" id="googleSubtitle3">Limitless Possibilities</div>
+                    <div class="subtitle animated noOpacity" id="googleSubtitle4">Moving Forward</div>
                     <div class="buttonContainer">
                         <div class="circle"></div>
                         <div data-section-number="1" class="numberButton"></div>
@@ -92,22 +93,27 @@
                         <div data-section-number="4" class="numberButton"></div>
                     </div>
                     <div id="googleText1" class="text animated">
-                        Snapchat is a photo-sharing application that was first launched in September 2011. It enables users to take and send photos and short videos that automatically delete after a set amount of time. Beginning in September 2015, Snapchat incorporated augmented reality into the experience through a feature called Lense Filters.
+                        Google is a multi-billion dollar technology company that specializes in web-services, software, and hardware. With its popular Google search engine, Chrome web browser, and various pieces of hardware, it's only fitting that Google became a pioneer in the augmented reality business. The company's product, Google Glass, is an optical head-mounted display in the form of a pair of glasses.
                     </div>
                     <div id="googleText2" class="text animated hidden">
-                        Why use Snapchat instead of taking a picture with your phone's generic camera app and sending it via text? Snapchat Lense Filters add real-time special effects to images and have rapidly grown in popularity since their addition. Specific examples include the illusion of the user living under the sea, possessing kitchy anime eyes, crying or drooling, and having a dog's rolling tongue once the user opens his or her mouth.
+                        Initially, the product was intended to be an ubiquitous computer that would allow the user to access the Internet. In addition, it displayed information through a hands-free method, in the same manner that one would see on a smartphone. For example, if the user were walking on the street in search of a restaurant, he or she could immediately Google search for local eateries with a simple tap on the Google Glass. The apparatus utilizes a camera, touch pad, liquid crystal on silicon, complex color system, and LED illuminated display.
                     </div>
                     <div id="googleText3" class="text animated hidden">
-                        Snapchat's unique face-tracking algorithm is the sole reason to their advanced AR attributes. In order to properly use Snapchat Lense Filters, the user must first point his or her face directly towards the camera and hold his or her finger down on the screen to trigger the filters. At that point, the app traces an intricate outline of the user's face in order to superimpose a variety of unique filters, which the user can then select from.
+                        The concept was novel. It was bright and new to the tech world. Why pull out your phone, unlock it, and type phrases into the Google search engine...when you can just instantly view such information through a hands-free method? The world, both digitally and physically, could be seen right in front of your eyes. Multi-tasking can prove to be extremely efficient...but there are a few cons.
                     </div>
                     <div id="googleText4" class="text animated hidden">
-                        These Lense Filters are just one of the many reasons why Snapchat is constantly evolving and growing in popularity among the masses. In addition to geotags and on-demand filters (i.e. current time and temperature), since these lenses are constantly being updated with brand-new and creative options, users incessantly flock to the app to see all the ways they can transform their faces.
+                        Although Google terminated production of the Google Glass, it indeed provided valuable insight to the future of the AR field. People started to steer clear of the multi-tasking aspect of the Google Glass due to physical safety concerns. Today, wearable AR technology, such as castAR and Meta, is mainly focused on specific tasks in order to prevent intrusion into the wearer's field of view. This may be the case now; however, the future of AR is still aimed towards access to omnipresent information without the obstruction of the user's visual standpoint.
                     </div>
                 </div>
             </div>
         </div>
         <div id="section5" class="fullScreenSection">
-            <div class="centerCircle valign-wrapper"><p>Other Uses</p></div>
+            <div id="blob1" class="blob valign-wrapper"><p>Educational</p></div>
+            <div id="blob2" class="blob valign-wrapper"><p>Commercial</p></div>
+            <div id="blob3" class="blob valign-wrapper"><p>Recreational</p></div>
+            <div id="blob4" class="blob valign-wrapper"><p>Research</p></div>
+            <div id="bigBlobShadow"></div>
+            <div id="bigBlob" class="valign-wrapper"><p>Other Uses</p></div>
         </div>
         <div id="section6" class="fullScreenSection">
         </div>
@@ -157,7 +163,7 @@
             <img src="scroll_down_caret.png" width="30" height="17">
         </div>
         
-        <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+        <div id="menuButton" class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
             <a class="btn-floating btn-large blue">
                 <i class="material-icons">menu</i>
             </a>
@@ -186,6 +192,8 @@
             largeScreenStateChange.addListener(updateiPhoneMaskPosition);
             tinyScreenStateChange.addListener(updateiPhoneMaskPosition);
             
+            blobsHaveBeenAnimated = false;
+            
             updateSectionScrollPositions();
             $(window).on("resize", updateSectionScrollPositions);
             function updateSectionScrollPositions() {
@@ -210,12 +218,26 @@
                 
                 // Mountains
                 if (currentScroll > 0 && currentScroll < $("#section3").offset().top) {
-                    $("#mtn1").css("top", 0.2*currentScroll + "px");
-                    $("#mtn2").css("top", 0.3*currentScroll + "px");
-                    $("#mtn3").css("top", 0.4*currentScroll + "px");
-                    $("#mtn4").css("top", 0.5*currentScroll + "px");
-                    $("#mtn5").css("top", 0.6*currentScroll + "px");
-                    $("#mtn6").css("top", 0.7*currentScroll + "px");
+                    $("#mtn1").css("bottom", "calc(6vw + " + 0.2*(currentScroll - $(window).height()) + "px)");
+                    $("#mtn2").css("bottom", "calc(8vw + " + 0.3*(currentScroll - $(window).height()) + "px)");
+                    $("#mtn3").css("bottom", 0.4*(currentScroll - $(window).height()) + "px");
+                    $("#mtn4").css("bottom", 0.6*(currentScroll - $(window).height()) + "px");
+                    $("#mtn5").css("bottom", 0.7*(currentScroll - $(window).height()) + "px");
+                    $("#mtn6").css("bottom", 0.8*(currentScroll - $(window).height()) + "px");
+                    $("#mountainCover").css("bottom", "calc(" + 0.8*(currentScroll - $(window).height()) + "px - 100%)");
+                }
+                
+                // Blobs
+                if (currentScroll > $("#section4").offset().top + 0.35*$("#section5").height() && !blobsHaveBeenAnimated) {
+                    blobsHaveBeenAnimated = true;
+                    $("#blob1").addClass("positioned-blob-1");
+                    $("#blob2").addClass("positioned-blob-2");
+                    $("#blob3").addClass("positioned-blob-3");
+                    $("#blob4").addClass("positioned-blob-4");
+                    $("#blob1").css("transform", "translateX(-25vw) translateY(15vh)");
+                    $("#blob2").css("transform", "translateX(-30vw) translateY(-22vh)");
+                    $("#blob3").css("transform", "translateX(35vw) translateY(10vh)");
+                    $("#blob4").css("transform", "translateX(25vw) translateY(-20vh)");
                 }
                 
                 // Navigation dots
@@ -250,7 +272,7 @@
             $("#scrollDownCaret").on("click", function() {
                 $("html, body").animate({
                     scrollTop: ($("#section2").offset().top)
-                },500,"swing");
+                },2000,"swing");
             })
              
             // Section navigation dots scrolling functionality
@@ -277,15 +299,18 @@
                 $("#section1 .sharpieText").fadeOut();
                 $("#sectionNav").fadeOut();
                 $("#scrollDownCaret").fadeOut();
+                $("#menuButton").fadeOut();
             })
             $("#section1 .iphone").on("mouseup", function() {
                 document.removeEventListener("mousemove", moveWithMouse);
                 $("#sectionNav").fadeIn();
                 $("#scrollDownCaret").fadeIn();
+                $("#menuButton").fadeIn();
             });
             $("#section1").mouseleave(function() {
                 document.removeEventListener("mousemove", moveWithMouse);
                 $("#sectionNav").fadeIn();
+                $("#menuButton").fadeIn();
                 if ($(window).scrollTop() < 40) {
                     $("#scrollDownCaret").fadeIn();
                 }
@@ -362,6 +387,12 @@
                     $("#googleText" + sectionNumber).fadeIn();
                 }
                 currentGoogleSection = sectionNumber;
+            });
+            
+            // Big Blob Parallax
+            $("#section5").on("mousemove", function(e) {
+                $("#bigBlob").css("left", "calc(40% - " + (e.clientX - $(window).width()/2)/160 + "px)");
+                $("#bigBlob").css("top", "calc(50% - 10vw - " + (e.clientY - $(window).height()/2)/120 + "px)");
             });
         </script>
     </body>
