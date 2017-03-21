@@ -67,8 +67,8 @@ body{
 
 .chip{
   position:absolute;
-  top:10px;
-  left:10px;
+  top:15px;
+  left:15px;
   /* CSS transitions */
   -webkit-transition: .5s ease-in-out; /* Safari */
   -moz-transition: .5s ease-in-out; /* Mozilla Firefox */
