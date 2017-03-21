@@ -20,6 +20,11 @@
     <body>
         <!-- Full screen sections -->
         <div id="section1" class="fullScreenSection">
+            <div id="heroTitleContainer">
+                <div class="heroTitle animated">Augmented Reality</div>
+                <div class="heroTitleLine"></div>
+                <div class="heroSubtitle animated">Design Brief</div>
+            </div>
             <div class="clippingBox">
                 <div class="backgroundMask"></div>
                 <img src="iphone_vector.svg" class="iphone" draggable="false">
@@ -74,8 +79,7 @@
         </div>
         <div id="section4" class="fullScreenSection">
             <div class="leftContainer">
-                <img src="iphone_vector_vertical.svg" class="iphone" draggable="false">
-                <img src="face_mesh.svg" class="faceMesh" draggable="false">
+                <img src="google_glass.png" class="googleGlass" draggable="false">
             </div>
             <div class="rightContainer">
                 <div class="content">
@@ -184,6 +188,15 @@
                         $(this).removeClass('animated ' + animationName);
                     });
                 }
+            });
+            
+            $(window).on("load", function() {
+                $("#heroTitleContainer .heroTitle").animateCss("fadeInDown");
+                $("#heroTitleContainer .heroSubtitle").animateCss("fadeInDown");
+                $("#heroTitleContainer .heroTitleLine").delay(500).animate( {
+                    width: "20%",
+                    left: "40%"
+                }, 1000);
             });
             
             // @media listeners
@@ -300,17 +313,20 @@
                 $("#sectionNav").fadeOut();
                 $("#scrollDownCaret").fadeOut();
                 $("#menuButton").fadeOut();
+                $("#heroTitleContainer").fadeOut();
             })
             $("#section1 .iphone").on("mouseup", function() {
                 document.removeEventListener("mousemove", moveWithMouse);
                 $("#sectionNav").fadeIn();
                 $("#scrollDownCaret").fadeIn();
                 $("#menuButton").fadeIn();
+                $("#heroTitleContainer").fadeIn();
             });
             $("#section1").mouseleave(function() {
                 document.removeEventListener("mousemove", moveWithMouse);
                 $("#sectionNav").fadeIn();
                 $("#menuButton").fadeIn();
+                $("#heroTitleContainer").fadeIn();
                 if ($(window).scrollTop() < 40) {
                     $("#scrollDownCaret").fadeIn();
                 }
