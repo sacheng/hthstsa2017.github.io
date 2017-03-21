@@ -10,10 +10,17 @@ body{
   /*overflow-x:scroll;*/
 }
 
-/*take out for fullscreen slider?*/
+.modal-close:hover{
+  background-color:#C9D6FA;
+}
 
-#section1 img{
-  background-size:cover;
+.modal-close{
+  /* CSS transitions */
+  -webkit-transition: .5s ease-in-out; /* Safari */
+  -moz-transition: .5s ease-in-out; /* Mozilla Firefox */
+  -ms-transition: .5s ease-in-out; /* Microsoft specific */
+  -o-transition: .5s ease-in-out; /* Opera */
+  transition: .5s ease-in-out; /* general & Google Chrome */
 }
 
 #section1, #section2,#section3,#section4,#section5,#section6{
@@ -58,7 +65,11 @@ body{
   background-position: center;
 }
 
-
+.chip{
+  position:absolute;
+  top:10px;
+  left:10px;
+}
 /*FOR CLICK CIRCLES*/
 a{
   display:block;
@@ -67,7 +78,7 @@ a{
 .circle1{
   border-radius:50%;
   background-color:transparent;
-  border: 3px white solid;
+  border: 3px #e8f3fc solid;
 
   /* CSS transitions */
   -webkit-transition: .5s ease-in-out; /* Safari */
@@ -75,6 +86,10 @@ a{
   -ms-transition: .5s ease-in-out; /* Microsoft specific */
   -o-transition: .5s ease-in-out; /* Opera */
   transition: .5s ease-in-out; /* general & Google Chrome */
+}
+
+#microscopeline, #plantsline, #carsline, #mockup1line, #mockup2line, #posterline, #compline, #paperline, #houseline, #blueboxline, #bridgeline, #workline, #vexline, #projline{
+  background-color:#e8f3fc;
 }
 
 #house:hover, #bluebox:hover, #bridge:hover, #microscope:hover, #plants:hover, #plantsline, #cars:hover, #mockup1:hover, #mockup2:hover, #poster:hover, #comp:hover, #paper:hover, #work:hover, #vex:hover, #proj:hover{
@@ -94,7 +109,7 @@ a{
   bottom:3px;
   font-family:"Open Sans";
   text-align:justify;
-  background-color:rgba(0,0,0,.7);
+  background-color:rgba(33,41,92,.7);
   font-weight:bold;
   color:white;
   padding-left:5px;
@@ -111,21 +126,20 @@ a{
 }
 
 /*PLANTS*/
-#plantsline{
-  width:2px;
-  height:1px;
-  background-color:white;
-  position:absolute;
-  bottom:67.8%;
-  left:30%;
-}
-
 #plants{
   position:relative;
   top:10%;
   left:27%;
   width:6%;
   height:6vw;
+}
+
+#plantsline{
+  width:2px;
+  height:1px;
+  position:absolute;
+  bottom:67.8%;
+  left:30%;
 }
 
 #plantslinetext{
@@ -137,15 +151,6 @@ a{
 }
 
 /*MICROSCOPE*/
-#microscopeline{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:absolute;
-  top:60%;
-  right:20.3%;
-}
-
 #microscope{
   position:relative;
   top:47%;
@@ -154,30 +159,37 @@ a{
   height:11vw;
 }
 
+#microscopeline{
+  width:1px;
+  height:2px;
+  position:absolute;
+  top:60%;
+  right:20.3%;
+}
+
 #microscopelinetext{
   background-color:transparent;
   position:relative;
-  top:43%;
-  left:58%;
+  top:37%;
+  left:64.7%;
   width:300px;
 }
 
 /*WORKSPACE*/
-#workline{
-  width:2px;
-  height:1px;
-  background-color:white;
-  position:absolute;
-  bottom:59.8%;
-  left:46%;
-}
-
 #work{
   position:relative;
   top:40%;
   left:43%;
   width:6%;
   height:6vw;
+}
+
+#workline{
+  width:2px;
+  height:1px;
+  position:absolute;
+  bottom:59.8%;
+  left:46%;
 }
 
 #worklinetext{
@@ -189,21 +201,20 @@ a{
 }
 
 /*VEX*/
-#vexline{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:absolute;
-  top:70%;
-  left:36.9%;
-}
-
 #vex{
   position:relative;
   top:47%;
   left:27%;
   width:10%;
   height:10vw;
+}
+
+#vexline{
+  width:1px;
+  height:2px;
+  position:absolute;
+  top:70%;
+  left:36.9%;
 }
 
 #vexlinetext{
@@ -215,21 +226,20 @@ a{
 }
 
 /*POE PROJECT*/
-#projline{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:absolute;
-  top:36.5%;
-  right:10.1%;
-}
-
 #proj{
   position:relative;
   top:0%;
   left:89.8%;
   width:4%;
   height:4vw;
+}
+
+#projline{
+  width:1px;
+  height:2px;
+  position:absolute;
+  top:36.5%;
+  right:10.1%;
 }
 
 #projlinetext{
@@ -241,21 +251,20 @@ a{
 }
 
 /*CARS*/
-#carsline{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:relative;
-  top:53%;
-  left:76.8%;
-}
-
 #cars{
   position:relative;
   top:60%;
   left:69%;
   width:8%;
   height:8vw;
+}
+
+#carsline{
+  width:1px;
+  height:2px;
+  position:relative;
+  top:53%;
+  left:76.8%;
 }
 
 #carslinetext{
@@ -267,21 +276,20 @@ a{
 }
 
 /*MOCKUP 1*/
-#mockup1line{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:relative;
-  top:2%;
-  left:22.4%;
-}
-
 #mockup1{
   position:relative;
   top:4%;
   left:18%;
   width:5%;
   height:5vw;
+}
+
+#mockup1line{
+  width:1px;
+  height:2px;
+  position:relative;
+  top:2%;
+  left:22.4%;
 }
 
 #mockup1linetext{
@@ -293,21 +301,20 @@ a{
 }
 
 /*MOCKUP 2*/
-#mockup2line{
-  width:2px;
-  height:1px;
-  background-color:white;
-  position:absolute;
-  bottom:42%;
-  left:33%;
-}
-
 #mockup2{
   position:relative;
   top:30%;
   left:20%;
   width:20%;
   height:20vw;
+}
+
+#mockup2line{
+  width:2px;
+  height:1px;
+  position:absolute;
+  bottom:42%;
+  left:33%;
 }
 
 #mockup2linetext{
@@ -319,21 +326,20 @@ a{
 }
 
 /*HOUSE*/
-#houseline{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:relative;
-  top:51%;
-  left:44.8%;
-}
-
 #house{
   position:relative;
   top:56%;
   left:38%;
   width:7%;
   height:7vw;
+}
+
+#houseline{
+  width:1px;
+  height:2px;
+  position:relative;
+  top:51%;
+  left:44.8%;
 }
 
 #houselinetext{
@@ -345,73 +351,70 @@ a{
 }
 
 /*BLUE BOX*/
+#bluebox{
+  position:relative;
+  top:27%;
+  left:23.3%;
+  width:4.5%;
+  height:4.5vw;
+}
+
 #blueboxline{
   width:2px;
   height:1px;
-  background-color:white;
   position:relative;
-  top:45.8%;
-  left:25.7%;
-}
-
-#bluebox{
-  position:relative;
-  top:46%;
-  left:23.5%;
-  width:4.5%;
-  height:4.5vw;
+  top:26.8%;
+  left:25.5%;
 }
 
 #blueboxlinetext{
   background-color:transparent;
   position:relative;
-  top:53%;
+  top:35%;
   left:19%;
   width:300px;
 }
 
 /*BRIDGE*/
+#bridge{
+  position:relative;
+  top:20%;
+  left:60.5%;
+  width:9%;
+  height:9vw;
+}
+
 #bridgeline{
   width:2px;
   height:1px;
-  background-color:white;
   position:absolute;
-  bottom:63.7%;
-  left:64.9%;
-}
-
-#bridge{
-  position:relative;
-  top:12%;
-  left:60.3%;
-  width:9%;
-  height:9vw;
+  bottom:65.5%;
+  left:65%;
 }
 
 #bridgelinetext{
   background-color:transparent;
   position:relative;
-  top:-22%;
-  left:56%;
+  top:-10%;
+  left:58%;
   width:300px;
 }
 
 /*POSTER*/
-#posterline{
-  width:2px;
-  height:1px;
-  background-color:white;
-  position:relative;
-  top:-24%;
-  left:70.5%;
-}
-
 #poster{
   position:relative;
   top:-23.8%;
   left:66.5%;
   width:8%;
   height:8vw;
+}
+
+#posterline{
+  width:2px;
+  height:1px;
+  position:relative;
+  top:-24%;
+  left:70.5%;
 }
 
 #posterlinetext{
@@ -423,21 +426,20 @@ a{
 }
 
 /*COMPUTER*/
-#compline{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:relative;
-  top:29%;
-  left:27.3%;
-}
-
 #comp{
   position:relative;
   top:33%;
   left:23%;
   width:4.5%;
   height:4.5vw;
+}
+
+#compline{
+  width:1px;
+  height:2px;
+  position:relative;
+  top:29%;
+  left:27.3%;
 }
 
 #complinetext{
@@ -449,21 +451,20 @@ a{
 }
 
 /*PAPER*/
-#paperline{
-  width:1px;
-  height:2px;
-  background-color:white;
-  position:relative;
-  top:55%;
-  left:36%;
-}
-
 #paper{
   position:relative;
   top:63%;
   left:28%;
   width:8%;
   height:8vw;
+}
+
+#paperline{
+  width:1px;
+  height:2px;
+  position:relative;
+  top:55%;
+  left:36%;
 }
 
 #paperlinetext{
