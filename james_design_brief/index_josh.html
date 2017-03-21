@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
         <link rel="stylesheet" href="../css/materialize.css">
         <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection"/>
-        <link href="styles.css" type="text/css" rel="stylesheet">
+        <link href="styles_josh.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="animate.min.css">
     </head>
     <body>
@@ -192,6 +192,62 @@
 
               <br>
               <br>
+
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img src="../pictures/CTE/BEES/bees1.jpg" style="width:100%">
+                <div class="text">There are many resources available in the BEES room.</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 8</div>
+                <img src="../pictures/CTE/BEES/bees2.jpg" style="width:100%">
+                <div class="text">Students are observing crawfish in varying conditions.</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                <img src="../pictures/CTE/BEES/bees3.jpg" style="width:100%">
+                <div class="text">Yeast is collected and measured.</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img src="../pictures/CTE/BEES/bees4.jpg" style="width:100%">
+                <div class="text">A few goldfish live in the BEES room for research and study.</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img src="../pictures/CTE/BEES/bees5.jpg" style="width:100%">
+                <div class="text">This device shows varying soil types and conditions.</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img src="../pictures/CTE/BEES/bees6.jpg" style="width:100%">
+                <div class="text">A cabinet stores multiple microscopes for use in the classroom.</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img src="../pictures/CTE/BEES/bees7.jpg" style="width:100%">
+                <div class="text">A student's engineering journal displays a water filtration activity.</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="../pictures/CTE/BEES/bees8.jpg" style="width:100%">
+                <div class="text">A graphic designed by a student shows the manufacturing and transportation farm cycle.</div>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+              <span class="dot1" onclick="currentSlide(1)"></span> 
+              <span class="dot1" onclick="currentSlide(2)"></span> 
+              <span class="dot1" onclick="currentSlide(3)"></span>
+              <span class="dot1" onclick="currentSlide(4)"></span> 
+              <span class="dot1" onclick="currentSlide(5)"></span> 
+              <span class="dot1" onclick="currentSlide(6)"></span> 
+              <span class="dot1" onclick="currentSlide(7)"></span> 
+              <span class="dot1" onclick="currentSlide(8)"></span> 
+            </div>
 
               <h4 id="modalAR" class="center-align"><i class="material-icons medium">trending_up</i>&nbsp;&nbsp;Business Moving Forward&nbsp;&nbsp;<i class="material-icons medium">trending_up</i></h4>
               <p>It seems that phones and handheld devices are the only methods of utilizing AR. Well, picture yourself trying on different T-shirts without needing to take them on and off. Virtual fitting rooms are going to be the next big thing. Another case is picking out different colors and variances of products, such as cars or apparel. Finally, designers can easily get a nice panoramic, 3D view of interior designs that can be easily altered with the touch of a button...definitely better than redesigning a space completely.
@@ -528,6 +584,250 @@
             $(document).ready(function(){
             $('.modal-trigger').leanModal();
             });
+
+            //carousel ?
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot1");
+              if (n > slides.length) {slideIndex = 1} 
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block"; 
+              dots[slideIndex-1].className += " active";
+            }
+            //2
+            var slideIndex2 = 1;
+            showSlides2(slideIndex2);
+
+            function plusSlides2(n) {
+              showSlides2(slideIndex2 += n);
+            }
+
+            function currentSlide2(n) {
+              showSlides2(slideIndex2 = n);
+            }
+
+            function showSlides2(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides2");
+              var dots = document.getElementsByClassName("dot2");
+              if (n > slides.length) {slideIndex2 = 1} 
+              if (n < 1) {slideIndex2 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex2-1].style.display = "block"; 
+              dots[slideIndex2-1].className += " active";
+            }
+            //3
+            var slideIndex3 = 1;
+            showSlides3(slideIndex3);
+
+            function plusSlides3(n) {
+              showSlides3(slideIndex3 += n);
+            }
+
+            function currentSlide3(n) {
+              showSlides3(slideIndex3 = n);
+            }
+
+            function showSlides3(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides3");
+              var dots = document.getElementsByClassName("dot3");
+              if (n > slides.length) {slideIndex3 = 1} 
+              if (n < 1) {slideIndex3 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex3-1].style.display = "block"; 
+              dots[slideIndex3-1].className += " active";
+            }
+            //4
+            var slideIndex4 = 1;
+            showSlides4(slideIndex4);
+
+            function plusSlides4(n) {
+              showSlides4(slideIndex4 += n);
+            }
+
+            function currentSlide4(n) {
+              showSlides4(slideIndex4 = n);
+            }
+
+            function showSlides4(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides4");
+              var dots = document.getElementsByClassName("dot4");
+              if (n > slides.length) {slideIndex4 = 1} 
+              if (n < 1) {slideIndex4 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex4-1].style.display = "block"; 
+              dots[slideIndex4-1].className += " active";
+            }
+            //5
+            var slideIndex5 = 1;
+            showSlides5(slideIndex5);
+
+            function plusSlides5(n) {
+              showSlides5(slideIndex5 += n);
+            }
+
+            function currentSlide5(n) {
+              showSlides5(slideIndex5 = n);
+            }
+
+            function showSlides5(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides5");
+              var dots = document.getElementsByClassName("dot5");
+              if (n > slides.length) {slideIndex5 = 1} 
+              if (n < 1) {slideIndex5 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex5-1].style.display = "block"; 
+              dots[slideIndex5-1].className += " active";
+            }
+            //6
+            var slideIndex6 = 1;
+            showSlides6(slideIndex6);
+
+            function plusSlides6(n) {
+              showSlides6(slideIndex6 += n);
+            }
+
+            function currentSlide6(n) {
+              showSlides6(slideIndex6 = n);
+            }
+
+            function showSlides6(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides6");
+              var dots = document.getElementsByClassName("dot6");
+              if (n > slides.length) {slideIndex6 = 1} 
+              if (n < 1) {slideIndex6 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex6-1].style.display = "block"; 
+              dots[slideIndex6-1].className += " active";
+            }
+            //7
+            var slideIndex7 = 1;
+            showSlides7(slideIndex7);
+
+            function plusSlides7(n) {
+              showSlides7(slideIndex7 += n);
+            }
+
+            function currentSlide7(n) {
+              showSlides7(slideIndex7 = n);
+            }
+
+            function showSlides7(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides7");
+              var dots = document.getElementsByClassName("dot7");
+              if (n > slides.length) {slideIndex7 = 1} 
+              if (n < 1) {slideIndex7 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex7-1].style.display = "block"; 
+              dots[slideIndex7-1].className += " active";
+            }
+            //8
+            var slideIndex8 = 1;
+            showSlides8(slideIndex8);
+
+            function plusSlides8(n) {
+              showSlides8(slideIndex8 += n);
+            }
+
+            function currentSlide8(n) {
+              showSlides8(slideIndex8 = n);
+            }
+
+            function showSlides8(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides8");
+              var dots = document.getElementsByClassName("dot8");
+              if (n > slides.length) {slideIndex8 = 1} 
+              if (n < 1) {slideIndex8 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex8-1].style.display = "block"; 
+              dots[slideIndex8-1].className += " active";
+            }
+            //9
+            var slideIndex9 = 1;
+            showSlides9(slideIndex9);
+
+            function plusSlides9(n) {
+              showSlides9(slideIndex9 += n);
+            }
+
+            function currentSlide9(n) {
+              showSlides9(slideIndex9 = n);
+            }
+
+            function showSlides9(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides9");
+              var dots = document.getElementsByClassName("dot9");
+              if (n > slides.length) {slideIndex9 = 1} 
+              if (n < 1) {slideIndex9 = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex9-1].style.display = "block"; 
+              dots[slideIndex9-1].className += " active";
+            }
         </script>
     </body>
 </html>
