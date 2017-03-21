@@ -37,21 +37,21 @@ body{
 }
 
 #section3 {
-  background-image:url("pictures/CTE/room170.jpg");
+  background-image:url("pictures/CTE/room170.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #section4 {
-  background-image:url("pictures/CTE/room185.jpg");
+  background-image:url("pictures/CTE/room185.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #section5 {
-  background-image:url("pictures/CTE/room210.jpg");
+  background-image:url("pictures/CTE/room210.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -59,7 +59,7 @@ body{
 }
 
 #section6 {
-  background-image:url("pictures/CTE/room175.jpg");
+  background-image:url("pictures/CTE/room175.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -691,6 +691,7 @@ a{
   bottom: 8px;
   width: 100%;
   text-align: center;
+  background-color: rgba(33,41,92,.7);
 }
 
 /* Number text (1/3 etc) */
@@ -722,7 +723,7 @@ a{
 
 }
 
-.active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover, .dot6:hover, .dot7:hover, .dot8:hover, .dot9:hover{
+.active2, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover, .dot6:hover, .dot7:hover, .dot8:hover, .dot9:hover{
   background-color: #017ba5;
   height:9px;
   width:9px;
