@@ -44,8 +44,11 @@
         </div>
         <div id="section3" class="fullScreenSection">
             <div class="leftContainer">
+                <img src="snapchat_images/snapchat_face.png" class="screenContent" draggable="false">
+                <img src="snapchat_images/snapchat_mesh.png" class="screenContent hidden" id="snapchatImg2" draggable="false">
+                <img src="snapchat_images/snapchat_lense.png" class="screenContent hidden" id="snapchatImg3" draggable="false">
+                <img src="snapchat_images/snapchat_send.png" class="screenContent hidden" id="snapchatImg4" draggable="false">
                 <img src="iphone_vector_vertical.svg" class="iphone" draggable="false">
-                <img src="face_mesh.svg" class="faceMesh" draggable="false">
             </div>
             <div class="rightContainer">
                 <div class="content">
@@ -112,12 +115,12 @@
             </div>
         </div>
         <div id="section5" class="fullScreenSection">
+            <!-- Blobs -->
             <a class="modal-trigger" href="#modalEducational"><div id="blob1" class="blob valign-wrapper"><p>Educational</p></div></a>
             <a class="modal-trigger" href="#modalCommercial"><div id="blob2" class="blob valign-wrapper"><p>Commercial</p></div></a>
             <a class="modal-trigger" href="#modalRecreational"><div id="blob3" class="blob valign-wrapper"><p>Recreational</p></div></a>
             <a class="modal-trigger" href="#modalResearch"><div id="blob4" class="blob valign-wrapper"><p>Research</p></div></a>
-            <div id="bigBlobShadow"></div>
-            <a class="modal-trigger" href="#modalOrigin"><div id="bigBlob" class="valign-wrapper"><p>Origins</p></div></a>
+            <a class="modal-trigger" href="#modalOrigin"><div id="bigBlob" class="valign-wrapper hoverable"><p>Origins</p></div></a>
         </div>
         <div id="section6" class="fullScreenSection">
         </div>
@@ -167,7 +170,7 @@
             <img src="scroll_down_caret.png" width="30" height="17">
         </div>
 
-        
+        <!-- Hamburger menu button -->
         <div id="menuButton" class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
             <a class="btn-floating btn-large blue">
                 <i class="material-icons">menu</i>
@@ -493,6 +496,8 @@
                     $("#snapchatText" + currentSnapchatSection).fadeOut();
                     $("#snapchatText" + sectionNumber).fadeIn();
                 }
+                $("#snapchatImg" + sectionNumber).fadeIn();
+                $("#snapchatImg" + currentSnapchatSection).fadeOut();
                 currentSnapchatSection = sectionNumber;
             });
             
