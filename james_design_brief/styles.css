@@ -404,6 +404,19 @@ html, body {
     text-align: center;
 }
 
+
+#modalAR {
+    font-family: "Lato";
+    font-weight:400px;
+    color:#4487ED;
+}
+
+#modalEducational, #modalResearch, #modalCommercial, #modalRecreational, #modalOrigin p {
+    font-size: 1.1vw;
+    font-family: "Lato";
+    text-align: justify;
+}
+
 #section6 {
     background-color: #5EABD4;
 }
