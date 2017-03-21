@@ -20,12 +20,49 @@ html, body {
 }
 
 #section1 {
+    position: relative;
     background-color: #323D59;
     background-image: url("hero_background.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+}
+
+#section1 #heroTitleContainer {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}
+
+#section1 .heroTitle {
+    position: relative;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 4.5vw;
+    width: 50%;
+    left: 25%;
+    text-align: center;
+}
+
+#section1 .heroTitleLine {
+    position: relative;
+    background: white;
+    width: 0%;
+    height: 2px;
+    left: 50%;
+}
+
+#section1 .heroSubtitle {
+    position: relative;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 3vw;
+    width: 50%;
+    left: 25%;
+    text-align: center;
 }
 
 #section1 .clippingBox {
@@ -223,6 +260,15 @@ html, body {
     background: #4487ED;
 }
 
+#section4 .leftContainer .googleGlass {
+    position: relative;
+    width: 95%;
+    height: auto;
+    float: right;
+    top: 50%;
+    transform: translateY(-60%);
+}
+
 .rightContainer .content .buttonContainer {
     position: relative;
     background-image: url("number_buttons.png");
@@ -356,6 +402,19 @@ html, body {
     color: #313E5A;
     width: 100%;
     text-align: center;
+}
+
+
+#modalAR {
+    font-family: "Lato";
+    font-weight:400px;
+    color:#4487ED;
+}
+
+#modalEducational, #modalResearch, #modalCommercial, #modalRecreational, #modalOrigin p {
+    font-size: 1.1vw;
+    font-family: "Lato";
+    text-align: justify;
 }
 
 #section6 {
