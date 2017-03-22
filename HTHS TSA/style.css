@@ -151,6 +151,18 @@ imageAnimation {  0% {
     color: white;
 }
 
+#third{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url(images/state.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color:white;
+
+}
 #intro_container{
   position: relative;
   max-width: 1000px;
@@ -163,11 +175,11 @@ imageAnimation {  0% {
 }
 
 #intro_container h1{
-  font-size: 5.4rem;
+  font-size: 5.4vw;
 }
 
 #intro_container h2{
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   margin-top: 1%;
   font-family: 'Georgia', serif;
   color: #d9d9d9;
@@ -200,13 +212,13 @@ imageAnimation {  0% {
 
 #intro_container h3{
   font-family: 'Lato', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   margin: 0 auto;
 }
 
 #intro_container h4{
   font-family: 'Georgia', serif;
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   font-weight: normal;
   max-width: 600px;
   margin: 0 auto;
@@ -260,7 +272,7 @@ imageAnimation {  0% {
 }
 
 .head2{
-  font-size: 5em;
+  font-size: 5vw;
   font-weight: bold;
 }
 
@@ -275,14 +287,14 @@ imageAnimation {  0% {
   text-align: right;
   padding-right: 30px;
   color: cyan;
-  font-size: 0.5em;
+  font-size: 0.7vw;
 }
 
 
 
 #s2 {
   font-family: 'Raleway', 'sans-serif';
-  font-size: 25px;
+  font-size: 2vw;
 }
 
 
@@ -295,17 +307,17 @@ imageAnimation {  0% {
 
 #lil{
   color: cyan;
-  font-size: 15px;
+  font-size: 0.8vw;
   font-weight: normal;
   position: relative;
 }
 
 #large{
-  font-size: 90px;
+  font-size: 6vw;
 }
 
 #con{
-  font-size: 18px;
+  font-size: 1.2vw;
   font-family: 'Raleway';
   padding-left: 10%;
   font-weight: normal;
@@ -362,29 +374,31 @@ div#slider figure {
 }
 
 .one{
+    z-index: 100;
   width: 45%;
   min-width: 200px;
   float: left;
-  height: 300px;
+  height: 200px;
   padding: 5px;
 }
 .two{
+    z-index: 100;
   min-width: 300px;
   width: 40%;
   float: left;
-  height: 300px;
+  height: 200px;
   padding: 30px;
 }
 
 .flat h1{
   display: block;
   position: relative;
-  font-size: 50px;
+  font-size: 6vw;
   color: white;
 }
 
 .flat h2{
-  font-size: 16px;
+  font-size: 1vw;
   color: #999999;
   padding-top: 20px;
   font-family: 'Raleway';
@@ -415,6 +429,7 @@ span {
 body{
   overflow-x: hidden;
 }
+
 
 
 
