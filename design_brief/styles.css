@@ -2,6 +2,17 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    background-color: #5EABD4;
+}
+
+#topBackground {
+    background-color: #C0CDE7;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 20%;
 }
 
 .noOpacity {
@@ -202,6 +213,55 @@ html, body {
     height: 100%;
     background: #37B3DE;
     bottom: -100%;
+}
+
+#section3 #jetsContainer {
+    position: absolute;
+    width: 12%;
+    height: 11vw;
+    background-image: url("jets.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#section3 #jetsCallout {
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    background: rgba(0,0,0,0.5);
+    width: 100px;
+    height: 28px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+#section3 #jetsCallout .notch {
+    position: absolute;
+    bottom: -10px;
+    left: 45px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid rgba(0,0,0,0.5);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 0;
+    padding: 0;
+}
+
+#hud {
+    display: none;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
 }
 
 #section4 {
@@ -497,6 +557,14 @@ html, body {
     text-align: center;
 }
 
+#section7 {
+    background-color: #5EABD4;
+}
+
+#section7 .cardsContainer {
+    position: relative;
+    top: 20%;
+}
 
 #modalAR {
     font-family: "Lato";
@@ -512,10 +580,6 @@ html, body {
 
 #modalAR2 {
     color:#01579b;
-}
-
-#section7 {
-    background-color: #5EABD4;
 }
 
 #scrollDownCaret {
