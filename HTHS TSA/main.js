@@ -18,15 +18,16 @@ $(document).ready(function(){
 	})
 	.setTween(TweenMax.from('.bcg', 1, {y: '-50%', ease:Power0.easeNone}))
 	.addTo(controller);
-	
+	*/
+
 	//build a scene
-	var ourScene = new ScrollMagic.Scene({
-		triggerElement: '#intro_container',
-		duration: '70%', //defines ending indicator
+	var fade2 = new ScrollMagic.Scene({
+		triggerElement: '#statepic',
+		duration: '90%', //defines ending indicator
 		triggerHook: 0.65
 		//reverse: false means animation only happens once
 	})
-	.setClassToggle('#intro_container', 'fade-in') // add class to project 01
+	.setClassToggle('#statepic', 'fade-in') // add class to project 01
 	.addIndicators({
 		name: 'fade scene',
 		colorTrigger: 'black',
@@ -34,7 +35,7 @@ $(document).ready(function(){
 		colorStart: '#75C695'
 	})	//plugin required)
 	.addTo(controller);
-	*/
+	
 
 	//loop through each .project element
 	$('.project').each(function(){
@@ -61,18 +62,32 @@ $(document).ready(function(){
 });
 
 
-var waypoint1 = new Waypoint({
-  element: document.getElementById('second'),
+
+var waypoint2 = new Waypoint({
+  element: document.getElementById('third'),
   handler: function(direction) {
   	console.log('Direction: ' + direction);
   	if (direction == 'down')	{
-		$('#intro').css('background-color', '#003d99');
+		$('#second').css('background-color', 'white');
 	} else {
-		$('#intro').css('background-color', '');
+		$('#second').css('background-color', '');
 	}
   },
   offset: 300 
 })
+var waypoint2 = new Waypoint({
+  element: document.getElementById('fifth'),
+  handler: function(direction) {
+  	console.log('Direction: ' + direction);
+  	if (direction == 'down')	{
+		$('#fourth').css('background-color', '#33334d');
+	} else {
+		$('#fourth').css('background-color', '');
+	}
+  },
+  offset: 300 
+})
+
 
 function calculateOffsets() {
     state_conference_off = $("#state_conference").offset().top;
@@ -90,3 +105,7 @@ $(window).scroll(function(){
 		console.log(wScroll /5 - state_conference_off);
 	}
 });	
+
+
+
+
