@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	var state_conference_off;
+	calculateOffsets();
+	$(window).on("resize", calculateOffsets());
 	// Init ScrollMagic, use scrollbar to trigger animation defined in scene
 	var controller = new ScrollMagic.Controller();
 	//pin the intro
@@ -56,12 +59,26 @@ $(document).ready(function(){
 	});
 });
 
-( function( $ ) {
-    // Init Skrollr
-    var s = skrollr.init({
-        render: function(data) {
-            //Debugging - Log the current scroll position.
-            //console.log(data.curTop);
-        }
-    });
-} )( jQuery );
+
+var waypoint = new Waypoint({
+  element: document.getElementById('state_conference'),
+  handler: function(direction) {
+  },
+  offset: 300 
+})
+
+function calculateOffsets() {
+    state_conference_off = $("#state_conference").offset().top;
+}
+
+$(window).scroll(function(){
+	var wScroll = $(this).scrollTop();
+	console.log(wScroll);
+	if (wScroll > state_conference_off)	{
+		console.log('moving');
+		$('#state_conference').css({
+			'transform': 'translate(0px, -' + (wScroll - state_conference_off)/5 + '%)'
+		});
+		console.log(wScroll /5 - state_conference_off);
+	}
+});	
