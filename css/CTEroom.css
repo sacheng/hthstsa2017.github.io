@@ -110,11 +110,18 @@ a{
   background-color:#e8f3fc;
 }
 
-.chip:hover,#house:hover, #bluebox:hover, #bridge:hover, #microscope:hover, #plants:hover, #plantsline, #cars:hover, #mockup1:hover, #mockup2:hover, #poster:hover, #comp:hover, #paper:hover, #work:hover, #vex:hover, #proj:hover{
+#house:hover, #bluebox:hover, #bridge:hover, #microscope:hover, #plants:hover, #cars:hover, #mockup1:hover, #mockup2:hover, #poster:hover, #comp:hover, #paper:hover, #work:hover, #vex:hover, #proj:hover{
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 128, 0.7), 0 4px 15px 0 rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 128, 0.7), 0 4px 15px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 5px 11px 0 rgba(0, 0, 128, 0.7), 0 4px 15px 0 rgba(0, 0, 0, 0.4); 
 }
+
+.chip:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.7), 0 4px 15px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.7), 0 4px 15px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.7), 0 4px 15px 0 rgba(0, 0, 0, 0.4); 
+}
+
 
 #house:hover~#houselinetext, #bluebox:hover~#blueboxlinetext, #bridge:hover~#bridgelinetext, #microscope:hover~#microscopelinetext, #plants:hover~#plantslinetext, #cars:hover~#carslinetext, #mockup1:hover~#mockup1linetext, #mockup2:hover~#mockup2linetext, #poster:hover~#posterlinetext, #comp:hover~#complinetext, #paper:hover~#paperlinetext, #work:hover~#worklinetext, #vex:hover~#vexlinetext, #proj:hover~#projlinetext{
   opacity:100;
@@ -156,7 +163,7 @@ a{
   width:2px;
   height:1px;
   position:absolute;
-  bottom:67.8%;
+  bottom:62%;
   left:30%;
 }
 
@@ -264,7 +271,7 @@ a{
   background-color:transparent;
   position:relative;
   top:15%;
-  left:58%;
+  left:50%;
   width:300px;
 }
 
