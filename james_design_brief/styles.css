@@ -463,19 +463,19 @@ html, body {
 
 @keyframes blob1 {
     from { transform: translateX(0) translateY(0); }
-    to { transform: translateX(-25vw) translateY(15vh); }
+    to { transform: translateX(-30vw) translateY(-22vh); }
 }
 @keyframes blob2 {
     from { transform: translateX(0) translateY(0); }
-    to { transform: translateX(-30vw) translateY(-22vh); }
+    to { transform: translateX(-25vw) translateY(15vh); }
 }
 @keyframes blob3 {
     from { transform: translateX(0) translateY(0); }
-    to { transform: translateX(35vw) translateY(10vh); }
+    to { transform: translateX(25vw) translateY(-20vh); }
 }
 @keyframes blob4 {
     from { transform: translateX(0) translateY(0); }
-    to { transform: translateX(25vw) translateY(-20vh); }
+    to { transform: translateX(35vw) translateY(10vh); }
 }
 
 #section6 #bigBlob {
@@ -508,6 +508,10 @@ html, body {
     font-size: 1.1vw;
     font-family: "Lato";
     text-align: justify;
+}
+
+#modalAR2 {
+    color:#01579b;
 }
 
 #section7 {
