@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English:400,400i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
         <link rel="stylesheet" href="../css/materialize.css">
@@ -20,6 +21,11 @@
     <body>
         <!-- Full screen sections -->
         <div id="section1" class="fullScreenSection">
+            <div id="heroTitleContainer">
+                <div class="heroTitle animated">Augmented Reality</div>
+                <div class="heroTitleLine"></div>
+                <div class="heroSubtitle animated">Design Brief</div>
+            </div>
             <div class="clippingBox">
                 <div class="backgroundMask"></div>
                 <img src="iphone_vector.svg" class="iphone" draggable="false">
@@ -29,6 +35,16 @@
             </div>
         </div>
         <div id="section2" class="fullScreenSection">
+            <div class="wordContainer animated noOpacity">
+                <div class="term">aug&bull;ment&bull;ed</div>
+                <div class="definition"><i>adjective</i> : having been made greater in size or value.</div>
+            </div>
+            <div class="wordContainer animated noOpacity">
+                <div class="term">re&bull;al&bull;i&bull;ty</div>
+                <div class="definition"><i>noun</i> : the world or the state of things as they actually exist.</div>
+            </div>
+        </div>
+        <div id="section3" class="fullScreenSection">
             <img class="mountainImage" id="mtn1" src="mountain_images/mountains1.png">
             <img class="mountainImage" id="mtn2" src="mountain_images/mountains2.png">
             <img class="mountainImage" id="mtn3" src="mountain_images/mountains3.png">
@@ -37,10 +53,13 @@
             <img class="mountainImage" id="mtn6" src="mountain_images/mountains6.png">
             <div id="mountainCover"></div>
         </div>
-        <div id="section3" class="fullScreenSection">
+        <div id="section4" class="fullScreenSection">
             <div class="leftContainer">
+                <img src="snapchat_images/snapchat_face.png" class="screenContent" draggable="false">
+                <img src="snapchat_images/snapchat_mesh.png" class="screenContent hidden" id="snapchatImg2" draggable="false">
+                <img src="snapchat_images/snapchat_lense.png" class="screenContent hidden" id="snapchatImg3" draggable="false">
+                <img src="snapchat_images/snapchat_send.png" class="screenContent hidden" id="snapchatImg4" draggable="false">
                 <img src="iphone_vector_vertical.svg" class="iphone" draggable="false">
-                <img src="face_mesh.svg" class="faceMesh" draggable="false">
             </div>
             <div class="rightContainer">
                 <div class="content">
@@ -72,10 +91,12 @@
                 </div>
             </div>
         </div>
-        <div id="section4" class="fullScreenSection">
+        <div id="section5" class="fullScreenSection">
             <div class="leftContainer">
-                <img src="iphone_vector_vertical.svg" class="iphone" draggable="false">
-                <img src="face_mesh.svg" class="faceMesh" draggable="false">
+                <img src="google_images/google_glass.png" class="googleGlass" draggable="false">
+                <img src="google_images/googleImg2.png" class="googleGlass hidden" id="googleImg2" draggable="false">
+                <img src="google_images/googleImg3.png" class="googleGlass hidden" id="googleImg3" draggable="false">
+                <img src="google_images/googleImg4.png" class="googleGlass hidden" id="googleImg4" draggable="false">
             </div>
             <div class="rightContainer">
                 <div class="content">
@@ -107,16 +128,131 @@
                 </div>
             </div>
         </div>
-        <div id="section5" class="fullScreenSection">
-            <div id="blob1" class="blob valign-wrapper"><p>Educational</p></div>
-            <div id="blob2" class="blob valign-wrapper"><p>Commercial</p></div>
-            <div id="blob3" class="blob valign-wrapper"><p>Recreational</p></div>
-            <div id="blob4" class="blob valign-wrapper"><p>Research</p></div>
-            <div id="bigBlobShadow"></div>
-            <div id="bigBlob" class="valign-wrapper"><p>Other Uses</p></div>
-        </div>
         <div id="section6" class="fullScreenSection">
+            <canvas id="canvas6"></canvas>
+            <!-- Blobs -->
+            <a class="modal-trigger" href="#modalEducational"><div id="blob1" class="blob valign-wrapper"><p>Educational</p></div></a>
+            <a class="modal-trigger" href="#modalCommercial"><div id="blob2" class="blob valign-wrapper"><p>Commercial</p></div></a>
+            <a class="modal-trigger" href="#modalRecreational"><div id="blob3" class="blob valign-wrapper"><p>Recreational</p></div></a>
+            <a class="modal-trigger" href="#modalResearch"><div id="blob4" class="blob valign-wrapper"><p>Research</p></div></a>
+            <a class="modal-trigger" href="#modalOrigin"><div id="bigBlob" class="valign-wrapper hoverable"><p>Origins</p></div></a>
         </div>
+        <div id="section7" class="fullScreenSection">
+        <div class="container">
+          <div class="row" id="About">
+            <div class="col s12 m6 l6">
+              <div class="card">
+                <div class="card-image">
+                  <img class="activator" src="benefit.jpg">
+                </div>
+                <div class="card-content cyan accent-3">
+                  <span class="card-title activator grey-text text-darken-4">Augmented Reality Benefits<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"><b>Augmented Reality Benefits</b><i class="material-icons right">close</i></span>
+
+
+                        <p>Rampant increase in augmented reality's presence throughout society:</p>
+                        <ul>
+                            <li>enhances user engagement</li>
+                            <li>increases the perceived value of products.</li>
+                            <li>will never die down. In fact, the smartphone industry is improving rapidly; therefore, augmented reality will always have a home.</li>
+                        </ul>
+
+                        <p>Clearly, AR's climb to the top is inevitable. Reasons why its future is nothing to worry about:</p>
+                            <ul>
+                                <li>Hardware readily available.</li>
+                                    <ul> 
+                                        <li>It just takes creativity, innovation, and ingenuity to implement the augmented reality attributes.</li>
+                                    </ul>
+
+                                <li> Entertainment </li>
+                                    <ul>
+                                        <li>With AR, the interactivity is so engaging that it makes people want to come back to the product over and over again!</li>
+                                    </ul> 
+                                <li> Sales </li>
+                                    <ul>
+                                        <li>In fact, AR increases the likelihood that a user will buy a product</li>
+                                            <ul>
+                                                <li>88% increase for clothes</li>
+                                                <li>86% increase for furniture and home accessories</li>
+                                                <li>61% increase for games</li>
+                                            </ul>
+                                    </ul>
+                                <li> Views </li>
+                                    <ul>
+                                        <li>See the world differently!</li>
+                                            <ul>
+                                                <li>Assistance with navigation</li>
+                                                <li>Viewing events from the past play out in real life (i.e. seeing a horse drawn carriage from the 20th century on a street in present day)</li>
+                                                <li>Quick history lessons</li>
+                                            </ul>
+                                    </ul>
+                                <li> Safety and Rescue </li>
+                                    <ul>
+                                        <li>Look at an area and see all the power lines and water lines</li>
+                                        <li>Helps to understand an area that you've possibly never seen (for police officers, firefighters, etc.)</li>
+                                    </ul>
+                            </ul>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m6 l6">
+              <div class="card">
+                <div class="card-image">
+                  <img class="activator" src="concern.jpg">
+                </div>
+                <div class="card-content cyan accent-3">
+                  <span class="card-title activator grey-text text-darken-4">Augmented Reality Concerns<i class="material-icons right">more_vert</i></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"><b>Augmented Reality Concerns</b><i class="material-icons right">close</i></span>
+
+                    <h4>Safety Concerns:</h4>
+                    <ul>
+                        <li>Can cause individuals to misjudge the speed of oncoming cars</li>
+                        <li>Underestimate reaction time</li>
+                        <li>Unintentionally ignore potential hazards in the real world</li>
+                            <ul>
+                                <li>Some injured while exploring environments in Pokemon Go</li>
+                            </ul>
+                    </ul>
+                    <h4>Physical Health Concerns</h4>
+                    <ul>
+                        <li>Poorly designed AR interface can create the same effects of:</li>
+                            <ul>
+                                <li>Presbyopia, farsightedness, nearsightedness</li>
+                                <li>Tunnel vision (unable to see in the peripheral field of vision) that results from diabetes and glaucoma</li>
+                                <li>Age-related macular degeneration</li>
+                            </ul>
+                        <li>Focus can become an issue</li>
+                        <li>Difficulty adjusting to using AR wearables, in which they will be much more distracted and have longer reaction times</li>
+                            <ul>
+                                <li>In a test involving ~100 people, 5-10% of Glass users experienced so much strain that they gave up using it</li>
+                                <li>25% of these users experienced difficulty but were able to stick with it</li>
+                            </ul>
+                        <li>Vision impairing</li>
+                            <ul>
+                                <li>“Indeed, AR users may be at more risk than someone with a permanent vision problem, because they have developed no compensatory strategies for lost vision.”</li>
+                            </ul>
+                    </ul>
+
+                    <h4>Privacy Concerns</h4>
+                    <ul>
+                        <li>Threat of malicious hackers accessing users’ cameras and GPS data</li>
+                            <ul>
+                                <li>“If a violent homophobe walks into a bar and his augmented reality glasses identify a person as being gay, it could become a potentially dangerous situation for that person."</li>
+                            </ul>
+                    </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
         
         <!-- Dot navigation bar on right side -->
         <ol id="sectionNav">
@@ -129,29 +265,35 @@
             <li>
                 <div data-section-number="2" id="dot2" class="dot">
                     <div class="inner"></div>
-                    <div class="label">HUDs</div>
+                    <div class="label">What is it?</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="3" id="dot3" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Snapchat Lenses</div>
+                    <div class="label">HUDs</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="4" id="dot4" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Google Glass</div>
+                    <div class="label">Snapchat Lenses</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="5" id="dot5" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Other Uses</div>
+                    <div class="label">Google Glass</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="6" id="dot6" class="dot">
+                    <div class="inner"></div>
+                    <div class="label">Other Uses</div>
+                </div>
+            </li>
+            <li>
+                <div data-section-number="7" id="dot7" class="dot">
                     <div class="inner"></div>
                     <div class="label">Safety Concerns</div>
                 </div>
@@ -162,19 +304,133 @@
         <div id="scrollDownCaret" class="visible">
             <img src="scroll_down_caret.png" width="30" height="17">
         </div>
-        
+
+        <!-- Hamburger menu button -->
         <div id="menuButton" class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
             <a class="btn-floating btn-large blue">
                 <i class="material-icons">menu</i>
             </a>
             <ul>
-                <li><a class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="CTE" href="CTE.htm"><i class="material-icons">person_pin</i></a></li>
-                <li><a class="btn-floating green darken-1 tooltipped" data-position="top" data-delay="50" data-tooltip="TSA" href="TSA3.htm"><i class="material-icons">code</i></a></li>
-                <li><a class="btn-floating yellow tooltipped" data-position="top" data-delay="50" data-tooltip="AR" href="Prompt.htm"><i class="material-icons">games</i></a></li>
-                <li><a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="About Us" href="About_Us.htm"><i class="material-icons">http</i></a></li>
+                <li><a class="btn-floating light-blue darken-4 tooltipped" data-position="top" data-delay="50" data-tooltip="CTE" href="../CTE_byroom.htm"><i class="material-icons">person_pin</i></a></li>
+                <li><a class="btn-floating light-blue accent-4 tooltipped" data-position="top" data-delay="50" data-tooltip="TSA" href="../HTHS TSA/index.html"><i class="material-icons">code</i></a></li>
+                <li><a class="btn-floating light-blue lighten-1 tooltipped" data-position="top" data-delay="50" data-tooltip="AR" href="james_design_brief/index.html"><i class="material-icons">games</i></a></li>
+                <li><a class="btn-floating light-blue accent-1 tooltipped" data-position="top" data-delay="50" data-tooltip="About Us" href="../About_Us.htm"><i class="material-icons">http</i></a></li>
             </ul>
         </div>
         
+        <!--Modal Content Starts Here-->
+        <div id="modalCommercial" class="modal modal-fixed-footer">
+
+             <div class="modal-content">
+
+              <h4 id="modalAR" class="center-align"><i class="material-icons medium">trending_up</i>&nbsp;&nbsp;Commercial Uses&nbsp;&nbsp;<i class="material-icons medium">trending_up</i></h4>
+
+              <p>Google. Niantic. Snapchat. All of these companies have already gotten a headstart on the AR business. Technology is incessantly evolving, and several big-name companies have to stay updated on these trends. Niantic's Pokemon Go was the most popular app of 2016. Essentially, the user is able to encounter Pokemon in real-time at various locations. Superimposed Pokemon can then be captured with Pokeballs. Again, this is just one instance. The gaming world is home to AR cards, in which users can play a variety of games by simply pointing their devices at a single app-compatible card. In addition, the big-name companies are promoting their products by encouraging consumers to view 3D AR graphics on their boxes and containers. Imagine seeing a huge dinosaur on your cereal box in the morning. That's how big the excitement and craze of AR are!
+              </p>
+
+              <br>
+              <br>
+
+              <h4 id="modalAR2" class="center-align"><i class="material-icons medium">trending_up</i>&nbsp;&nbsp;Business Moving Forward&nbsp;&nbsp;<i class="material-icons medium">trending_up</i></h4>
+              <p>It seems that phones and handheld devices are the only methods of utilizing AR. Well, picture yourself trying on different T-shirts without needing to take them on and off. Virtual fitting rooms are going to be the next big thing. Another case is picking out different colors and variances of products, such as cars or apparel. Finally, designers can easily get a nice panoramic, 3D view of interior designs that can be easily altered with the touch of a button...definitely better than redesigning a space completely.
+              </p>
+
+             </div>
+
+             <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
+
+        </div>
+
+        <div id="modalEducational" class="modal modal-fixed-footer">
+
+             <div class="modal-content">
+
+              <h4 id="modalAR" class="center-align"><i class="material-icons medium">library_books</i>&nbsp;&nbsp;Current Educational Purposes&nbsp;&nbsp;<i class="material-icons medium">library_books</i></h4>
+
+                <p>Education is one of the many important characteristics of our society. Imagine introducing easy-to-access 3D visual graphics by pointing your phone at a book. Current AR technology allows students and teachers alike to cross the bridge between the virtual and physical world. Perhaps, a student would like to view what 14th century ceramics looked like? By pointing his or her phone at a compatible book, he or she can obtain insightful knowledge on that and even more topics. In addition, current AR technology can teach students a thing or two about the stars and constellations because there are now apps that superimpose these spatial bodies on the night sky.</p>
+
+                <br>
+                <br>
+
+                <h4 id="modalAR2" class="center-align"><i class="material-icons medium">library_books</i>&nbsp;&nbsp;Learning about Tomorrow&nbsp;&nbsp;<i class="material-icons medium">library_books</i></h4>
+
+                <p>Such creativity and innovation can spur genius in the future of this world's youth. AR provides good insight and the minute details. It truly facilitates the entire process. Specific examples as we head towards the future are: astronauts going on mission simulations, medical students practicing surgeries, students utilizing apps like Elements 4D and Daqri to manipulate elements in chemistry, and viewing English translations at the point of a camera.</p>
+
+
+             </div>
+
+             <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
+
+        </div>
+
+        <div id="modalRecreational" class="modal modal-fixed-footer">
+
+             <div class="modal-content">
+
+              <h4 id="modalAR" class="center-align"><i class="material-icons medium">person_pin</i>&nbsp;&nbsp;Recreation Today&nbsp;&nbsp;<i class="material-icons medium">person_pin</i></h4>
+
+                <p>Perhaps, one of the most popular uses of Augmented Reality in a recreational sense is viewing the details of the world around us. A specific example is <a href="https://www.wikitude.com/showcase/augmented-reality-chimani-national-parks/" target="_blank">Chimani's</a> National Parks App. With the assistance of this app's enhanced augmented reality tech, park visitors have the ability to navigate and discover the minute details of each park's awesome activities and attractions. This is only one of the multitudinous aspects of recreational AR. Picture yourself walking through the city in search of a cheap restaurant. Or perhaps, you just want a quick history lesson about a national landmark. All of that information can be immediately accessed with AR's limitless potential.</p>
+
+                <br>
+                <br>
+
+                <h4 id="modalAR2" class="center-align"><i class="material-icons medium">person_pin</i>&nbsp;&nbsp;Recreation Tomorrow&nbsp;&nbsp;<i class="material-icons medium">person_pin</i></h4>
+
+                <p>Recreation can be defined as one's personal leisure and enjoyment. With AR, you can have an even greater time! Innovators and engineers are currently looking into the marriage between GPS and AR, which could possible create neat tourists routes. In addition, Disney and Crayola are collaborating on an app-book combo, in which a user colors an app combatible book, and an AR app will recreate the colored character in 3D. Furthermore, smart glasses, now with improved technology after the existence of Google Glass, are being developed to allow blind people to better interact with their surrounding environments.</p>
+
+             </div>
+
+             <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
+
+        </div>
+
+        <div id="modalResearch" class="modal modal-fixed-footer">
+
+             <div class="modal-content">
+
+              <h4 id="modalAR" class="center-align" id="modalAR" class="center-align"><i class="material-icons medium">language</i>&nbsp;&nbsp;Research Uses&nbsp;&nbsp;<i class="material-icons medium">language</i></h4>
+
+                <p>The world is constantly changing, and we have to keep up with these changes. Through the use of AR, the entire research process can be extremely facilitated. Existing technology allows developers to recreate/provide detailed 3D maps of various environments. In addition, doctors are able to access images of human subject.</p>
+
+                <br>
+                <br>
+
+                <h4 id="modalAR2" class="center-align"><i class="material-icons medium">language</i>&nbsp;&nbsp;Researching the Future&nbsp;&nbsp;<i class="material-icons medium">language</i></h4>
+
+                <p>
+                    Archaeology. Architecture. Medicine. The entire STEM field needs to move forward faster, and AR is the answer to all these problems. We can learn more about our history by using AR in archaeology. Architecture involves analyzing building structures and stability. Designs can actually be tested without wasting money and effort. Finally, new chemicals can be created at the swipe of your fingers. The possibilities are endless. 
+                </p>
+
+             </div>
+
+             <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
+
+        </div>
+
+        <div id="modalOrigin" class="modal modal-fixed-footer">
+
+             <div class="modal-content">
+
+              <h4 id="modalAR" class="center-align" id="modalAR" class="center-align">Origin Story</h4>
+
+                <p>One of the most prevalent precursors to the world of Augmented Reality was SixthSense, a device that utilized the combination of a camera, small projector, smartphone, and mirror, which was engineered by MIT Media Lab's Fluid Interfaces Group. In this system, the user wears the apparatus around his or her neck, and movements with the finger sensors can manipulate projected images. Who knew that this invention would lay the path for what would become the most revolutionary pieces of technology?</p>
+
+             </div>
+
+             <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
+
+        </div>
+
         <script type="text/javascript">
             $.fn.extend({
                 animateCss: function (animationName) {
@@ -186,6 +442,15 @@
                 }
             });
             
+            $(window).on("load", function() {
+                $("#heroTitleContainer .heroTitle").animateCss("fadeInDown");
+                $("#heroTitleContainer .heroSubtitle").animateCss("fadeInDown");
+                $("#heroTitleContainer .heroTitleLine").delay(500).animate( {
+                    width: "20%",
+                    left: "40%"
+                }, 1000);
+            });
+            
             // @media listeners
             var largeScreenStateChange = window.matchMedia("(min-width: 1400px)");
             var tinyScreenStateChange = window.matchMedia("(max-width: 700px)");
@@ -193,6 +458,7 @@
             tinyScreenStateChange.addListener(updateiPhoneMaskPosition);
             
             blobsHaveBeenAnimated = false;
+            definitionsHaveBeenAnimated = false;
             
             updateSectionScrollPositions();
             $(window).on("resize", updateSectionScrollPositions);
@@ -204,8 +470,163 @@
                 scroll4 = $("#section4").offset().top + heightOffset;
                 scroll5 = $("#section5").offset().top + heightOffset;
                 scroll6 = $("#section6").offset().top + heightOffset;
+                scroll7 = $("#section7").offset().top + heightOffset;
             }
             
+            // Blob Canvas Line Animation
+            var can = document.getElementById("canvas6");
+            var ctx = can.getContext("2d");
+            mouseEntered1 = false;
+            mouseEntered2 = false;
+            mouseEntered3 = false;
+            mouseEntered4 = false;
+            
+            window.addEventListener("resize", resizeCanvas);
+            resizeCanvas();
+            
+            $("#blob1").on("mouseenter", function() {
+                mouseEntered1 = true;
+                drawLine1();
+            });
+            $("#blob1").on("mouseleave", function() {
+                mouseEntered1 = false;
+                drawLine1();
+            });
+            $("#blob2").on("mouseenter", function() {
+                mouseEntered2 = true;
+                drawLine2();
+            });
+            $("#blob2").on("mouseleave", function() {
+                mouseEntered2 = false;
+                drawLine2();
+            });
+            $("#blob3").on("mouseenter", function() {
+                mouseEntered3 = true;
+                drawLine3();
+            });
+            $("#blob3").on("mouseleave", function() {
+                mouseEntered3 = false;
+                drawLine3();
+            });
+            $("#blob4").on("mouseenter", function() {
+                mouseEntered4 = true;
+                drawLine4();
+            });
+            $("#blob4").on("mouseleave", function() {
+                mouseEntered4 = false;
+                drawLine4();
+            });
+            
+            function resizeCanvas() {
+                can.width = window.innerWidth;
+                can.height = window.innerHeight;
+                x1 = can.width/2;
+                y1 = can.height/2;
+                x2 = can.width/2;
+                y2 = can.height/2;
+                x3 = can.width/2;
+                y3 = can.height/2;
+                x4 = can.width/2;
+                y4 = can.height/2;
+            }
+            
+            function drawLine1() {
+                animateLine1 = window.requestAnimationFrame(drawLine1);
+                ctx.clearRect(0,0,can.width,can.height);
+                ctx.beginPath();
+                ctx.strokeStyle = "#D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(x1, y1);
+                if (mouseEntered1) {
+                    x1-=(can.width/5)/15;
+                    y1-=(can.height/6.5)/15;
+                    if (x1<=can.width/5) {
+                        cancelAnimationFrame(animateLine1);
+                    }
+                } else {
+                    x1+=(can.width/5)/15;
+                    y1+=(can.height/6.5)/15;
+                    if (x1>=can.width/2) {
+                        cancelAnimationFrame(animateLine1);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            function drawLine2() {
+                animateLine2 = window.requestAnimationFrame(drawLine2);
+                ctx.clearRect(0,0,can.width,can.height);
+                ctx.beginPath();
+                ctx.strokeStyle = "#D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(x2, y2);
+                if (mouseEntered2) {
+                    x2-=(can.width/4)/20;
+                    y2+=(can.height/6)/20;
+                    if (x2<=can.width/4) {
+                        cancelAnimationFrame(animateLine2);
+                    }
+                } else {
+                    x2+=(can.width/4)/20;
+                    y2-=(can.height/6)/20;
+                    if (x2>=can.width/2) {
+                        cancelAnimationFrame(animateLine2);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            function drawLine3() {
+                animateLine3 = window.requestAnimationFrame(drawLine3);
+                ctx.clearRect(0,0,can.width,can.height);
+                ctx.beginPath();
+                ctx.strokeStyle = "#D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(x3, y3);
+                if (mouseEntered3) {
+                    x3+=(can.width/4)/20;
+                    y3-=(can.height/5)/20;
+                    if (x3>=(3/4)*can.width) {
+                        cancelAnimationFrame(animateLine3);
+                    }
+                } else {
+                    x3-=(can.width/4)/20;
+                    y3+=(can.height/5)/20;
+                    if (x3<=can.width/2) {
+                        cancelAnimationFrame(animateLine3);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            function drawLine4() {
+                animateLine4 = window.requestAnimationFrame(drawLine4);
+                ctx.clearRect(0,0,can.width,can.height);
+                ctx.beginPath();
+                ctx.strokeStyle = "#D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(x4, y4);
+                if (mouseEntered4) {
+                    x4+=(can.width/4)/20;
+                    y4+=(can.height/11)/20;
+                    if (x4>=(7/8)*can.width) {
+                        cancelAnimationFrame(animateLine4);
+                    }
+                } else {
+                    x4-=(can.width/4)/20;
+                    y4-=(can.height/11)/20;
+                    if (x4<=can.width/2) {
+                        cancelAnimationFrame(animateLine4);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            // Function called on window scroll
             $(window).on("scroll", function() {
                 var currentScroll = $(window).scrollTop();
                 
@@ -216,28 +637,36 @@
                     $("#scrollDownCaret").fadeIn();
                 }
                 
+                if (currentScroll > 0.5*$(window).height() && !definitionsHaveBeenAnimated) {
+                    definitionsHaveBeenAnimated = true;
+                    $(".wordContainer:first").animateCss("fadeInLeft");
+                    setTimeout( function() {
+                        $(".wordContainer:last").animateCss("fadeInLeft");
+                    }, 200);
+                }
+                
                 // Mountains
-                if (currentScroll > 0 && currentScroll < $("#section3").offset().top) {
-                    $("#mtn1").css("bottom", "calc(6vw + " + 0.2*(currentScroll - $(window).height()) + "px)");
-                    $("#mtn2").css("bottom", "calc(8vw + " + 0.3*(currentScroll - $(window).height()) + "px)");
-                    $("#mtn3").css("bottom", 0.4*(currentScroll - $(window).height()) + "px");
-                    $("#mtn4").css("bottom", 0.6*(currentScroll - $(window).height()) + "px");
-                    $("#mtn5").css("bottom", 0.7*(currentScroll - $(window).height()) + "px");
-                    $("#mtn6").css("bottom", 0.8*(currentScroll - $(window).height()) + "px");
-                    $("#mountainCover").css("bottom", "calc(" + 0.8*(currentScroll - $(window).height()) + "px - 100%)");
+                if (currentScroll > $(window).height() && currentScroll < $("#section4").offset().top) {
+                    $("#mtn1").css("bottom", "calc(6vw + " + 0.2*(currentScroll - 2*$(window).height()) + "px)");
+                    $("#mtn2").css("bottom", "calc(8vw + " + 0.3*(currentScroll - 2*$(window).height()) + "px)");
+                    $("#mtn3").css("bottom", 0.4*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mtn4").css("bottom", 0.6*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mtn5").css("bottom", 0.7*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mtn6").css("bottom", 0.8*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mountainCover").css("bottom", "calc(" + 0.8*(currentScroll - 2*$(window).height()) + "px - 100%)");
                 }
                 
                 // Blobs
-                if (currentScroll > $("#section4").offset().top + 0.35*$("#section5").height() && !blobsHaveBeenAnimated) {
+                if (currentScroll > $("#section5").offset().top + 0.35*$("#section6").height() && !blobsHaveBeenAnimated) {
                     blobsHaveBeenAnimated = true;
                     $("#blob1").addClass("positioned-blob-1");
                     $("#blob2").addClass("positioned-blob-2");
                     $("#blob3").addClass("positioned-blob-3");
                     $("#blob4").addClass("positioned-blob-4");
-                    $("#blob1").css("transform", "translateX(-25vw) translateY(15vh)");
-                    $("#blob2").css("transform", "translateX(-30vw) translateY(-22vh)");
-                    $("#blob3").css("transform", "translateX(35vw) translateY(10vh)");
-                    $("#blob4").css("transform", "translateX(25vw) translateY(-20vh)");
+                    $("#blob1").css("transform", "translateX(-30vw) translateY(-22vh)");
+                    $("#blob2").css("transform", "translateX(-25vw) translateY(15vh)");
+                    $("#blob3").css("transform", "translateX(25vw) translateY(-20vh)");
+                    $("#blob4").css("transform", "translateX(35vw) translateY(10vh)");
                 }
                 
                 // Navigation dots
@@ -265,14 +694,22 @@
                     // Section6
                     $("#sectionNav li .dot .inner").removeClass("active");
                     $("#sectionNav li #dot6 .inner").addClass("active");
+                } else if (currentScroll > scroll6 && currentScroll < scroll7) {
+                    // Section7
+                    $("#sectionNav li .dot .inner").removeClass("active");
+                    $("#sectionNav li #dot7 .inner").addClass("active");
                 }
             });
             
             // Caret scroll-down functionality
             $("#scrollDownCaret").on("click", function() {
                 $("html, body").animate({
-                    scrollTop: ($("#section2").offset().top)
+                    scrollTop: ($("#section3").offset().top)
                 },2000,"swing");
+                if (!definitionsHaveBeenAnimated) {
+                    definitionsHaveBeenAnimated = true;
+                    $(".wordContainer").removeClass("noOpacity");
+                }
             })
              
             // Section navigation dots scrolling functionality
@@ -300,17 +737,20 @@
                 $("#sectionNav").fadeOut();
                 $("#scrollDownCaret").fadeOut();
                 $("#menuButton").fadeOut();
+                $("#heroTitleContainer").fadeOut();
             })
             $("#section1 .iphone").on("mouseup", function() {
                 document.removeEventListener("mousemove", moveWithMouse);
                 $("#sectionNav").fadeIn();
                 $("#scrollDownCaret").fadeIn();
                 $("#menuButton").fadeIn();
+                $("#heroTitleContainer").fadeIn();
             });
             $("#section1").mouseleave(function() {
                 document.removeEventListener("mousemove", moveWithMouse);
                 $("#sectionNav").fadeIn();
                 $("#menuButton").fadeIn();
+                $("#heroTitleContainer").fadeIn();
                 if ($(window).scrollTop() < 40) {
                     $("#scrollDownCaret").fadeIn();
                 }
@@ -345,9 +785,9 @@
             // Snapchat number buttons and text fading in/out
             currentSnapchatSection = 1;
             var leftValues = [-1, 28.5, 58, 87.5];
-            $("#section3 .rightContainer .numberButton").on("click touch", function() {
+            $("#section4 .rightContainer .numberButton").on("click touch", function() {
                 var sectionNumber = this.getAttribute("data-section-number")
-                $("#section3 .rightContainer .circle").animate({
+                $("#section4 .rightContainer .circle").animate({
                     left: leftValues[sectionNumber - 1] + "%"
                 },400,"swing");
                 if (sectionNumber - currentSnapchatSection > 0) {
@@ -363,14 +803,16 @@
                     $("#snapchatText" + currentSnapchatSection).fadeOut();
                     $("#snapchatText" + sectionNumber).fadeIn();
                 }
+                $("#snapchatImg" + sectionNumber).fadeIn();
+                $("#snapchatImg" + currentSnapchatSection).fadeOut();
                 currentSnapchatSection = sectionNumber;
             });
             
             // Google number buttons and text fading in/out
             currentGoogleSection = 1;
-            $("#section4 .rightContainer .numberButton").on("click touch", function() {
+            $("#section5 .rightContainer .numberButton").on("click touch", function() {
                 var sectionNumber = this.getAttribute("data-section-number")
-                $("#section4 .rightContainer .circle").animate({
+                $("#section5 .rightContainer .circle").animate({
                     left: leftValues[sectionNumber - 1] + "%"
                 },400,"swing");
                 if (sectionNumber - currentGoogleSection > 0) {
@@ -386,13 +828,19 @@
                     $("#googleText" + currentGoogleSection).fadeOut();
                     $("#googleText" + sectionNumber).fadeIn();
                 }
+                $("#googleImg" + sectionNumber).fadeIn();
+                $("#googleImg" + currentGoogleSection).fadeOut();
                 currentGoogleSection = sectionNumber;
             });
             
             // Big Blob Parallax
-            $("#section5").on("mousemove", function(e) {
+            $("#section6").on("mousemove", function(e) {
                 $("#bigBlob").css("left", "calc(40% - " + (e.clientX - $(window).width()/2)/160 + "px)");
                 $("#bigBlob").css("top", "calc(50% - 10vw - " + (e.clientY - $(window).height()/2)/120 + "px)");
+            });
+
+            $(document).ready(function() {
+                $('.modal-trigger').leanModal();
             });
         </script>
     </body>
