@@ -35,11 +35,11 @@
             </div>
         </div>
         <div id="section2" class="fullScreenSection">
-            <div class="wordContainer">
+            <div class="wordContainer animated noOpacity">
                 <div class="term">aug&bull;ment&bull;ed</div>
                 <div class="definition"><i>adjective</i> : having been made greater in size or value.</div>
             </div>
-            <div class="wordContainer">
+            <div class="wordContainer animated noOpacity">
                 <div class="term">re&bull;al&bull;i&bull;ty</div>
                 <div class="definition"><i>noun</i> : the world or the state of things as they actually exist.</div>
             </div>
@@ -344,6 +344,7 @@
             tinyScreenStateChange.addListener(updateiPhoneMaskPosition);
             
             blobsHaveBeenAnimated = false;
+            definitionsHaveBeenAnimated = false;
             
             updateSectionScrollPositions();
             $(window).on("resize", updateSectionScrollPositions);
@@ -358,30 +359,160 @@
                 scroll7 = $("#section7").offset().top + heightOffset;
             }
             
-            // Blob Canvas
+            // Blob Canvas Line Animation
             var can = document.getElementById("canvas6");
             var ctx = can.getContext("2d");
+            mouseEntered1 = false;
+            mouseEntered2 = false;
+            mouseEntered3 = false;
+            mouseEntered4 = false;
             
             window.addEventListener("resize", resizeCanvas);
             resizeCanvas();
-            redraw();
+            
+            $("#blob1").on("mouseenter", function() {
+                mouseEntered1 = true;
+                drawLine1();
+            });
+            $("#blob1").on("mouseleave", function() {
+                mouseEntered1 = false;
+                drawLine1();
+            });
+            $("#blob2").on("mouseenter", function() {
+                mouseEntered2 = true;
+                drawLine2();
+            });
+            $("#blob2").on("mouseleave", function() {
+                mouseEntered2 = false;
+                drawLine2();
+            });
+            $("#blob3").on("mouseenter", function() {
+                mouseEntered3 = true;
+                drawLine3();
+            });
+            $("#blob3").on("mouseleave", function() {
+                mouseEntered3 = false;
+                drawLine3();
+            });
+            $("#blob4").on("mouseenter", function() {
+                mouseEntered4 = true;
+                drawLine4();
+            });
+            $("#blob4").on("mouseleave", function() {
+                mouseEntered4 = false;
+                drawLine4();
+            });
             
             function resizeCanvas() {
                 can.width = window.innerWidth;
                 can.height = window.innerHeight;
-                redraw();
+                x1 = can.width/2;
+                y1 = can.height/2;
+                x2 = can.width/2;
+                y2 = can.height/2;
+                x3 = can.width/2;
+                y3 = can.height/2;
+                x4 = can.width/2;
+                y4 = can.height/2;
             }
             
-            function redraw() {
+            function drawLine1() {
+                animateLine1 = window.requestAnimationFrame(drawLine1);
+                ctx.clearRect(0,0,can.width,can.height);
                 ctx.beginPath();
-                ctx.strokeStyle = "D8D8D8";
+                ctx.strokeStyle = "#D8D8D8";
                 ctx.lineWidth = "2";
                 ctx.moveTo(can.width/2, can.height/2);
-                ctx.lineTo(500, 100);
+                ctx.lineTo(x1, y1);
+                if (mouseEntered1) {
+                    x1-=(can.width/5)/15;
+                    y1-=(can.height/6.5)/15;
+                    if (x1<=can.width/5) {
+                        cancelAnimationFrame(animateLine1);
+                    }
+                } else {
+                    x1+=(can.width/5)/15;
+                    y1+=(can.height/6.5)/15;
+                    if (x1>=can.width/2) {
+                        cancelAnimationFrame(animateLine1);
+                    }
+                }
                 ctx.stroke();
             }
             
+            function drawLine2() {
+                animateLine2 = window.requestAnimationFrame(drawLine2);
+                ctx.clearRect(0,0,can.width,can.height);
+                ctx.beginPath();
+                ctx.strokeStyle = "#D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(x2, y2);
+                if (mouseEntered2) {
+                    x2-=(can.width/4)/20;
+                    y2+=(can.height/6)/20;
+                    if (x2<=can.width/4) {
+                        cancelAnimationFrame(animateLine2);
+                    }
+                } else {
+                    x2+=(can.width/4)/20;
+                    y2-=(can.height/6)/20;
+                    if (x2>=can.width/2) {
+                        cancelAnimationFrame(animateLine2);
+                    }
+                }
+                ctx.stroke();
+            }
             
+            function drawLine3() {
+                animateLine3 = window.requestAnimationFrame(drawLine3);
+                ctx.clearRect(0,0,can.width,can.height);
+                ctx.beginPath();
+                ctx.strokeStyle = "#D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(x3, y3);
+                if (mouseEntered3) {
+                    x3+=(can.width/4)/20;
+                    y3-=(can.height/5)/20;
+                    if (x3>=(3/4)*can.width) {
+                        cancelAnimationFrame(animateLine3);
+                    }
+                } else {
+                    x3-=(can.width/4)/20;
+                    y3+=(can.height/5)/20;
+                    if (x3<=can.width/2) {
+                        cancelAnimationFrame(animateLine3);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            function drawLine4() {
+                animateLine4 = window.requestAnimationFrame(drawLine4);
+                ctx.clearRect(0,0,can.width,can.height);
+                ctx.beginPath();
+                ctx.strokeStyle = "#D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(x4, y4);
+                if (mouseEntered4) {
+                    x4+=(can.width/4)/20;
+                    y4+=(can.height/11)/20;
+                    if (x4>=(7/8)*can.width) {
+                        cancelAnimationFrame(animateLine4);
+                    }
+                } else {
+                    x4-=(can.width/4)/20;
+                    y4-=(can.height/11)/20;
+                    if (x4<=can.width/2) {
+                        cancelAnimationFrame(animateLine4);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            // Function called on window scroll
             $(window).on("scroll", function() {
                 var currentScroll = $(window).scrollTop();
                 
@@ -390,6 +521,14 @@
                     $("#scrollDownCaret").fadeOut();
                 } else {
                     $("#scrollDownCaret").fadeIn();
+                }
+                
+                if (currentScroll > 0.5*$(window).height() && !definitionsHaveBeenAnimated) {
+                    definitionsHaveBeenAnimated = true;
+                    $(".wordContainer:first").animateCss("fadeInLeft");
+                    setTimeout( function() {
+                        $(".wordContainer:last").animateCss("fadeInLeft");
+                    }, 200);
                 }
                 
                 // Mountains
@@ -410,10 +549,10 @@
                     $("#blob2").addClass("positioned-blob-2");
                     $("#blob3").addClass("positioned-blob-3");
                     $("#blob4").addClass("positioned-blob-4");
-                    $("#blob1").css("transform", "translateX(-25vw) translateY(15vh)");
-                    $("#blob2").css("transform", "translateX(-30vw) translateY(-22vh)");
-                    $("#blob3").css("transform", "translateX(35vw) translateY(10vh)");
-                    $("#blob4").css("transform", "translateX(25vw) translateY(-20vh)");
+                    $("#blob1").css("transform", "translateX(-30vw) translateY(-22vh)");
+                    $("#blob2").css("transform", "translateX(-25vw) translateY(15vh)");
+                    $("#blob3").css("transform", "translateX(25vw) translateY(-20vh)");
+                    $("#blob4").css("transform", "translateX(35vw) translateY(10vh)");
                 }
                 
                 // Navigation dots
@@ -453,6 +592,10 @@
                 $("html, body").animate({
                     scrollTop: ($("#section3").offset().top)
                 },2000,"swing");
+                if (!definitionsHaveBeenAnimated) {
+                    definitionsHaveBeenAnimated = true;
+                    $(".wordContainer").removeClass("noOpacity");
+                }
             })
              
             // Section navigation dots scrolling functionality
