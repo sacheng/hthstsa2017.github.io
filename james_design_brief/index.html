@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English:400,400i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
         <link rel="stylesheet" href="../css/materialize.css">
@@ -34,6 +35,16 @@
             </div>
         </div>
         <div id="section2" class="fullScreenSection">
+            <div class="wordContainer">
+                <div class="term">aug&bull;ment&bull;ed</div>
+                <div class="definition"><i>adjective</i> : having been made greater in size or value.</div>
+            </div>
+            <div class="wordContainer">
+                <div class="term">re&bull;al&bull;i&bull;ty</div>
+                <div class="definition"><i>noun</i> : the world or the state of things as they actually exist.</div>
+            </div>
+        </div>
+        <div id="section3" class="fullScreenSection">
             <img class="mountainImage" id="mtn1" src="mountain_images/mountains1.png">
             <img class="mountainImage" id="mtn2" src="mountain_images/mountains2.png">
             <img class="mountainImage" id="mtn3" src="mountain_images/mountains3.png">
@@ -42,7 +53,7 @@
             <img class="mountainImage" id="mtn6" src="mountain_images/mountains6.png">
             <div id="mountainCover"></div>
         </div>
-        <div id="section3" class="fullScreenSection">
+        <div id="section4" class="fullScreenSection">
             <div class="leftContainer">
                 <img src="snapchat_images/snapchat_face.png" class="screenContent" draggable="false">
                 <img src="snapchat_images/snapchat_mesh.png" class="screenContent hidden" id="snapchatImg2" draggable="false">
@@ -80,9 +91,12 @@
                 </div>
             </div>
         </div>
-        <div id="section4" class="fullScreenSection">
+        <div id="section5" class="fullScreenSection">
             <div class="leftContainer">
-                <img src="google_glass.png" class="googleGlass" draggable="false">
+                <img src="google_images/google_glass.png" class="googleGlass" draggable="false">
+                <img src="google_images/googleImg2.png" class="googleGlass hidden" id="googleImg2" draggable="false">
+                <img src="google_images/googleImg3.png" class="googleGlass hidden" id="googleImg3" draggable="false">
+                <img src="google_images/googleImg4.png" class="googleGlass hidden" id="googleImg4" draggable="false">
             </div>
             <div class="rightContainer">
                 <div class="content">
@@ -114,7 +128,8 @@
                 </div>
             </div>
         </div>
-        <div id="section5" class="fullScreenSection">
+        <div id="section6" class="fullScreenSection">
+            <canvas id="canvas6"></canvas>
             <!-- Blobs -->
             <a class="modal-trigger" href="#modalEducational"><div id="blob1" class="blob valign-wrapper"><p>Educational</p></div></a>
             <a class="modal-trigger" href="#modalCommercial"><div id="blob2" class="blob valign-wrapper"><p>Commercial</p></div></a>
@@ -122,7 +137,7 @@
             <a class="modal-trigger" href="#modalResearch"><div id="blob4" class="blob valign-wrapper"><p>Research</p></div></a>
             <a class="modal-trigger" href="#modalOrigin"><div id="bigBlob" class="valign-wrapper hoverable"><p>Origins</p></div></a>
         </div>
-        <div id="section6" class="fullScreenSection">
+        <div id="section7" class="fullScreenSection">
         </div>
         
         <!-- Dot navigation bar on right side -->
@@ -136,29 +151,35 @@
             <li>
                 <div data-section-number="2" id="dot2" class="dot">
                     <div class="inner"></div>
-                    <div class="label">HUDs</div>
+                    <div class="label">What is it?</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="3" id="dot3" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Snapchat Lenses</div>
+                    <div class="label">HUDs</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="4" id="dot4" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Google Glass</div>
+                    <div class="label">Snapchat Lenses</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="5" id="dot5" class="dot">
                     <div class="inner"></div>
-                    <div class="label">Other Uses</div>
+                    <div class="label">Google Glass</div>
                 </div>
             </li>
             <li>
                 <div data-section-number="6" id="dot6" class="dot">
+                    <div class="inner"></div>
+                    <div class="label">Other Uses</div>
+                </div>
+            </li>
+            <li>
+                <div data-section-number="7" id="dot7" class="dot">
                     <div class="inner"></div>
                     <div class="label">Safety Concerns</div>
                 </div>
@@ -203,8 +224,8 @@
              </div>
 
              <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-blue btn-flat">Close</a>
-             </div>
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
 
         </div>
 
@@ -227,8 +248,8 @@
              </div>
 
              <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-             </div>
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
 
         </div>
 
@@ -250,8 +271,8 @@
              </div>
 
              <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-             </div>
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
 
         </div>
 
@@ -275,8 +296,8 @@
              </div>
 
              <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-             </div>
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
 
         </div>
 
@@ -291,8 +312,8 @@
              </div>
 
              <div class="modal-footer">
-              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-             </div>
+                <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+            </div>
 
         </div>
 
@@ -334,7 +355,32 @@
                 scroll4 = $("#section4").offset().top + heightOffset;
                 scroll5 = $("#section5").offset().top + heightOffset;
                 scroll6 = $("#section6").offset().top + heightOffset;
+                scroll7 = $("#section7").offset().top + heightOffset;
             }
+            
+            // Blob Canvas
+            var can = document.getElementById("canvas6");
+            var ctx = can.getContext("2d");
+            
+            window.addEventListener("resize", resizeCanvas);
+            resizeCanvas();
+            redraw();
+            
+            function resizeCanvas() {
+                can.width = window.innerWidth;
+                can.height = window.innerHeight;
+                redraw();
+            }
+            
+            function redraw() {
+                ctx.beginPath();
+                ctx.strokeStyle = "D8D8D8";
+                ctx.lineWidth = "2";
+                ctx.moveTo(can.width/2, can.height/2);
+                ctx.lineTo(500, 100);
+                ctx.stroke();
+            }
+            
             
             $(window).on("scroll", function() {
                 var currentScroll = $(window).scrollTop();
@@ -347,18 +393,18 @@
                 }
                 
                 // Mountains
-                if (currentScroll > 0 && currentScroll < $("#section3").offset().top) {
-                    $("#mtn1").css("bottom", "calc(6vw + " + 0.2*(currentScroll - $(window).height()) + "px)");
-                    $("#mtn2").css("bottom", "calc(8vw + " + 0.3*(currentScroll - $(window).height()) + "px)");
-                    $("#mtn3").css("bottom", 0.4*(currentScroll - $(window).height()) + "px");
-                    $("#mtn4").css("bottom", 0.6*(currentScroll - $(window).height()) + "px");
-                    $("#mtn5").css("bottom", 0.7*(currentScroll - $(window).height()) + "px");
-                    $("#mtn6").css("bottom", 0.8*(currentScroll - $(window).height()) + "px");
-                    $("#mountainCover").css("bottom", "calc(" + 0.8*(currentScroll - $(window).height()) + "px - 100%)");
+                if (currentScroll > $(window).height() && currentScroll < $("#section4").offset().top) {
+                    $("#mtn1").css("bottom", "calc(6vw + " + 0.2*(currentScroll - 2*$(window).height()) + "px)");
+                    $("#mtn2").css("bottom", "calc(8vw + " + 0.3*(currentScroll - 2*$(window).height()) + "px)");
+                    $("#mtn3").css("bottom", 0.4*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mtn4").css("bottom", 0.6*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mtn5").css("bottom", 0.7*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mtn6").css("bottom", 0.8*(currentScroll - 2*$(window).height()) + "px");
+                    $("#mountainCover").css("bottom", "calc(" + 0.8*(currentScroll - 2*$(window).height()) + "px - 100%)");
                 }
                 
                 // Blobs
-                if (currentScroll > $("#section4").offset().top + 0.35*$("#section5").height() && !blobsHaveBeenAnimated) {
+                if (currentScroll > $("#section5").offset().top + 0.35*$("#section6").height() && !blobsHaveBeenAnimated) {
                     blobsHaveBeenAnimated = true;
                     $("#blob1").addClass("positioned-blob-1");
                     $("#blob2").addClass("positioned-blob-2");
@@ -395,13 +441,17 @@
                     // Section6
                     $("#sectionNav li .dot .inner").removeClass("active");
                     $("#sectionNav li #dot6 .inner").addClass("active");
+                } else if (currentScroll > scroll6 && currentScroll < scroll7) {
+                    // Section7
+                    $("#sectionNav li .dot .inner").removeClass("active");
+                    $("#sectionNav li #dot7 .inner").addClass("active");
                 }
             });
             
             // Caret scroll-down functionality
             $("#scrollDownCaret").on("click", function() {
                 $("html, body").animate({
-                    scrollTop: ($("#section2").offset().top)
+                    scrollTop: ($("#section3").offset().top)
                 },2000,"swing");
             })
              
@@ -478,9 +528,9 @@
             // Snapchat number buttons and text fading in/out
             currentSnapchatSection = 1;
             var leftValues = [-1, 28.5, 58, 87.5];
-            $("#section3 .rightContainer .numberButton").on("click touch", function() {
+            $("#section4 .rightContainer .numberButton").on("click touch", function() {
                 var sectionNumber = this.getAttribute("data-section-number")
-                $("#section3 .rightContainer .circle").animate({
+                $("#section4 .rightContainer .circle").animate({
                     left: leftValues[sectionNumber - 1] + "%"
                 },400,"swing");
                 if (sectionNumber - currentSnapchatSection > 0) {
@@ -503,9 +553,9 @@
             
             // Google number buttons and text fading in/out
             currentGoogleSection = 1;
-            $("#section4 .rightContainer .numberButton").on("click touch", function() {
+            $("#section5 .rightContainer .numberButton").on("click touch", function() {
                 var sectionNumber = this.getAttribute("data-section-number")
-                $("#section4 .rightContainer .circle").animate({
+                $("#section5 .rightContainer .circle").animate({
                     left: leftValues[sectionNumber - 1] + "%"
                 },400,"swing");
                 if (sectionNumber - currentGoogleSection > 0) {
@@ -521,17 +571,19 @@
                     $("#googleText" + currentGoogleSection).fadeOut();
                     $("#googleText" + sectionNumber).fadeIn();
                 }
+                $("#googleImg" + sectionNumber).fadeIn();
+                $("#googleImg" + currentGoogleSection).fadeOut();
                 currentGoogleSection = sectionNumber;
             });
             
             // Big Blob Parallax
-            $("#section5").on("mousemove", function(e) {
+            $("#section6").on("mousemove", function(e) {
                 $("#bigBlob").css("left", "calc(40% - " + (e.clientX - $(window).width()/2)/160 + "px)");
                 $("#bigBlob").css("top", "calc(50% - 10vw - " + (e.clientY - $(window).height()/2)/120 + "px)");
             });
 
-            $(document).ready(function(){
-            $('.modal-trigger').leanModal();
+            $(document).ready(function() {
+                $('.modal-trigger').leanModal();
             });
         </script>
     </body>

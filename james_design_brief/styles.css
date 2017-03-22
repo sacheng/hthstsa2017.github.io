@@ -150,21 +150,53 @@ html, body {
 }
 
 #section2 {
-    overflow: hidden;
-    position: relative;
-    background-image: url("mountain_images/mountains_background.png");
-    background-size: cover;
+    background-color: #323D59;
+    background-image: url("mountain_images/sky_top.jpg");
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: cover;
 }
 
-#section2 .mountainImage {
+#section2 .wordContainer {
+    position: relative;
+    float: top;
+    width: 60%;
+    margin: 0 auto;
+    top: 20%;
+}
+
+#section2 .term {
+    font-family: 'IM Fell English', serif;
+    color: white;
+    font-size: 4vw;
+}
+
+#section2 .definition {
+    font-family: 'IM Fell English', serif;
+    color: white;
+    font-size: 2.5vw;
+    border-left: 2px solid white;
+    padding-left: 1%;
+    margin-left: 4%;
+    white-space: nowrap;
+}
+
+#section3 {
+    overflow: hidden;
+    position: relative;
+    background-image: url("mountain_images/sky_bottom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#section3 .mountainImage {
     position: absolute;
     width: 100%;
     height: auto;
 }
 
-#section2 #mountainCover {
+#section3 #mountainCover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -172,11 +204,11 @@ html, body {
     bottom: -100%;
 }
 
-#section3 {
+#section4 {
     background-color: #37B3DE;
 }
 
-#section4 {
+#section5 {
     background-color: #4487ED;
 }
 
@@ -197,14 +229,14 @@ html, body {
     float: left;
 }
 
-#section3 .leftContainer .iphone {
+#section4 .leftContainer .iphone {
     position: relative;
     top: 10%;
     height: 80%;
     width: auto;
 }
 
-#section3 .leftContainer .screenContent {
+#section4 .leftContainer .screenContent {
     position: absolute;
     height: 61.8%;
     width: auto;
@@ -251,16 +283,16 @@ html, body {
     background: #37B3DE;
 }
 
-#section4 .rightContainer .content .subtitle {
+#section5 .rightContainer .content .subtitle {
     background: #4487ED;
 }
 
-#section4 .leftContainer .googleGlass {
-    position: relative;
-    width: 95%;
+#section5 .leftContainer .googleGlass {
+    position: absolute;
+    width: 105%;
     left: 5%;
     height: auto;
-    top: calc(50% - 5.62vw);
+    top: calc(50% - 12.5vw);
 }
 
 .rightContainer .content .buttonContainer {
@@ -322,12 +354,12 @@ html, body {
         height: 50%;
     }
     
-    #section3 .leftContainer .iphone {
+    #section4 .leftContainer .iphone {
         top: 0;
         height: 100%;
     }
     
-    #section3 .leftContainer .screenContent {
+    #section4 .leftContainer .screenContent {
         height: 77.25%;
         top: 11.375%;
         left: calc(50vw - 11.125vh);
@@ -366,21 +398,27 @@ html, body {
         font-size: 2.2vw;
     }
     
-    #section4 .leftContainer .googleGlass {
+    #section5 .leftContainer .googleGlass {
+        position: absolute;
         width: 80%;
-        left: 0;
+        left: 5%;
         height: auto;
-        top: 50%;
+        top: 40%;
     }
     
 }
 
-#section5 {
+#section6 {
     background-color: #313E5A;
     position: relative;
 }
 
-#section5 .blob {
+#canvas6 {
+    width: 100%;
+    height: 100%;
+}
+
+#section6 .blob {
     position: absolute;
     width: 16%;
     height: 16vw;
@@ -395,13 +433,13 @@ html, body {
     transition: box-shadow 0.25s, width 0.25s, height 0.25s;
 }
 
-#section5 .blob:hover {
+#section6 .blob:hover {
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
     width: 16.1%;
     height: 16.1vw;
 }
 
-#section5 .blob p {
+#section6 .blob p {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 1.8vw;
@@ -440,7 +478,7 @@ html, body {
     to { transform: translateX(25vw) translateY(-20vh); }
 }
 
-#section5 #bigBlob {
+#section6 #bigBlob {
     position: absolute;
     width: 20%;
     height: 20vw;
@@ -450,7 +488,7 @@ html, body {
     background: #D8D8D8;
 }
 
-#section5 #bigBlob p {
+#section6 #bigBlob p {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 1.8vw;
@@ -472,7 +510,7 @@ html, body {
     text-align: justify;
 }
 
-#section6 {
+#section7 {
     background-color: #5EABD4;
 }
 
