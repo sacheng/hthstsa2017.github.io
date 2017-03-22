@@ -35,11 +35,11 @@
             </div>
         </div>
         <div id="section2" class="fullScreenSection">
-            <div class="wordContainer">
+            <div class="wordContainer animated noOpacity">
                 <div class="term">aug&bull;ment&bull;ed</div>
                 <div class="definition"><i>adjective</i> : having been made greater in size or value.</div>
             </div>
-            <div class="wordContainer">
+            <div class="wordContainer animated noOpacity">
                 <div class="term">re&bull;al&bull;i&bull;ty</div>
                 <div class="definition"><i>noun</i> : the world or the state of things as they actually exist.</div>
             </div>
@@ -344,6 +344,7 @@
             tinyScreenStateChange.addListener(updateiPhoneMaskPosition);
             
             blobsHaveBeenAnimated = false;
+            definitionsHaveBeenAnimated = false;
             
             updateSectionScrollPositions();
             $(window).on("resize", updateSectionScrollPositions);
@@ -522,6 +523,14 @@
                     $("#scrollDownCaret").fadeIn();
                 }
                 
+                if (currentScroll > 0.5*$(window).height() && !definitionsHaveBeenAnimated) {
+                    definitionsHaveBeenAnimated = true;
+                    $(".wordContainer:first").animateCss("fadeInLeft");
+                    setTimeout( function() {
+                        $(".wordContainer:last").animateCss("fadeInLeft");
+                    }, 200);
+                }
+                
                 // Mountains
                 if (currentScroll > $(window).height() && currentScroll < $("#section4").offset().top) {
                     $("#mtn1").css("bottom", "calc(6vw + " + 0.2*(currentScroll - 2*$(window).height()) + "px)");
@@ -583,6 +592,10 @@
                 $("html, body").animate({
                     scrollTop: ($("#section3").offset().top)
                 },2000,"swing");
+                if (!definitionsHaveBeenAnimated) {
+                    definitionsHaveBeenAnimated = true;
+                    $(".wordContainer").removeClass("noOpacity");
+                }
             })
              
             // Section navigation dots scrolling functionality
