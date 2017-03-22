@@ -494,7 +494,7 @@ html, body {
 
 }
 
-.active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover, .dot6:hover, .dot7:hover, .dot8:hover, .dot9:hover{
+.active2, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover, .dot6:hover, .dot7:hover, .dot8:hover, .dot9:hover{
   background-color: #017ba5;
   height:9px;
   width:9px;
