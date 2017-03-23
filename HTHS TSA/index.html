@@ -28,6 +28,10 @@
 	        var options = {
 	          title: 'Total Awards Won',
 	          is3D: true,
+	          backgroundColor: { fill:'transparent' },
+	          titleTextStyle: {
+   				 color: 'white'
+			}, legendTextStyle: {color:'white'},
 	        };
 
 	        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -52,11 +56,19 @@
 	                       2]);
 
 	      var options = {
+
 	        title: "Number of Top 3 Finishes",
 	        width: 600,
 	        height: 400,
 	        bar: {groupWidth: "95%"},
 	        legend: { position: "none" },
+	        backgroundColor: { fill:'transparent' },
+	        titleTextStyle: {
+   				 color: 'white'
+			},
+			hAxis: {
+    			textStyle:{color: '#FFF'}
+			},
      		 };
 	      var chart2 = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
 	      chart2.draw(view, options);
@@ -100,19 +112,19 @@
 		<div class = "slide_container">
 			<img class = "slide_pic" id = "statepic" src = '../pictures/conference/nationals2016/archreno2.jpg' height = '600px'>
 			<div id = "state_conference">
-				<div class = "caption"> ON THE STAGE </div>
+				<div class = "caption"> ARCHITECTURE </div>
 				<div class = "head2"> State Conference </div>
 				<div class = "cont2"> The New Jersey TSA State Conference is held every year at the College of New Jersey in Ewing Township, NJ. At this event, High Tech students have several opportunities to showcase their engineering prowess and critical thinking skills in a variety of different competitions. With over 30 individual and team events total, there’s no doubt that each High Tech student gets an excellent opportunity to explore and learn more about their talents. From Fashion Design to Extemporaneous Speech to Webmaster, each event encompasses a different branch in the widespread field of STEM. (use the statistics from the top) </div>
 			</div>
 		</div>
 	</section>
-	<section class = "slide" style = "background-color: white; padding-top: 50px; color: black;" id = "third">
+	<section class = "slide" style = " padding-top: 50px; color: black;" id = "third">
 		<div class = "slide_container" style = "padding: 0; margin-top: 10px">
-			<h1 style = "font-size: 70px; font-weight: bold;"> 2016 State Conference </h1>
-			<div style = "position: relative; margin-top: 50px">
+			<h1 style = "font-size: 70px; font-weight: bold; color: white;"> 2016 State Conference </h1>
+			<div style = "position: relative; margin-top: 50px;color: white;">
 			<div id="piechart_3d" style="width: 500px; height: 400px; position: relative; float: left"></div>
 			<div id = "s2"> HTHS is very strong in the State Competition. Every HTHS TSA member dedicates weeks and months preparing for or developing their projects. Our hard work pays off. <span style = "display: block; position: relative; margin-top:100px"> There are 38 possible awards for all ranks: 1st, 2nd, and 3rd. We earn a large proportion of these awards. </span> </div>
-				<div id="columnchart_values" style="width: 700px; height: 220px; position: relative; float: right">
+				<div id="columnchart_values" style="width: 700px; height: 220px; position: relative; margin: 0 auto;">
 				</div>
 		</div>
 	</div>
@@ -126,8 +138,8 @@
 					<figure>
 				<img src="images/house.jpg" alt>
 				<img src="../pictures/conference/nationals2016/dragster2.jpg" alt>
-				<img src="../pictures/conference/nationals2016/softdev5.jpg" alt>
 				<img src="../pictures/conference/nationals2016/IMG_6916.jpg" alt>
+				<img src="../pictures/conference/nationals2016/vex/IMG_6879.jpg" alt>
 					</figure>
 				</div>
 			</div>
@@ -157,8 +169,8 @@
 				</div>
 				<br>
 			<div class = 'flat'> <div class = 'one'> <h1> VEX </h1> <h2> The VEX Robotics Competition (VRC) is a robotics event for high schoolers. Teams build robots to complete an annual challenge. For the 2016-2017 season, the VRC challenge is STARSTRUCK, in which two alliances, composed of 2 teams each, earn points by scoring stars and cubes in designated zones in their respective zones and by hanging their robots on the Hanging Bar. This is the second year that the 5-member HTHS team, Team 765A, competed in the VRC challenge. Also, this is the first year that a secondary HTHS VEX team, Team 765X, competed at the regional and state levels. They won the most prestigious award available, the Excellence Award, at their regional competition, where they were also tournament finalists. This qualified them for the state-level competition. These awards qualify them for the international level of competition, VEX Worlds, where they will be competing in mid-April.</h2></div> 
-			<div class = 'two'> 
-				<img class = "in" id = "i1" src = "../pictures/conference/nationals2016/vex/vexrobot1.jpg" height = "280px" style ="display: block; position: relative; margin-top: 100px;">
+			<div class = 'two' style = "z-index: 1;"> 
+				<img class = "in" id = "i1" src = "../pictures/conference/nationals2016/vex/vexrobot1.jpg" height = "280px" style ="display: block; position: relative; z-index: 1;">
 				<!--<img class = "in" id = "i2" src = "../pictures/conference/misc/2017-03-192.jpg" height="200px">
 				<img class = "in" id = "i3" src= "../pictures/conference/misc/new.png" height = "300px">-->
 			</div> </div>
@@ -171,8 +183,5 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 	<script src ="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"> </script>
 	<script src = "main.js"> </script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script src="../js/materialize.js"></script>
-    <script src="../js/materialize.min.js"></script>
 </body>
 </html>

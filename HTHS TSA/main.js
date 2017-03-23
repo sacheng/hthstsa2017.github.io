@@ -97,12 +97,12 @@ $(window).scroll(function(){
 	var wScroll = $(this).scrollTop();
 
 	console.log(wScroll);
-	if (wScroll > state_conference_off)	{
-		console.log('moving');
+	if (wScroll > state_conference_off - 300)	{
+
 		$('#state_conference').css({
-			'transform': 'translate(0px, -' + (wScroll - state_conference_off)/5 + '%)'
+			'transform': 'translate(0px,' -1*(wScroll - state_conference_off)/5 + '%)'
 		});
-		console.log(wScroll /5 - state_conference_off);
+		console.log('parallax: ' + ((wScroll - state_conference_off)/5));
 	}
 });	
 
