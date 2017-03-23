@@ -151,6 +151,18 @@ imageAnimation {  0% {
     color: white;
 }
 
+#third{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url(images/state.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color:white;
+
+}
 #intro_container{
   position: relative;
   max-width: 1000px;
@@ -163,11 +175,11 @@ imageAnimation {  0% {
 }
 
 #intro_container h1{
-  font-size: 5.4rem;
+  font-size: 5.4vw;
 }
 
 #intro_container h2{
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   margin-top: 1%;
   font-family: 'Georgia', serif;
   color: #d9d9d9;
@@ -200,13 +212,13 @@ imageAnimation {  0% {
 
 #intro_container h3{
   font-family: 'Lato', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   margin: 0 auto;
 }
 
 #intro_container h4{
   font-family: 'Georgia', serif;
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   font-weight: normal;
   max-width: 600px;
   margin: 0 auto;
@@ -259,30 +271,53 @@ imageAnimation {  0% {
   width: 70%;
 }
 
+#second{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url('images/student.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .head2{
-  font-size: 5em;
+  font-size: 5vw;
   font-weight: bold;
+  color: #66c2ff;
 }
 
 .cont2{
   padding-left: 100px;
   padding-top: 50px;
-  font-size: 1em;
+  font-size:calc(12px + 0.5vw);
   font-family: 'Raleway', sans-serif;
 }
 
 .caption{
   text-align: right;
   padding-right: 30px;
-  color: cyan;
-  font-size: 0.5em;
+  color: #b3d9ff;
+  font-size: 0.7vw;
 }
 
-
+#fifth{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url('../pictures/conference/nationals2016/softdev5.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 #s2 {
   font-family: 'Raleway', 'sans-serif';
-  font-size: 25px;
+  font-size: 2vw;
 }
 
 
@@ -294,18 +329,19 @@ imageAnimation {  0% {
 }
 
 #lil{
-  color: cyan;
-  font-size: 15px;
+  color: #b3d9ff;
+  font-size: 0.8vw;
   font-weight: normal;
   position: relative;
 }
 
 #large{
-  font-size: 90px;
+  font-size: 6vw;
+  color: #66c2ff;
 }
 
 #con{
-  font-size: 18px;
+  font-size:calc(12px + 0.5vw);
   font-family: 'Raleway';
   padding-left: 10%;
   font-weight: normal;
@@ -357,42 +393,42 @@ div#slider figure {
   height: auto;
   position: relative;
   transition: background 1s ease;
-  height: 100%;
   overflow: hidden;
 }
 
 .one{
+    z-index: 100;
   width: 45%;
   min-width: 200px;
   float: left;
-  height: 300px;
   padding: 5px;
+  overflow: hidden;
 }
 .two{
-  min-width: 300px;
+    z-index: 100;
   width: 40%;
   float: left;
-  height: 300px;
   padding: 30px;
+   overflow: hidden;
 }
 
 .flat h1{
   display: block;
   position: relative;
-  font-size: 50px;
-  color: white;
+  font-size: 5vw;
+  color: #66c2ff;
 }
 
 .flat h2{
-  font-size: 16px;
-  color: #999999;
+  font-size: 15px;
+  color: #cccccc;
   padding-top: 20px;
   font-family: 'Raleway';
 }
 
 
 ol {
-  color: #ccc;
+  color: white;
   list-style-type: none;
 }
 
@@ -405,7 +441,7 @@ ol li {
 li p {
   font: 30px 'Lato', sans-serif;
   padding-left: 60px;
-  color: #999999;
+  color: #cccccc;
 }
 
 span {
@@ -415,6 +451,7 @@ span {
 body{
   overflow-x: hidden;
 }
+
 
 
 
