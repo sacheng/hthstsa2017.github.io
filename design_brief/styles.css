@@ -626,11 +626,11 @@ html, body {
 
 .cardclose{
     color:black;
-    -webkit-transition: .3s ease-in-out; /* Safari */
-  -moz-transition: .3s ease-in-out; /* Mozilla Firefox */
-  -ms-transition: .3s ease-in-out; /* Microsoft specific */
-  -o-transition: .3s ease-in-out; /* Opera */
-  transition: .3s ease-in-out; /* general & Google Chrome */
+    -webkit-transition: .5s ease-in-out; /* Safari */
+  -moz-transition: .5s ease-in-out; /* Mozilla Firefox */
+  -ms-transition: .5s ease-in-out; /* Microsoft specific */
+  -o-transition: .5s ease-in-out; /* Opera */
+  transition: .5s ease-in-out; /* general & Google Chrome */
 }
 
 .cardclose:hover{
