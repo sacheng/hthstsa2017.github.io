@@ -169,18 +169,18 @@ a{
 }
 
 #plantsline{
-  width:2px;
-  height:1px;
-  position:absolute;
-  bottom:62%;
-  left:30%;
+  width:1px;
+  height:2px;
+  position:relative;
+  top:3%;
+  left:32.8%;
 }
 
 #plantslinetext{
   background-color:transparent;
   position:relative;
-  bottom:10%;
-  left:23%;
+  top:13%;
+  left:41%;
   width:300px;
 }
 
@@ -204,8 +204,8 @@ a{
 #microscopelinetext{
   background-color:transparent;
   position:relative;
-  top:37%;
-  left:64.7%;
+  top:47%;
+  left:50%;
   width:300px;
 }
 
@@ -344,18 +344,18 @@ a{
 }
 
 #mockup2line{
-  width:2px;
-  height:1px;
-  position:absolute;
-  bottom:42%;
-  left:33%;
+  width:1px;
+  height:2px;
+  position:relative;
+  top:25%;
+  left:37%;
 }
 
 #mockup2linetext{
   background-color:transparent;
   position:relative;
-  bottom:17%;
-  left:26%;
+  top:23%;
+  left:42%;
   width:300px;
 }
 
@@ -397,14 +397,14 @@ a{
   width:2px;
   height:1px;
   position:absolute;
-  bottom:37.4%;
+  bottom:40%;
   left:25.5%;
 }
 
 #blueboxlinetext{
   background-color:transparent;
   position:relative;
-  top:4%;
+  top:2%;
   left:17%;
   width:300px;
 }
