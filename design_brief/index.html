@@ -55,9 +55,15 @@
             <div id="mountainCover"></div>
             <div id="jetsContainer">
                 <div id="jetsCallout" class="animated noOpacity">Click Me<div class="notch"></div></div>
+                <img src="jetsBoxes.png" id="jetsBoxes">
             </div>
         </div>
-        <div id="hud"></div>
+        <div id="hud">
+            <img src="exit.svg" id="hudExit">
+            <img src="hudBody.png" id="hudBody">
+            <img src="hudLines.png" id="hudLines">
+            <span id="hudText" class="noOpacity animated">HUDs, or Head-Up Displays, are one of the earliest forms of Augmented Reality. Born out of a World War II necessity, basic HUDs were first used by Royal Air Force night fighter pilots in the early 1940s. The pilots had a difficult time finding targets in the dark sky after looking up from the lit screen of a radar display. To solve this, by October 1942, pilots had successfully projected the image from the radar tube onto a flat area of the windscreen, and thus the HUD was born.<hr>Depicted to the left is a more modern version of the Head-Up Display.</span>
+        </div>
         <div id="section4" class="fullScreenSection">
             <div class="leftContainer">
                 <img src="snapchat_images/snapchat_face.png" class="screenContent" draggable="false">
@@ -462,6 +468,7 @@
             blobsHaveBeenAnimated = false;
             definitionsHaveBeenAnimated = false;
             jetsCalloutHasBeenAnimated = false;
+            hudIsActive = false;
             
             updateSectionScrollPositions();
             $(window).on("resize", updateSectionScrollPositions);
@@ -478,10 +485,24 @@
             
             // Fighter jet HUD
             $("#jetsContainer").on("click", function() {
+                hudIsActive = true;
                 $("#hud").fadeIn();
                 $("#jetsCallout").fadeOut();
+                $("#hudText").animateCss("fadeInRight");
+                setTimeout( function() {
+                    $("#jetsBoxes").fadeIn();
+                }, 800);
             });
-            
+            $("#hudExit").on("click", function() {
+                hudIsActive = false;
+                $("#hud").fadeOut();
+                $("#jetsCallout").fadeIn();
+                $("#jetsBoxes").fadeOut();
+            })
+            $("#hud").on("mousemove", function(e) {
+                var angle = 10*((e.clientX / $(window).width()) - 0.5)
+                $("#hudBody").css({"transform" : "rotate(" + angle + "deg)"}); 
+            });
             
             // Blob Canvas Line Animation
             var can = document.getElementById("canvas6");
@@ -658,7 +679,15 @@
                 // Move fighter jets
                 if (currentScroll > 1.5*$(window).height() && !jetsCalloutHasBeenAnimated) {
                     jetsCalloutHasBeenAnimated = true;
-                    $("#jetsCallout").animateCss("fadeInDown");
+                    $("#jetsCallout").animateCss("fadeInUp");
+                }
+                
+                // Get rid of HUD if you scroll too far away
+                if ((currentScroll > 2.2*$(window).height() || currentScroll < 0.5*$(window).height()) && hudIsActive) {
+                    hudIsActive = false;
+                    $("#hud").fadeOut();
+                    $("#jetsCallout").fadeIn();
+                    $("#jetsBoxes").fadeOut();
                 }
                 
                 // Mountains
