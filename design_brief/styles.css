@@ -616,6 +616,26 @@ html, body {
     color:#01579b;
 }
 
+.cardSC {
+    color:#2980b9;
+}
+
+.cardSCtitle{
+    color: #33cccc;
+}
+
+.cardclose{
+    color:black;
+}
+
+.cardclose:hover{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 #scrollDownCaret {
     width: 10%;
     height: 28px;
