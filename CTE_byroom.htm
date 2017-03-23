@@ -258,7 +258,7 @@
   </ol>
 
 <div id="scrollDownCaret" class="visible">
-  <img src="james_design_brief/scroll_down_caret.png" width="30" height="17">
+  <img src="design_brief/scroll_down_caret.png" width="30" height="17">
 </div>
 
 <!--hamburger nav-->
@@ -518,7 +518,7 @@
     </div>
     <div class="mySlides4 fade">
       <div class="numbertext">7 / 7</div>
-      <img src="pictures/CTE/EDD/edd6.JPG" style="width:100%">
+      <img src="pictures/CTE/EDD/edd7.JPG" style="width:100%">
       <div class="text">A student does computer research to identify a humanitarian problem to solve.</div>
     </div>
     <a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
@@ -850,8 +850,14 @@
 </div>
 
 <script>
-//make line bigger
+//scroll to top on page reload
+/*
+$(document).ready(function(){
+    $('html').animate({scrollTop:0}, 1);
+    $('body').animate({scrollTop:0}, 1);
+});*/
 
+//make line bigger
 var enlargedscope = false;
 $('#microscope').hover(function() {
     $('#microscopeline').stop(true, false).animate({
@@ -1263,6 +1269,12 @@ function showSlides9(n) {
   slides[slideIndex9-1].style.display = "block"; 
   dots[slideIndex9-1].className += " active2";
 }
+
+$("#scrollDownCaret").on("click", function() {
+    $("html, body").animate({
+        scrollTop: ($("#section2").offset().top)
+    },800,"swing");
+})
 
 </script>
 
