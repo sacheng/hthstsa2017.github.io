@@ -1,0 +1,468 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+
+#overlay{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/pattern.png) repeat top left; 
+  background-position:center top;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+}
+.crossfade > figure {
+  animation: imageAnimation 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: -3;
+}
+.crossfade > figure:nth-child(1) { background-image: url('../pictures/conference/misc/tsa2015.jpg'); }
+
+.crossfade > figure:nth-child(2) {
+  animation-delay: 6s;
+  background-image: url('../pictures/conference/misc/tsa_mcvsdgroup_2016.jpg');
+}
+
+.crossfade > figure:nth-child(3) {
+  animation-delay: 12s;
+  background-image: url('../pictures/conference/misc/hackathon.jpg');
+}
+
+.crossfade > figure:nth-child(4) {
+  animation-delay: 18s;
+  background-image: url('../pictures/conference/misc/vexChristmas2.jpg');
+}
+
+.crossfade > figure:nth-child(5) {
+  animation-delay: 24s;
+  background-image: url('../pictures/conference/misc/tsa2012.jpg');
+}
+
+@keyframes 
+imageAnimation {  0% {
+ animation-timing-function: ease-in;
+ opacity: 0;
+}
+ 8% {
+ animation-timing-function: ease-out;
+ opacity: 1;
+}
+ 17% {
+ opacity: 1
+}
+ 25% {
+ opacity: 0
+}
+ 100% {
+ opacity: 0
+}
+}
+/* ===HEADER=== */
+#banner_heading{
+  z-index: 100;
+  color: #fff;
+  position: relative;
+  position:absolute; 
+  top:30%;
+  left: 100px;
+  z-index:999;
+  max-width: 500px;
+}
+
+#banner_heading h1{
+  font-size: 100px;
+  font-weight: bold;
+}
+
+
+@-webkit-keyframes typing {
+    from { width: 0 }
+    to { width:16.3em }
+}
+
+@-moz-keyframes typing {
+    from { width: 0 }
+    to { width:16.3em }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+#banner_heading h3{
+  margin-top: 5%;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 20px;
+  font-weight: lighter;
+    width: auto; 
+    white-space:nowrap;
+    overflow:hidden;
+    border-right: .1em solid white;
+    
+    -webkit-animation: typing 3s steps(37, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+    -moz-animation: typing 3s steps(37, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+}
+
+#intro{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url(images/hths.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+    align-items: center;
+    min-height: 500px;
+    transition: background 1s ease;
+    color: white;
+}
+
+#third{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url(images/state.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  color:white;
+
+}
+#intro_container{
+  position: relative;
+  max-width: 1000px;
+  min-width: 100px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 0 60px;
+}
+
+#intro_container h1{
+  font-size: 5.4vw;
+}
+
+#intro_container h2{
+  font-size: 1.4vw;
+  margin-top: 1%;
+  font-family: 'Georgia', serif;
+  color: #d9d9d9;
+  font-weight: normal;
+}
+
+#intro_container hr{
+  opacity: 1;
+  border: 3px solid #66B3FF;
+  width: 10%;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+#holder{
+  margin-top:50px;
+}
+
+#fourth{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url('../pictures/conference/nationals2016/just nice hotel pics/c.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#intro_container h3{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4vw;
+  margin: 0 auto;
+}
+
+#intro_container h4{
+  font-family: 'Georgia', serif;
+  font-size: 1.3vw;
+  font-weight: normal;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #d9d9d9;
+}
+
+.project{
+  opacity: 0;
+  /*transform: translateY(50px);*/
+  transition: all 1s ease-out;
+}
+
+.project.fade-in{
+  opacity: 1;
+  /*transform: translateY(0);*/
+}
+
+
+.slide{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #66B3FF;
+    min-height: 1000px;
+    color: white;
+    transition: background 1s ease;
+}
+
+.slide_container{
+  position: relative;
+  max-width: 1000px;
+  min-width: 100px;
+  padding: 0px 60px;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+
+.slide_pic{
+  z-index: 2;
+  display: block;
+  position: absolute;
+}
+
+#state_conference{
+  display: block;
+  position: absolute;
+  z-index: 3;
+  top: 490px;
+  left: 20%;
+  width: 70%;
+}
+
+#second{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url('images/student.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.head2{
+  font-size: 5vw;
+  font-weight: bold;
+  color: #66c2ff;
+}
+
+.cont2{
+  padding-left: 100px;
+  padding-top: 50px;
+  font-size:calc(12px + 0.5vw);
+  font-family: 'Raleway', sans-serif;
+}
+
+.caption{
+  text-align: right;
+  padding-right: 30px;
+  color: #b3d9ff;
+  font-size: 0.7vw;
+}
+
+#fifth{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url('../pictures/conference/nationals2016/softdev5.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#s2 {
+  font-family: 'Raleway', 'sans-serif';
+  font-size: 2vw;
+}
+
+
+#nat{
+  color: white;
+  position: absolute;
+  padding: 5px;
+  top: 500px;
+}
+
+#lil{
+  color: #b3d9ff;
+  font-size: 0.8vw;
+  font-weight: normal;
+  position: relative;
+}
+
+#large{
+  font-size: 6vw;
+  color: #66c2ff;
+}
+
+#con{
+  font-size:calc(12px + 0.5vw);
+  font-family: 'Raleway';
+  padding-left: 10%;
+  font-weight: normal;
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+
+#slider img{
+  height: 100%;
+  width: auto;
+}
+
+
+
+#flat{
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background-color: #33334d;
+  overflow: hidden;
+}
+
+#fifth{
+  background-color: #33334d;
+  width: 100%;
+  height: auto;
+  position: relative;
+  transition: background 1s ease;
+  overflow: hidden;
+}
+
+.one{
+    z-index: 100;
+  width: 45%;
+  min-width: 200px;
+  float: left;
+  padding: 5px;
+  overflow: hidden;
+}
+.two{
+    z-index: 100;
+  width: 40%;
+  float: left;
+  padding: 30px;
+   overflow: hidden;
+}
+
+.flat h1{
+  display: block;
+  position: relative;
+  font-size: 5vw;
+  color: #66c2ff;
+}
+
+.flat h2{
+  font-size: 15px;
+  color: #cccccc;
+  padding-top: 20px;
+  font-family: 'Raleway';
+}
+
+
+ol {
+  color: white;
+  list-style-type: none;
+}
+
+ol li {
+  position: relative;
+  font: bold italic 35px/1.5 Helvetica, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+
+li p {
+  font: 30px 'Lato', sans-serif;
+  padding-left: 60px;
+  color: #cccccc;
+}
+
+span {
+  position: absolute;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#sixth{
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+  url('../pictures/conference/nationals2016/softdev5.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
