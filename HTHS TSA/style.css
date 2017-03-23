@@ -286,6 +286,7 @@ imageAnimation {  0% {
 .head2{
   font-size: 5vw;
   font-weight: bold;
+  color: #66c2ff;
 }
 
 .cont2{
@@ -298,7 +299,7 @@ imageAnimation {  0% {
 .caption{
   text-align: right;
   padding-right: 30px;
-  color: cyan;
+  color: #b3d9ff;
   font-size: 0.7vw;
 }
 
@@ -328,7 +329,7 @@ imageAnimation {  0% {
 }
 
 #lil{
-  color: cyan;
+  color: #b3d9ff;
   font-size: 0.8vw;
   font-weight: normal;
   position: relative;
@@ -336,6 +337,7 @@ imageAnimation {  0% {
 
 #large{
   font-size: 6vw;
+  color: #66c2ff;
 }
 
 #con{
@@ -404,7 +406,6 @@ div#slider figure {
 }
 .two{
     z-index: 100;
-  min-width: 300px;
   width: 40%;
   float: left;
   padding: 30px;
@@ -414,8 +415,8 @@ div#slider figure {
 .flat h1{
   display: block;
   position: relative;
-  font-size: 6vw;
-  color: white;
+  font-size: 5vw;
+  color: #66c2ff;
 }
 
 .flat h2{
