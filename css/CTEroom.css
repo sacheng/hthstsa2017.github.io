@@ -169,18 +169,18 @@ a{
 }
 
 #plantsline{
-  width:2px;
-  height:1px;
-  position:absolute;
-  bottom:62%;
-  left:30%;
+  width:1px;
+  height:2px;
+  position:relative;
+  top:3%;
+  left:32.8%;
 }
 
 #plantslinetext{
   background-color:transparent;
   position:relative;
-  bottom:10%;
-  left:23%;
+  top:13%;
+  left:41%;
   width:300px;
 }
 
@@ -204,8 +204,8 @@ a{
 #microscopelinetext{
   background-color:transparent;
   position:relative;
-  top:37%;
-  left:64.7%;
+  top:47%;
+  left:50%;
   width:300px;
 }
 
@@ -344,18 +344,18 @@ a{
 }
 
 #mockup2line{
-  width:2px;
-  height:1px;
-  position:absolute;
-  bottom:42%;
-  left:33%;
+  width:1px;
+  height:2px;
+  position:relative;
+  top:25%;
+  left:37%;
 }
 
 #mockup2linetext{
   background-color:transparent;
   position:relative;
-  bottom:17%;
-  left:26%;
+  top:23%;
+  left:42%;
   width:300px;
 }
 
@@ -397,14 +397,14 @@ a{
   width:2px;
   height:1px;
   position:absolute;
-  bottom:37.4%;
+  bottom:40%;
   left:25.5%;
 }
 
 #blueboxlinetext{
   background-color:transparent;
   position:relative;
-  top:4%;
+  top:2%;
   left:17%;
   width:300px;
 }
@@ -508,83 +508,6 @@ a{
   left:37%;
   width:300px;
 }
-
-/*START FLIP CARD CSS*/
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000px;
-}
-  /* flip the pane when hovered */
-  .flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
-
-.flip-container, .front, .back {
-  width: 100px;
-  height: 100px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-}
-
-.card1front{
-  background:
-    url("pictures/CTE/house.jpg") no-repeat center center fixed;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.front img, .back img{
-  height:100px;
-  width:100px;
-  overflow:hidden;
-}
-
-.card{
-  width:100px;
-}
-
-.card-image{
-  background-color:#778899;
-}
-
-.front {
-  background-color:green;
-}
-
-.back {
-  background-color:blue;
-}
-/* END FLIP CARD CSS */
 
 
 /* START SIDE DOT NAVIGATION */
