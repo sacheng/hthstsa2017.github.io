@@ -291,7 +291,7 @@ imageAnimation {  0% {
 .cont2{
   padding-left: 100px;
   padding-top: 50px;
-  font-size: 1em;
+  font-size:calc(12px + 0.5vw);
   font-family: 'Raleway', sans-serif;
 }
 
@@ -339,7 +339,7 @@ imageAnimation {  0% {
 }
 
 #con{
-  font-size: 1.2vw;
+  font-size:calc(12px + 0.5vw);
   font-family: 'Raleway';
   padding-left: 10%;
   font-weight: normal;
@@ -391,7 +391,6 @@ div#slider figure {
   height: auto;
   position: relative;
   transition: background 1s ease;
-  height: 100%;
   overflow: hidden;
 }
 
